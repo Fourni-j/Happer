@@ -14,17 +14,17 @@ class userClass {
     
     private let id: Int
     private var name: String
-    private var rank: Int
+    private var circle: Int
     private var level: Int
     private var exp: Float
     private var credit: Int
     
     // MARK : - Initialiseur
     
-    init (id: Int, name: String, rank: Int, level: Int, exp: Float, credit: Int) {
+    init (id: Int, name: String, circle: Int, level: Int, exp: Float, credit: Int) {
         self.id = id
         self.name = name
-        self.rank = rank
+        self.circle = circle
         self.level = level
         self.exp = exp
         self.credit = credit
@@ -38,8 +38,8 @@ class userClass {
     func getName() -> String {
         return name
     }
-    func getRank() -> Int {
-        return rank
+    func getCircle() -> Int {
+        return circle
     }
     func getLevel() -> Int {
         return level
@@ -65,8 +65,8 @@ class userClass {
         level += 1
     }
 
-    private func rankUp() {
-        rank += 1
+    private func circleUp() {
+        circle += 1
         exp = 0
     }
 

@@ -15,13 +15,15 @@ class productClass: categoryClass {
     private let price: Float
     private var winned: Bool
     private var description: String
+    private let circle: Int
     
     //MARK: initialiseur
     
-    init(price: Float, winned: Bool, description: String, id: Int, name: String, categoryName: String) {
+    init(price: Float, winned: Bool, description: String, circle: Int, id: Int, name: String, categoryName: String) {
         self.price = price
         self.winned = winned
         self.description = description
+        self.circle = circle
         super.init(id: id, name: name, categoryName: categoryName)
     }
     
