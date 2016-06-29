@@ -10,17 +10,28 @@ import UIKit
 
 class signUpVC: UIViewController {
 
+    // MARK: - properties
+    
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var mailField: UITextField!
+    @IBOutlet weak var passwdField: UITextField!
+    @IBOutlet weak var confpassField: UITextField!
+
+    // MARK: - parent.methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+
+    // MARK: - self.methods
+
+    @IBAction func submit(sender: UIButton) {
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -31,5 +42,4 @@ class signUpVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

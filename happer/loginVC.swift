@@ -10,6 +10,13 @@ import UIKit
 
 class loginVC: UIViewController {
 
+    // MARK: - properties
+    
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passwdField: UITextField!
+    
+    // MARK: - parent.methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +27,12 @@ class loginVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    // MARK: - self.methods
+    
+    @IBAction func submit(sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

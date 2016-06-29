@@ -9,6 +9,11 @@
 import UIKit
 
 class mainPageVC: UIViewController {
+    // MARK: - properties
+    
+    /* FBSDKloginButtonFR à implementer et ajouter */
+    
+    // MARK: - parent.methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +23,13 @@ class mainPageVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - self.methods
+    
+    @IBAction func loginButton(sender: UIButton) {
+    }
+    
+    @IBAction func signUpButton(sender: UIButton) {
     }
 }
