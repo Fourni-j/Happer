@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B071D23E4EE009D7968 /* AppDelegate.swift */; };
+		353C2B0A1D23E4EE009D7968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B091D23E4EE009D7968 /* ViewController.swift */; };
+		353C2B0D1D23E4EE009D7968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C2B0B1D23E4EE009D7968 /* Main.storyboard */; };
+		353C2B0F1D23E4EE009D7968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353C2B0E1D23E4EE009D7968 /* Assets.xcassets */; };
+		353C2B121D23E4EE009D7968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C2B101D23E4EE009D7968 /* LaunchScreen.storyboard */; };
+		353C2B1D1D23E4F0009D7968 /* happerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B1C1D23E4F0009D7968 /* happerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		353C2B191D23E4F0009D7968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 353C2AFC1D23E4ED009D7968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 353C2B031D23E4ED009D7968;
+			remoteInfo = happer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		353C2B041D23E4ED009D7968 /* happer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		353C2B071D23E4EE009D7968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		353C2B091D23E4EE009D7968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		353C2B0C1D23E4EE009D7968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		353C2B0E1D23E4EE009D7968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		353C2B111D23E4EE009D7968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		353C2B131D23E4EE009D7968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		353C2B181D23E4F0009D7968 /* happerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = happerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		353C2B1C1D23E4F0009D7968 /* happerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happerTests.swift; sourceTree = "<group>"; };
+		353C2B1E1D23E4F0009D7968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		353C2B011D23E4ED009D7968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		353C2B151D23E4F0009D7968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		353C2AFB1D23E4ED009D7968 = {
+			isa = PBXGroup;
+			children = (
+				353C2B061D23E4EE009D7968 /* happer */,
+				353C2B1B1D23E4F0009D7968 /* happerTests */,
+				353C2B051D23E4ED009D7968 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		353C2B051D23E4ED009D7968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				353C2B041D23E4ED009D7968 /* happer.app */,
+				353C2B181D23E4F0009D7968 /* happerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		353C2B061D23E4EE009D7968 /* happer */ = {
+			isa = PBXGroup;
+			children = (
+				353C2B071D23E4EE009D7968 /* AppDelegate.swift */,
+				353C2B091D23E4EE009D7968 /* ViewController.swift */,
+				353C2B0B1D23E4EE009D7968 /* Main.storyboard */,
+				353C2B0E1D23E4EE009D7968 /* Assets.xcassets */,
+				353C2B101D23E4EE009D7968 /* LaunchScreen.storyboard */,
+				353C2B131D23E4EE009D7968 /* Info.plist */,
+			);
+			path = happer;
+			sourceTree = "<group>";
+		};
+		353C2B1B1D23E4F0009D7968 /* happerTests */ = {
+			isa = PBXGroup;
+			children = (
+				353C2B1C1D23E4F0009D7968 /* happerTests.swift */,
+				353C2B1E1D23E4F0009D7968 /* Info.plist */,
+			);
+			path = happerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		353C2B031D23E4ED009D7968 /* happer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 353C2B211D23E4F0009D7968 /* Build configuration list for PBXNativeTarget "happer" */;
+			buildPhases = (
+				353C2B001D23E4ED009D7968 /* Sources */,
+				353C2B011D23E4ED009D7968 /* Frameworks */,
+				353C2B021D23E4ED009D7968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = happer;
+			productName = happer;
+			productReference = 353C2B041D23E4ED009D7968 /* happer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		353C2B171D23E4F0009D7968 /* happerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 353C2B241D23E4F0009D7968 /* Build configuration list for PBXNativeTarget "happerTests" */;
+			buildPhases = (
+				353C2B141D23E4F0009D7968 /* Sources */,
+				353C2B151D23E4F0009D7968 /* Frameworks */,
+				353C2B161D23E4F0009D7968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				353C2B1A1D23E4F0009D7968 /* PBXTargetDependency */,
+			);
+			name = happerTests;
+			productName = happerTests;
+			productReference = 353C2B181D23E4F0009D7968 /* happerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		353C2AFC1D23E4ED009D7968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = mjosse;
+				TargetAttributes = {
+					353C2B031D23E4ED009D7968 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X7T96DDHA8;
+					};
+					353C2B171D23E4F0009D7968 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X7T96DDHA8;
+						TestTargetID = 353C2B031D23E4ED009D7968;
+					};
+				};
+			};
+			buildConfigurationList = 353C2AFF1D23E4ED009D7968 /* Build configuration list for PBXProject "happer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 353C2AFB1D23E4ED009D7968;
+			productRefGroup = 353C2B051D23E4ED009D7968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				353C2B031D23E4ED009D7968 /* happer */,
+				353C2B171D23E4F0009D7968 /* happerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		353C2B021D23E4ED009D7968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				353C2B121D23E4EE009D7968 /* LaunchScreen.storyboard in Resources */,
+				353C2B0F1D23E4EE009D7968 /* Assets.xcassets in Resources */,
+				353C2B0D1D23E4EE009D7968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		353C2B161D23E4F0009D7968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		353C2B001D23E4ED009D7968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				353C2B0A1D23E4EE009D7968 /* ViewController.swift in Sources */,
+				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		353C2B141D23E4F0009D7968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				353C2B1D1D23E4F0009D7968 /* happerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		353C2B1A1D23E4F0009D7968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 353C2B031D23E4ED009D7968 /* happer */;
+			targetProxy = 353C2B191D23E4F0009D7968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		353C2B0B1D23E4EE009D7968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				353C2B0C1D23E4EE009D7968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		353C2B101D23E4EE009D7968 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				353C2B111D23E4EE009D7968 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		353C2B1F1D23E4F0009D7968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		353C2B201D23E4F0009D7968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		353C2B221D23E4F0009D7968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = happer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		353C2B231D23E4F0009D7968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = happer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		353C2B251D23E4F0009D7968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = happerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happer.app/happer";
+			};
+			name = Debug;
+		};
+		353C2B261D23E4F0009D7968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = happerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/happer.app/happer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		353C2AFF1D23E4ED009D7968 /* Build configuration list for PBXProject "happer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				353C2B1F1D23E4F0009D7968 /* Debug */,
+				353C2B201D23E4F0009D7968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		353C2B211D23E4F0009D7968 /* Build configuration list for PBXNativeTarget "happer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				353C2B221D23E4F0009D7968 /* Debug */,
+				353C2B231D23E4F0009D7968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		353C2B241D23E4F0009D7968 /* Build configuration list for PBXNativeTarget "happerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				353C2B251D23E4F0009D7968 /* Debug */,
+				353C2B261D23E4F0009D7968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 353C2AFC1D23E4ED009D7968 /* Project object */;
+}
