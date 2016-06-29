@@ -16,6 +16,7 @@
 		353C2B291D23E6EA009D7968 /* userClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B281D23E6EA009D7968 /* userClass.swift */; };
 		353C2B2F1D23ED12009D7968 /* categoryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B2E1D23ED12009D7968 /* categoryClass.swift */; };
 		353C2B311D23F1D0009D7968 /* selfieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B301D23F1D0009D7968 /* selfieClass.swift */; };
+		353C2B331D23F53F009D7968 /* productClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B321D23F53F009D7968 /* productClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		353C2B281D23E6EA009D7968 /* userClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userClass.swift; sourceTree = "<group>"; };
 		353C2B2E1D23ED12009D7968 /* categoryClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryClass.swift; sourceTree = "<group>"; };
 		353C2B301D23F1D0009D7968 /* selfieClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selfieClass.swift; sourceTree = "<group>"; };
+		353C2B321D23F53F009D7968 /* productClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = productClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				353C2B281D23E6EA009D7968 /* userClass.swift */,
 				353C2B2E1D23ED12009D7968 /* categoryClass.swift */,
 				353C2B301D23F1D0009D7968 /* selfieClass.swift */,
+				353C2B321D23F53F009D7968 /* productClass.swift */,
 			);
 			name = dataClasses;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353C2B331D23F53F009D7968 /* productClass.swift in Sources */,
 				353C2B291D23E6EA009D7968 /* userClass.swift in Sources */,
 				353C2B0A1D23E4EE009D7968 /* ViewController.swift in Sources */,
 				353C2B2F1D23ED12009D7968 /* categoryClass.swift in Sources */,
