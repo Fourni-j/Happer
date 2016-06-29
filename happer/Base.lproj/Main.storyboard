@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="273" y="292"/>
         </scene>
-        <!--fil d'actu-->
+        <!--Inspiration du jour-->
         <scene sceneID="nGH-Kf-P5E">
             <objects>
-                <viewController title="fil d'actu" id="mQV-13-i7a" sceneMemberID="viewController">
+                <viewController title="Inspiration du jour" id="mQV-13-i7a" customClass="inspirationVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kAW-PF-Yqh"/>
                         <viewControllerLayoutGuide type="bottom" id="5bK-aR-gUQ"/>
@@ -179,13 +179,344 @@
                     <view key="view" contentMode="scaleToFill" id="LHg-Wz-2PS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration du jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-GG-HWs">
+                                <rect key="frame" x="132" y="343" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FBu-4r-88g"/>
+                                    <constraint firstAttribute="width" constant="150" id="gOH-yg-uEZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZJS-GG-HWs" firstAttribute="centerY" secondItem="LHg-Wz-2PS" secondAttribute="centerY" id="M7H-P2-PTI"/>
+                            <constraint firstItem="ZJS-GG-HWs" firstAttribute="centerX" secondItem="LHg-Wz-2PS" secondAttribute="centerX" id="UeU-L1-3Pk"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTX-uk-lm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="273" y="1118"/>
+        </scene>
+        <!--FilactuVC-->
+        <scene sceneID="6AF-0h-Oxl">
+            <objects>
+                <viewController id="BqL-1p-IRn" customClass="filactuVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8q4-lj-LKo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zxu-W7-6mz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="moE-uz-ceg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fil d'actu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIS-YY-UvP">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="0Ic-so-Jhp"/>
+                                    <constraint firstAttribute="height" constant="40" id="FWo-0i-utb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gIS-YY-UvP" firstAttribute="centerY" secondItem="moE-uz-ceg" secondAttribute="centerY" id="9A0-fY-Zue"/>
+                            <constraint firstItem="gIS-YY-UvP" firstAttribute="centerX" secondItem="moE-uz-ceg" secondAttribute="centerX" id="SHF-Hs-M0r"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIv-22-Yaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="1118"/>
+        </scene>
+        <!--Cercles-->
+        <scene sceneID="wmB-vj-QQc">
+            <objects>
+                <viewController title="Cercles" id="rnR-JV-u41" customClass="cerclesVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mHo-he-3Fe"/>
+                        <viewControllerLayoutGuide type="bottom" id="3lU-1z-Oi9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wo1-iK-yjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cercles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-rv-78V">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k2r-3r-ARN"/>
+                                    <constraint firstAttribute="width" constant="120" id="nao-Ya-iXk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zKB-rv-78V" firstAttribute="centerX" secondItem="wo1-iK-yjc" secondAttribute="centerX" id="835-hD-ZfC"/>
+                            <constraint firstItem="zKB-rv-78V" firstAttribute="centerY" secondItem="wo1-iK-yjc" secondAttribute="centerY" id="zl6-6z-pkE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhT-ZY-H3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1379" y="1118"/>
+        </scene>
+        <!--mes coups de coeur-->
+        <scene sceneID="k5c-Zb-umY">
+            <objects>
+                <viewController title="mes coups de coeur" id="WcS-I3-Clj" customClass="coupDeCoeurVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uM1-Lr-gbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="afU-GR-WMJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qdl-fC-16t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes coups de coeur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9g-WX-ftP">
+                                <rect key="frame" x="122" y="348" width="170" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="GdT-A3-4wL"/>
+                                    <constraint firstAttribute="height" constant="40" id="XnQ-Te-Fjc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u9g-WX-ftP" firstAttribute="centerX" secondItem="Qdl-fC-16t" secondAttribute="centerX" id="fnx-LH-0BD"/>
+                            <constraint firstItem="u9g-WX-ftP" firstAttribute="centerY" secondItem="Qdl-fC-16t" secondAttribute="centerY" id="yx7-OV-P3F"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kos-HF-Jke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="1942"/>
+        </scene>
+        <!--ma wish list-->
+        <scene sceneID="oIq-GS-7iw">
+            <objects>
+                <viewController title="ma wish list" id="apU-A2-qCs" customClass="wishListVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jin-om-lBO"/>
+                        <viewControllerLayoutGuide type="bottom" id="cce-vH-FuL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LTH-Qq-sif">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ma wish-list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G1-GR-Q0c">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="0bk-63-bvQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="H6p-UF-gKV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7G1-GR-Q0c" firstAttribute="centerY" secondItem="LTH-Qq-sif" secondAttribute="centerY" id="4QA-2x-PkC"/>
+                            <constraint firstItem="7G1-GR-Q0c" firstAttribute="centerX" secondItem="LTH-Qq-sif" secondAttribute="centerX" id="nsw-0T-nPU"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qym-XQ-vDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="1942"/>
+        </scene>
+        <!--Mon Dressing-->
+        <scene sceneID="hme-hI-U40">
+            <objects>
+                <viewController title="Mon Dressing" id="shu-GP-kQt" customClass="dressingVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYm-Ug-SQc"/>
+                        <viewControllerLayoutGuide type="bottom" id="bVq-BN-4DA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CcI-jX-Uju">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon Dressing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llb-i1-GrH">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DZY-L9-Ma1"/>
+                                    <constraint firstAttribute="height" constant="40" id="eoY-Tg-JNL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Llb-i1-GrH" firstAttribute="centerY" secondItem="CcI-jX-Uju" secondAttribute="centerY" id="e2y-Zc-gNM"/>
+                            <constraint firstItem="Llb-i1-GrH" firstAttribute="centerX" secondItem="CcI-jX-Uju" secondAttribute="centerX" id="f7i-4n-Gkd"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQl-IM-UTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="1942"/>
+        </scene>
+        <!--Mon Compte-->
+        <scene sceneID="wRR-PC-G8G">
+            <objects>
+                <viewController title="Mon Compte" id="829-f4-DFi" customClass="monCompteVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bc0-nJ-jFb"/>
+                        <viewControllerLayoutGuide type="bottom" id="cFd-SA-44D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GT7-mh-O4l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon compte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG7-eI-qKb">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="R34-jL-vIM"/>
+                                    <constraint firstAttribute="width" constant="120" id="tnQ-X2-N5K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rG7-eI-qKb" firstAttribute="centerY" secondItem="GT7-mh-O4l" secondAttribute="centerY" id="v8z-4V-mTn"/>
+                            <constraint firstItem="rG7-eI-qKb" firstAttribute="centerX" secondItem="GT7-mh-O4l" secondAttribute="centerX" id="wrT-cO-Qcq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCa-XQ-gUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="1942"/>
+        </scene>
+        <!--demande d'aide-->
+        <scene sceneID="iHD-WX-Nc8">
+            <objects>
+                <viewController title="demande d'aide" id="3RC-fv-AaD" customClass="amisVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JZG-dt-rwD"/>
+                        <viewControllerLayoutGuide type="bottom" id="8hC-R3-zjN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lRy-vP-tw5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demande d'aide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHS-os-msU">
+                                <rect key="frame" x="145" y="348" width="125" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="F8b-Bn-Ska"/>
+                                    <constraint firstAttribute="width" constant="125" id="rPK-Bt-aq0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KHS-os-msU" firstAttribute="centerY" secondItem="lRy-vP-tw5" secondAttribute="centerY" id="gAK-Ui-qyg"/>
+                            <constraint firstItem="KHS-os-msU" firstAttribute="centerX" secondItem="lRy-vP-tw5" secondAttribute="centerX" id="qfN-YJ-Rpe"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzk-pC-7i2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="2773"/>
+        </scene>
+        <!--partager mon style-->
+        <scene sceneID="Fgm-iV-HhV">
+            <objects>
+                <viewController title="partager mon style" id="gg1-Cb-JKf" customClass="partageVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="60f-tc-nFy"/>
+                        <viewControllerLayoutGuide type="bottom" id="fm7-6T-IP0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bgp-r0-uQb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partager mon style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-1U-c4N">
+                                <rect key="frame" x="135" y="348" width="145" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Gg-8l-Gy2"/>
+                                    <constraint firstAttribute="width" constant="145" id="emG-H8-9fW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dkt-1U-c4N" firstAttribute="centerY" secondItem="Bgp-r0-uQb" secondAttribute="centerY" id="43x-XA-wHl"/>
+                            <constraint firstItem="Dkt-1U-c4N" firstAttribute="centerX" secondItem="Bgp-r0-uQb" secondAttribute="centerX" id="FSb-Rt-baJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkS-YZ-Q77" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="2773"/>
+        </scene>
+        <!--happLike-->
+        <scene sceneID="RzT-Rj-9yX">
+            <objects>
+                <viewController title="happLike" id="wan-en-E7n" customClass="happlikeVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1bY-db-2TS"/>
+                        <viewControllerLayoutGuide type="bottom" id="zRR-VE-fTY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bIj-QL-ics">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happ'Like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlE-lm-ZIk">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="41U-r7-HVG"/>
+                                    <constraint firstAttribute="height" constant="40" id="rLa-rZ-cGW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TlE-lm-ZIk" firstAttribute="centerX" secondItem="bIj-QL-ics" secondAttribute="centerX" id="New-Ee-6B9"/>
+                            <constraint firstItem="TlE-lm-ZIk" firstAttribute="centerY" secondItem="bIj-QL-ics" secondAttribute="centerY" id="veD-zl-3iD"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mz-KN-fxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="2773"/>
         </scene>
         <!--loginPage-->
         <scene sceneID="T9P-Nh-7Ps">
