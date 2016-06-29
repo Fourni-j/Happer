@@ -9,7 +9,7 @@
         <!--signUpPage-->
         <scene sceneID="pWH-ul-586">
             <objects>
-                <viewController title="signUpPage" id="4ss-aj-aQs" sceneMemberID="viewController">
+                <viewController title="signUpPage" id="4ss-aj-aQs" customClass="signUpVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hGp-dE-gvb"/>
                         <viewControllerLayoutGuide type="bottom" id="lm0-9n-Bh9"/>
@@ -98,7 +98,7 @@
         <!--mainPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="mainPage" id="BYZ-38-t0r" customClass="ViewController" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="mainPage" id="BYZ-38-t0r" customClass="mainPageVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -156,7 +156,7 @@
         <!--loginPage-->
         <scene sceneID="T9P-Nh-7Ps">
             <objects>
-                <viewController title="loginPage" id="qJj-dQ-E0x" sceneMemberID="viewController">
+                <viewController title="loginPage" id="qJj-dQ-E0x" customClass="loginVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E1r-WT-jPW"/>
                         <viewControllerLayoutGuide type="bottom" id="op1-mb-Si4"/>
