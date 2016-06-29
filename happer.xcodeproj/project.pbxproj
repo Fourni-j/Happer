@@ -14,6 +14,8 @@
 		353C2B121D23E4EE009D7968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C2B101D23E4EE009D7968 /* LaunchScreen.storyboard */; };
 		353C2B1D1D23E4F0009D7968 /* happerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B1C1D23E4F0009D7968 /* happerTests.swift */; };
 		353C2B291D23E6EA009D7968 /* userClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B281D23E6EA009D7968 /* userClass.swift */; };
+		353C2B2F1D23ED12009D7968 /* categoryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B2E1D23ED12009D7968 /* categoryClass.swift */; };
+		353C2B311D23F1D0009D7968 /* selfieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B301D23F1D0009D7968 /* selfieClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		353C2B1C1D23E4F0009D7968 /* happerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happerTests.swift; sourceTree = "<group>"; };
 		353C2B1E1D23E4F0009D7968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		353C2B281D23E6EA009D7968 /* userClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userClass.swift; sourceTree = "<group>"; };
+		353C2B2E1D23ED12009D7968 /* categoryClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryClass.swift; sourceTree = "<group>"; };
+		353C2B301D23F1D0009D7968 /* selfieClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selfieClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				353C2B281D23E6EA009D7968 /* userClass.swift */,
+				353C2B2E1D23ED12009D7968 /* categoryClass.swift */,
+				353C2B301D23F1D0009D7968 /* selfieClass.swift */,
 			);
 			name = dataClasses;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 			files = (
 				353C2B291D23E6EA009D7968 /* userClass.swift in Sources */,
 				353C2B0A1D23E4EE009D7968 /* ViewController.swift in Sources */,
+				353C2B2F1D23ED12009D7968 /* categoryClass.swift in Sources */,
+				353C2B311D23F1D0009D7968 /* selfieClass.swift in Sources */,
 				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +416,7 @@
 				353C2B231D23E4F0009D7968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		353C2B241D23E4F0009D7968 /* Build configuration list for PBXNativeTarget "happerTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +425,7 @@
 				353C2B261D23E4F0009D7968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
