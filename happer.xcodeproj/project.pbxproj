@@ -29,6 +29,8 @@
 		35D4F1501D240CC000BEA8E1 /* happlikeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F14F1D240CC000BEA8E1 /* happlikeVC.swift */; };
 		35D4F1521D240CD000BEA8E1 /* partageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1511D240CD000BEA8E1 /* partageVC.swift */; };
 		35D4F1541D240CF700BEA8E1 /* amisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1531D240CF700BEA8E1 /* amisVC.swift */; };
+		35D4F1561D240EFD00BEA8E1 /* produitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */; };
+		35D4F1581D240F1A00BEA8E1 /* detailProduitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		35D4F14F1D240CC000BEA8E1 /* happlikeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = happlikeVC.swift; sourceTree = "<group>"; };
 		35D4F1511D240CD000BEA8E1 /* partageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = partageVC.swift; sourceTree = "<group>"; };
 		35D4F1531D240CF700BEA8E1 /* amisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = amisVC.swift; sourceTree = "<group>"; };
+		35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = produitsVC.swift; sourceTree = "<group>"; };
+		35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailProduitVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				35D4F13F1D2408E000BEA8E1 /* inspirationVC.swift */,
 				35D4F1411D24099A00BEA8E1 /* filactuVC.swift */,
 				35D4F14C1D240C6700BEA8E1 /* cerclesVC.swift */,
+				35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */,
+				35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */,
 			);
 			path = happer;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				35D4F1541D240CF700BEA8E1 /* amisVC.swift in Sources */,
 				353C2B331D23F53F009D7968 /* productClass.swift in Sources */,
 				35D4F14B1D240A8600BEA8E1 /* coupDeCoeurVC.swift in Sources */,
+				35D4F1561D240EFD00BEA8E1 /* produitsVC.swift in Sources */,
 				35D4F1501D240CC000BEA8E1 /* happlikeVC.swift in Sources */,
 				35D4F13C1D24019A00BEA8E1 /* signUpVC.swift in Sources */,
 				35D4F13E1D2401C400BEA8E1 /* loginVC.swift in Sources */,
@@ -289,6 +296,7 @@
 				35D4F1521D240CD000BEA8E1 /* partageVC.swift in Sources */,
 				353C2B291D23E6EA009D7968 /* userClass.swift in Sources */,
 				353C2B2F1D23ED12009D7968 /* categoryClass.swift in Sources */,
+				35D4F1581D240F1A00BEA8E1 /* detailProduitVC.swift in Sources */,
 				35D4F14D1D240C6700BEA8E1 /* cerclesVC.swift in Sources */,
 				35D4F1401D2408E000BEA8E1 /* inspirationVC.swift in Sources */,
 				353C2B311D23F1D0009D7968 /* selfieClass.swift in Sources */,

@@ -273,6 +273,76 @@
             </objects>
             <point key="canvasLocation" x="1379" y="1118"/>
         </scene>
+        <!--produits-->
+        <scene sceneID="0Ce-oo-5Wr">
+            <objects>
+                <viewController title="produits" id="xKh-Qq-GST" customClass="produitsVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pmf-RZ-2Cd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zgx-xh-4fe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QJB-sS-UKt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="produits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FID-E9-IH4">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DwA-gt-Lc7"/>
+                                    <constraint firstAttribute="height" constant="40" id="btJ-jI-FSv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FID-E9-IH4" firstAttribute="centerX" secondItem="QJB-sS-UKt" secondAttribute="centerX" id="AeW-Y8-rjB"/>
+                            <constraint firstItem="FID-E9-IH4" firstAttribute="centerY" secondItem="QJB-sS-UKt" secondAttribute="centerY" id="hWp-7j-nxj"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USf-D0-LFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="1118"/>
+        </scene>
+        <!--détails produit-->
+        <scene sceneID="7Cm-gV-M5N">
+            <objects>
+                <viewController title="détails produit" id="kKt-SO-WAg" customClass="detailProduitVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D65-of-FHJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hst-BO-4Zy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WvA-WW-D3x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="détails produits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-Nh-g7S">
+                                <rect key="frame" x="147" y="348" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UyO-xb-pEn"/>
+                                    <constraint firstAttribute="width" constant="120" id="loY-p2-NXV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ba7-Nh-g7S" firstAttribute="centerX" secondItem="WvA-WW-D3x" secondAttribute="centerX" id="LTp-Aw-wTX"/>
+                            <constraint firstItem="ba7-Nh-g7S" firstAttribute="centerY" secondItem="WvA-WW-D3x" secondAttribute="centerY" id="pIW-jK-PFR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfC-ol-kTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2413" y="1118"/>
+        </scene>
         <!--mes coups de coeur-->
         <scene sceneID="k5c-Zb-umY">
             <objects>
