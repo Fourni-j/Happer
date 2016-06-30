@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mQV-13-i7a">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -195,28 +195,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspiration du jour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-GG-HWs">
-                                <rect key="frame" x="132" y="343" width="150" height="50"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olP-dL-ce3">
+                                <rect key="frame" x="0.0" y="8" width="414" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="FBu-4r-88g"/>
-                                    <constraint firstAttribute="width" constant="150" id="gOH-yg-uEZ"/>
+                                    <constraint firstAttribute="height" constant="45" id="8V6-gw-YrI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <items>
+                                    <navigationItem title="Title" id="Pis-9S-Src"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZJS-GG-HWs" firstAttribute="centerY" secondItem="LHg-Wz-2PS" secondAttribute="centerY" id="M7H-P2-PTI"/>
-                            <constraint firstItem="ZJS-GG-HWs" firstAttribute="centerX" secondItem="LHg-Wz-2PS" secondAttribute="centerX" id="UeU-L1-3Pk"/>
+                            <constraint firstItem="olP-dL-ce3" firstAttribute="top" secondItem="LHg-Wz-2PS" secondAttribute="topMargin" constant="8" id="mm4-t1-rN7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="olP-dL-ce3" secondAttribute="trailing" constant="-20" id="qJZ-ii-mHP"/>
+                            <constraint firstItem="olP-dL-ce3" firstAttribute="leading" secondItem="LHg-Wz-2PS" secondAttribute="leadingMargin" constant="-20" id="sS9-bF-yvJ"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTX-uk-lm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="1118"/>
+            <point key="canvasLocation" x="262" y="1118"/>
         </scene>
         <!--FilactuVC-->
         <scene sceneID="6AF-0h-Oxl">
