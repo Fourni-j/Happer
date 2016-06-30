@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4ss-aj-aQs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -57,10 +57,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0b-aw-OMI">
                                 <rect key="frame" x="177" y="318" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="12c-iy-swM"/>
                                     <constraint firstAttribute="width" constant="60" id="kpe-As-Auu"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VvE-XC-PoN" appends="YES" id="TnZ-rI-6W9"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="112" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEL-PX-aK4">
                                 <rect key="frame" x="151" y="602" width="112" height="30"/>
@@ -101,13 +105,19 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXb-zS-Oo5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VvE-XC-PoN">
+                    <connections>
+                        <action selector="back:" destination="4ss-aj-aQs" id="Lq8-zY-UyV"/>
+                        <outlet property="delegate" destination="4ss-aj-aQs" id="FbC-Je-Mag"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-245" y="292"/>
         </scene>
         <!--mainPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="mainPage" id="BYZ-38-t0r" customClass="mainPageVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainPage" title="mainPage" id="BYZ-38-t0r" customClass="mainPageVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -116,7 +126,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-Bx-iah">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9R-Bx-iah" customClass="FBSDKLoginButtonFR" customModule="happer" customModuleProvider="target">
                                 <rect key="frame" x="56" y="448" width="302" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -163,6 +173,11 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="fbLogin" destination="q9R-Bx-iah" id="icG-0i-eIG"/>
+                        <segue destination="4ss-aj-aQs" kind="showDetail" identifier="mainToSignUp" action="showViewController:sender:" id="PPg-7u-ZO3"/>
+                        <segue destination="qJj-dQ-E0x" kind="showDetail" identifier="mainToLogin" action="showViewController:sender:" id="BcM-8a-lN5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -620,6 +635,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="69" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAi-Kv-wSA">
                                 <rect key="frame" x="173" y="560" width="69" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Confirmer"/>
                                 <connections>
                                     <action selector="submit:" destination="qJj-dQ-E0x" eventType="touchUpInside" id="6zB-uh-V44"/>
@@ -628,10 +644,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fql-I3-Wmy">
                                 <rect key="frame" x="177" y="318" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0wD-LE-8FG"/>
                                     <constraint firstAttribute="width" constant="60" id="Tca-wN-riX"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ap1-kA-xWe" appends="YES" id="1be-S1-rm8"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -657,6 +677,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNc-9k-qtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ap1-kA-xWe">
+                    <connections>
+                        <action selector="back:" destination="qJj-dQ-E0x" id="zPB-0X-u72"/>
+                        <outlet property="delegate" destination="qJj-dQ-E0x" id="9Qs-wI-Pwp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="774" y="292"/>
         </scene>

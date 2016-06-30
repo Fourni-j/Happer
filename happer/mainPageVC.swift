@@ -10,9 +10,10 @@ import UIKit
 import FBSDKLoginKit
 
 class mainPageVC: UIViewController {
+    
     // MARK: - properties
     
-    /* FBSDKloginButtonFR à implementer et ajouter */
+    @IBOutlet weak var fbLogin: FBSDKLoginButtonFR!
     
     // MARK: - parent.methods
     
@@ -29,8 +30,10 @@ class mainPageVC: UIViewController {
     // MARK: - self.methods
     
     @IBAction func loginButton(sender: UIButton) {
+        performSegueWithIdentifier("mainToLogin", sender: self)
     }
     
     @IBAction func signUpButton(sender: UIButton) {
+        performSegueWithIdentifier("mainToSignUp", sender: self)
     }
 }

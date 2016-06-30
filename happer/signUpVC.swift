@@ -32,6 +32,11 @@ class signUpVC: UIViewController {
     @IBAction func submit(sender: UIButton) {
         
     }
+    @IBAction func back(sender: UITapGestureRecognizer) {
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! mainPageVC
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

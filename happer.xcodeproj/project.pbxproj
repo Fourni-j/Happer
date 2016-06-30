@@ -35,6 +35,7 @@
 		35D4F15C1D25174100BEA8E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */; };
 		35D4F15E1D25174E00BEA8E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */; };
 		35D4F1601D25175C00BEA8E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */; };
+		35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKLoginButtonFR.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		353C2B061D23E4EE009D7968 /* happer */ = {
 			isa = PBXGroup;
 			children = (
+				35D4F1611D2547DB00BEA8E1 /* useClass */,
 				35D4F14E1D240CA400BEA8E1 /* happies controllers */,
 				35D4F1431D240A0000BEA8E1 /* userPage controllers */,
 				35D4F1381D24013200BEA8E1 /* connexion controllers */,
@@ -196,6 +199,14 @@
 				35D4F1531D240CF700BEA8E1 /* amisVC.swift */,
 			);
 			name = "happies controllers";
+			sourceTree = "<group>";
+		};
+		35D4F1611D2547DB00BEA8E1 /* useClass */ = {
+			isa = PBXGroup;
+			children = (
+				35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */,
+			);
+			name = useClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +326,7 @@
 				35D4F1581D240F1A00BEA8E1 /* detailProduitVC.swift in Sources */,
 				35D4F14D1D240C6700BEA8E1 /* cerclesVC.swift in Sources */,
 				35D4F1401D2408E000BEA8E1 /* inspirationVC.swift in Sources */,
+				35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */,
 				353C2B311D23F1D0009D7968 /* selfieClass.swift in Sources */,
 				35D4F13A1D24016E00BEA8E1 /* mainPageVC.swift in Sources */,
 				35D4F1451D240A3400BEA8E1 /* dressingVC.swift in Sources */,
