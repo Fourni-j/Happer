@@ -31,6 +31,10 @@
 		35D4F1541D240CF700BEA8E1 /* amisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1531D240CF700BEA8E1 /* amisVC.swift */; };
 		35D4F1561D240EFD00BEA8E1 /* produitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */; };
 		35D4F1581D240F1A00BEA8E1 /* detailProduitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */; };
+		35D4F15A1D25172A00BEA8E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F1591D25172A00BEA8E1 /* Bolts.framework */; };
+		35D4F15C1D25174100BEA8E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */; };
+		35D4F15E1D25174E00BEA8E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */; };
+		35D4F1601D25175C00BEA8E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		35D4F1531D240CF700BEA8E1 /* amisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = amisVC.swift; sourceTree = "<group>"; };
 		35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = produitsVC.swift; sourceTree = "<group>"; };
 		35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailProduitVC.swift; sourceTree = "<group>"; };
+		35D4F1591D25172A00BEA8E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
+		35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D4F1601D25175C00BEA8E1 /* FBSDKShareKit.framework in Frameworks */,
+				35D4F15E1D25174E00BEA8E1 /* FBSDKLoginKit.framework in Frameworks */,
+				35D4F15C1D25174100BEA8E1 /* FBSDKCoreKit.framework in Frameworks */,
+				35D4F15A1D25172A00BEA8E1 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +107,10 @@
 		353C2AFB1D23E4ED009D7968 = {
 			isa = PBXGroup;
 			children = (
+				35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */,
+				35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */,
+				35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */,
+				35D4F1591D25172A00BEA8E1 /* Bolts.framework */,
 				353C2B061D23E4EE009D7968 /* happer */,
 				353C2B1B1D23E4F0009D7968 /* happerTests */,
 				353C2B051D23E4ED009D7968 /* Products */,
@@ -435,6 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = $HOME/Documents/FacebookSDK;
 				INFOPLIST_FILE = happer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happer;
@@ -449,6 +466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = $HOME/Documents/FacebookSDK;
 				INFOPLIST_FILE = happer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happer;
