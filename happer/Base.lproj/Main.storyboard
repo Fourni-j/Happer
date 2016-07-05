@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mQV-13-i7a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -186,7 +186,7 @@
         <!--Inspiration du jour-->
         <scene sceneID="nGH-Kf-P5E">
             <objects>
-                <viewController title="Inspiration du jour" id="mQV-13-i7a" customClass="inspirationVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inspiVC" title="Inspiration du jour" id="mQV-13-i7a" customClass="inspirationVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kAW-PF-Yqh"/>
                         <viewControllerLayoutGuide type="bottom" id="5bK-aR-gUQ"/>
@@ -784,7 +784,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Cdv-Ut-o6D"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-Yh-7rL">
                                 <rect key="frame" x="56" y="482" width="302" height="40"/>
