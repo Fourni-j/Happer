@@ -34,9 +34,10 @@
 		35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */; };
 		35D4F1651D26AE1F00BEA8E1 /* inspiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */; };
 		35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */; };
-		35D4F1681D2C002800BEA8E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */; };
-		35D4F1691D2C003400BEA8E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */; };
-		35D4F16A1D2C003F00BEA8E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */; };
+		554290FE1D2C029A003A2B74 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554290FA1D2C029A003A2B74 /* Bolts.framework */; };
+		554290FF1D2C029A003A2B74 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554290FB1D2C029A003A2B74 /* FBSDKCoreKit.framework */; };
+		554291001D2C029A003A2B74 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554290FC1D2C029A003A2B74 /* FBSDKLoginKit.framework */; };
+		554291011D2C029A003A2B74 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554290FD1D2C029A003A2B74 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,13 +79,13 @@
 		35D4F1531D240CF700BEA8E1 /* amisVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = amisVC.swift; sourceTree = "<group>"; };
 		35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = produitsVC.swift; sourceTree = "<group>"; };
 		35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailProduitVC.swift; sourceTree = "<group>"; };
-		35D4F1591D25172A00BEA8E1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
-		35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKLoginButtonFR.swift; sourceTree = "<group>"; };
 		35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inspiClass.swift; sourceTree = "<group>"; };
 		35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		554290FA1D2C029A003A2B74 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		554290FB1D2C029A003A2B74 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		554290FC1D2C029A003A2B74 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		554290FD1D2C029A003A2B74 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35D4F16A1D2C003F00BEA8E1 /* FBSDKShareKit.framework in Frameworks */,
-				35D4F1691D2C003400BEA8E1 /* FBSDKLoginKit.framework in Frameworks */,
-				35D4F1681D2C002800BEA8E1 /* FBSDKCoreKit.framework in Frameworks */,
+				554291011D2C029A003A2B74 /* FBSDKShareKit.framework in Frameworks */,
+				554290FE1D2C029A003A2B74 /* Bolts.framework in Frameworks */,
+				554290FF1D2C029A003A2B74 /* FBSDKCoreKit.framework in Frameworks */,
+				554291001D2C029A003A2B74 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,10 +113,10 @@
 		353C2AFB1D23E4ED009D7968 = {
 			isa = PBXGroup;
 			children = (
-				35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */,
-				35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */,
-				35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */,
-				35D4F1591D25172A00BEA8E1 /* Bolts.framework */,
+				554290FA1D2C029A003A2B74 /* Bolts.framework */,
+				554290FB1D2C029A003A2B74 /* FBSDKCoreKit.framework */,
+				554290FC1D2C029A003A2B74 /* FBSDKLoginKit.framework */,
+				554290FD1D2C029A003A2B74 /* FBSDKShareKit.framework */,
 				353C2B061D23E4EE009D7968 /* happer */,
 				353C2B1B1D23E4F0009D7968 /* happerTests */,
 				353C2B051D23E4ED009D7968 /* Products */,
@@ -469,7 +471,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = $HOME/Documents/FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = (
+					$HOME/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = happer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happer;
@@ -484,7 +489,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = $HOME/Documents/FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = (
+					$HOME/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = happer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Josse.happer;
