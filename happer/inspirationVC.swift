@@ -45,6 +45,16 @@ class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
         categories += [decontracte]
     }
     
+    // MARK: - topBar methods
+    
+    @IBAction func circlesButton(sender: UIButton) {
+        performSegueWithIdentifier("goCercles", sender: self)
+    }
+    
+    @IBAction func notifButton(sender: UIButton) {
+        // Afficher historique notifications
+    }
+    
     // MARK: - tableView methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,8 +78,12 @@ class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! filactuVC
-        destination.indexSelected = indexSelected
+        
+        if segue.identifier == "goFilActu" {
+            let destination = segue.destinationViewController as! filactuVC
+            destination.indexSelected = indexSelected
+        }
+  
     }
 
 }
