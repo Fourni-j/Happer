@@ -36,6 +36,8 @@
 		35D4F15E1D25174E00BEA8E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */; };
 		35D4F1601D25175C00BEA8E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */; };
 		35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */; };
+		35D4F1651D26AE1F00BEA8E1 /* inspiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */; };
+		35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKLoginButtonFR.swift; sourceTree = "<group>"; };
+		35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inspiClass.swift; sourceTree = "<group>"; };
+		35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */,
+				35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */,
+				35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */,
 			);
 			name = useClass;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */,
 				35D4F1541D240CF700BEA8E1 /* amisVC.swift in Sources */,
 				353C2B331D23F53F009D7968 /* productClass.swift in Sources */,
 				35D4F14B1D240A8600BEA8E1 /* coupDeCoeurVC.swift in Sources */,
@@ -330,6 +337,7 @@
 				353C2B311D23F1D0009D7968 /* selfieClass.swift in Sources */,
 				35D4F13A1D24016E00BEA8E1 /* mainPageVC.swift in Sources */,
 				35D4F1451D240A3400BEA8E1 /* dressingVC.swift in Sources */,
+				35D4F1651D26AE1F00BEA8E1 /* inspiClass.swift in Sources */,
 				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
 				35D4F1491D240A5F00BEA8E1 /* wishListVC.swift in Sources */,
 				35D4F1421D24099A00BEA8E1 /* filactuVC.swift in Sources */,

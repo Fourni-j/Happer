@@ -8,11 +8,18 @@
 
 import UIKit
 
-class inspirationVC: UIViewController {
+class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
 
+    // MARK : - attributs
+    
+    var categories: [inspiClass] = []
+    var indexSelected: Int = 0
+
+    @IBOutlet weak var catTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initCat()
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +28,48 @@ class inspirationVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - self.methods
+    
+    func initCat() {
+        let ootd = inspiClass(name: "Tenue de Jour", keyWord: "ootd")
+        let ootn = inspiClass(name: "Tenue de Nuit", keyWord: "ootn")
+        let sacs = inspiClass(name: "Sacs", keyWord: "sacs")
+        let accessoires = inspiClass(name: "Accessoires", keyWord: "accessoires")
+        let chaussures = inspiClass(name: "Chaussures", keyWord: "chaussures")
+        let decontracte = inspiClass(name: "Decontracté", keyWord: "decontracte")
+        categories += [ootd]
+        categories += [ootn]
+        categories += [sacs]
+        categories += [accessoires]
+        categories += [chaussures]
+        categories += [decontracte]
+    }
+    
+    // MARK: - tableView methods
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.catTable.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath) as! CategoryCell
+        cell.cellName.text = categories[indexPath.row].getName()
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.indexSelected = indexPath.row
+        performSegueWithIdentifier("goFilActu", sender: self)
+    }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let destination = segue.destinationViewController as! filactuVC
+        destination.indexSelected = indexSelected
     }
-    */
 
 }

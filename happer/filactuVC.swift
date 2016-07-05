@@ -10,8 +10,16 @@ import UIKit
 
 class filactuVC: UIViewController {
 
+    //MARK : - attributs
+    
+    var indexSelected: Int = 0
+    let catTab: [String] = ["ootd", "ootn", "sacs", "accessoires", "chaussures", "decontracte"]
+    
+    @IBOutlet weak var mylabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mylabel.text = catTab[indexSelected]
 
         // Do any additional setup after loading the view.
     }
