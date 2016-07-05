@@ -31,13 +31,12 @@
 		35D4F1541D240CF700BEA8E1 /* amisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1531D240CF700BEA8E1 /* amisVC.swift */; };
 		35D4F1561D240EFD00BEA8E1 /* produitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */; };
 		35D4F1581D240F1A00BEA8E1 /* detailProduitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */; };
-		35D4F15A1D25172A00BEA8E1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F1591D25172A00BEA8E1 /* Bolts.framework */; };
-		35D4F15C1D25174100BEA8E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */; };
-		35D4F15E1D25174E00BEA8E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */; };
-		35D4F1601D25175C00BEA8E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */; };
 		35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */; };
 		35D4F1651D26AE1F00BEA8E1 /* inspiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */; };
 		35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */; };
+		35D4F1681D2C002800BEA8E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15B1D25174100BEA8E1 /* FBSDKCoreKit.framework */; };
+		35D4F1691D2C003400BEA8E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15D1D25174E00BEA8E1 /* FBSDKLoginKit.framework */; };
+		35D4F16A1D2C003F00BEA8E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D4F15F1D25175C00BEA8E1 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,10 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35D4F1601D25175C00BEA8E1 /* FBSDKShareKit.framework in Frameworks */,
-				35D4F15E1D25174E00BEA8E1 /* FBSDKLoginKit.framework in Frameworks */,
-				35D4F15C1D25174100BEA8E1 /* FBSDKCoreKit.framework in Frameworks */,
-				35D4F15A1D25172A00BEA8E1 /* Bolts.framework in Frameworks */,
+				35D4F16A1D2C003F00BEA8E1 /* FBSDKShareKit.framework in Frameworks */,
+				35D4F1691D2C003400BEA8E1 /* FBSDKLoginKit.framework in Frameworks */,
+				35D4F1681D2C002800BEA8E1 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

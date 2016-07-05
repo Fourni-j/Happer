@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 import FBSDKLoginKit
 
-class mainPageVC: UIViewController {
+class mainPageVC: UIViewController, FBSDKLoginButtonDelegate {
     
     // MARK: - properties
     
@@ -19,6 +20,9 @@ class mainPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fbLogin.readPermissions = ["public_profile", "email", "user_friends"]
+        fbLogin.delegate = self
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -36,4 +40,38 @@ class mainPageVC: UIViewController {
     @IBAction func signUpButton(sender: UIButton) {
         performSegueWithIdentifier("mainToSignUp", sender: self)
     }
+    
+    // MARK: - FBSDK methods
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {}
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
+    {
+        if error != nil
+        {
+            print(error.localizedDescription)
+            return
+        }
+        else
+        {
+            let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,friends"], HTTPMethod: "GET")
+            request.startWithCompletionHandler({ (connection, result, error : NSError!) -> Void in
+                if(error == nil)
+                {
+                    print("result \(result)")
+                    let name = result.valueForKey("name") as! NSString
+                    let email = result.valueForKey("email") as! NSString
+                    print("\(name) \(email)")
+                    let story = UIStoryboard(name: "Main", bundle: nil)
+                    let vc = story.instantiateViewControllerWithIdentifier("inspiVC")
+                    self.presentViewController(vc, animated: true, completion: nil)
+                }
+                else
+                {
+                    print("error \(error)")
+                }
+            })
+        }
+    }
+
 }
