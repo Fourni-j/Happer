@@ -327,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTX-uk-lm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="1118"/>
+            <point key="canvasLocation" x="273" y="1118"/>
         </scene>
         <!--FilactuVC-->
         <scene sceneID="6AF-0h-Oxl">
@@ -660,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kos-HF-Jke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-657" y="1942"/>
+            <point key="canvasLocation" x="-703" y="1942"/>
         </scene>
         <!--ma wish list-->
         <scene sceneID="oIq-GS-7iw">
@@ -695,7 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qym-XQ-vDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199" y="1942"/>
+            <point key="canvasLocation" x="-245" y="1942"/>
         </scene>
         <!--Mon Dressing-->
         <scene sceneID="hme-hI-U40">
@@ -730,7 +730,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQl-IM-UTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="1942"/>
+            <point key="canvasLocation" x="273" y="1942"/>
         </scene>
         <!--Mon Compte-->
         <scene sceneID="wRR-PC-G8G">
@@ -800,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzk-pC-7i2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199" y="2773"/>
+            <point key="canvasLocation" x="-245" y="2773"/>
         </scene>
         <!--partager mon style-->
         <scene sceneID="Fgm-iV-HhV">
@@ -835,7 +835,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkS-YZ-Q77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="2773"/>
+            <point key="canvasLocation" x="273" y="2773"/>
         </scene>
         <!--happLike-->
         <scene sceneID="RzT-Rj-9yX">
