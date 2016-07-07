@@ -71,7 +71,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
             if res.statusCode >= 200 && res.statusCode < 300 {
                 do
                 {
-                    self.jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary // On convertis en Dictionnaire, ce sera plus facile a lire
+                    self.jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 }
                 catch
                 {
@@ -94,8 +94,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
             }
             else {
                 print("FAIL")
-                self.loginField.text = ""
-                self.passwdField.text = ""
             }
         })
         task.resume()
