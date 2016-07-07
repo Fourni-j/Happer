@@ -416,7 +416,7 @@
                                 <rect key="frame" x="0.0" y="147" width="414" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filActuCell" id="73y-GJ-6b7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filActuCell" id="73y-GJ-6b7" customClass="filActuCell" customModule="happer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="73y-GJ-6b7" id="z29-E6-t2Y">
@@ -471,8 +471,17 @@
                                                 <constraint firstItem="9tj-8Z-9UT" firstAttribute="centerX" secondItem="z29-E6-t2Y" secondAttribute="centerX" id="pfF-We-Ui6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImage" destination="Er3-wF-bYN" id="D6g-Bh-hxn"/>
+                                            <outlet property="cellLikeCount" destination="Wju-EL-jlE" id="8rk-ee-x61"/>
+                                            <outlet property="cellRating" destination="9tj-8Z-9UT" id="KXG-yp-33p"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BqL-1p-IRn" id="1W2-7s-7U1"/>
+                                    <outlet property="delegate" destination="BqL-1p-IRn" id="Lq1-0z-9C8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -490,6 +499,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="mylabel" destination="j6j-LB-pSy" id="yMs-TS-kN5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIv-22-Yaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

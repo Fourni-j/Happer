@@ -8,15 +8,15 @@
 
 import UIKit
 
-class filactuVC: UIViewController {
+class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK : - attributs
-    
+    @IBOutlet weak var mylabel: UILabel!
+
     var indexSelected: Int = 0
     let catTab: [String] = ["ootd", "ootn", "sacs", "accessoires", "chaussures", "decontracte"]
-    
-    @IBOutlet weak var mylabel: UILabel!
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mylabel.text = catTab[indexSelected]
@@ -28,7 +28,16 @@ class filactuVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    // MARK: - tableView methods
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+    }
 
     /*
     // MARK: - Navigation

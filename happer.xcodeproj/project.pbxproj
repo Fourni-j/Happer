@@ -20,6 +20,7 @@
 		358798181D2E58C50038AAA8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358798171D2E58C50038AAA8 /* FBSDKCoreKit.framework */; };
 		3587981A1D2E58D10038AAA8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 358798191D2E58D10038AAA8 /* FBSDKLoginKit.framework */; };
 		3587981C1D2E58DE0038AAA8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3587981B1D2E58DE0038AAA8 /* FBSDKShareKit.framework */; };
+		3587981E1D2E5B710038AAA8 /* filActuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587981D1D2E5B710038AAA8 /* filActuCell.swift */; };
 		35D4F13A1D24016E00BEA8E1 /* mainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1391D24016E00BEA8E1 /* mainPageVC.swift */; };
 		35D4F13C1D24019A00BEA8E1 /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F13B1D24019A00BEA8E1 /* signUpVC.swift */; };
 		35D4F13E1D2401C400BEA8E1 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F13D1D2401C400BEA8E1 /* loginVC.swift */; };
@@ -68,6 +69,7 @@
 		358798171D2E58C50038AAA8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		358798191D2E58D10038AAA8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		3587981B1D2E58DE0038AAA8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		3587981D1D2E5B710038AAA8 /* filActuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filActuCell.swift; sourceTree = "<group>"; };
 		35D4F1391D24016E00BEA8E1 /* mainPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainPageVC.swift; sourceTree = "<group>"; };
 		35D4F13B1D24019A00BEA8E1 /* signUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
 		35D4F13D1D2401C400BEA8E1 /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */,
 				35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */,
 				35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */,
+				3587981D1D2E5B710038AAA8 /* filActuCell.swift */,
 			);
 			name = useClass;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				35D4F13A1D24016E00BEA8E1 /* mainPageVC.swift in Sources */,
 				35D4F1451D240A3400BEA8E1 /* dressingVC.swift in Sources */,
 				35D4F1651D26AE1F00BEA8E1 /* inspiClass.swift in Sources */,
+				3587981E1D2E5B710038AAA8 /* filActuCell.swift in Sources */,
 				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
 				35D4F1491D240A5F00BEA8E1 /* wishListVC.swift in Sources */,
 				35D4F1421D24099A00BEA8E1 /* filactuVC.swift in Sources */,
