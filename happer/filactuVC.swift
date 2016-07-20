@@ -16,6 +16,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var indexSelected: Int = 0
     let catTab: [String] = ["ootd", "ootn", "sacs", "accessoires", "chaussures", "decontracte"]
+    var selfieTab: [selfieClass] = []
 
 
     override func viewDidLoad() {
@@ -77,7 +78,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
                 catch
                 {
-                    print("Erreur dans le catch sur FilActu")
+                    print("Catch failed")
                     return
                 }
             }
@@ -87,9 +88,18 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 print(res.statusCode)
                 return
             }
-            print(self.jsonData)
         })
         task.resume()
+    }
+    
+    func makeTab() {
+        
+        let tab = jsonData.valueForKey("selfies") as! NSDictionary
+        for val in tab {
+            let elem: selfieClass = selfieClass(ownerID: val.value["owner"], nbLike: val.value["nb_like"], rate: val.value["rate"], id: val.value["id"], categoryName: val.value["category"], path: val.value["url"])
+            selfieTab += [new]
+        }
+        
     }
 
     /*

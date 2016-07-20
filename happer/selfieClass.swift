@@ -7,28 +7,43 @@
 //
 
 import Foundation
+import UIKit
 
-class selfieClass: categoryClass {
+class selfieClass {
     
     //MARK : - attributs
     
+    private let id: Int
+    private let categoryName: String
     private let ownerID: Int
     private var nbLike: Int
     private var rate: Int
-    private var valide: Bool
+    private let path: String
+    private var image: UIImage
     
     //MARK : - initialiseur
     
-    init(ownerID: Int, nbLike: Int, rate: Int, valide: Bool, id: Int, name: String, categoryName: String) {
+    init(ownerID: Int, nbLike: Int, rate: Int, id: Int, categoryName: String, path: String) {
+        self.id = id
+        self.categoryName = categoryName
         self.ownerID = ownerID
         self.nbLike = nbLike
         self.rate = rate
-        self.valide = valide
-        super.init(id: id, name: name, categoryName: categoryName)
+        self.path = path
+        
+        let data = NSData(contentsOfURL: NSURL(string: path)!)
+        self.image = UIImage(data: data!)!
+        
     }
     
     //MARK : - getters
     
+    func getId() -> Int {
+        return id
+    }
+    func getCategory() -> String {
+        return categoryName
+    }
     func getOwnerID() -> Int {
         return ownerID
     }
@@ -38,8 +53,11 @@ class selfieClass: categoryClass {
     func getRate() -> Int {
         return rate
     }
-    func isValide() -> Bool {
-        return valide
+    func getPath() -> String {
+        return path
+    }
+    func getImage() -> UIImage {
+        return image
     }
     
     //MARK : - update data
