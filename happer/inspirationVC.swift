@@ -14,6 +14,7 @@ class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
     
     var categories: [inspiClass] = []
     var indexSelected: Int = 0
+    let viewID = "inspiVC"
 
     @IBOutlet weak var catTable: UITableView!
     
@@ -82,6 +83,7 @@ class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
         if segue.identifier == "goFilActu" {
             let destination = segue.destinationViewController as! filactuVC
             destination.indexSelected = indexSelected
+            destination.prevID = viewID
         }
   
     }

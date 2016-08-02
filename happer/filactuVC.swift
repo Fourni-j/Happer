@@ -13,6 +13,8 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //MARK : - attributs
     @IBOutlet weak var mylabel: UILabel!
     var jsonData = NSDictionary()
+    var viewID = "actuVC"
+    var prevID = ""
 
     @IBOutlet weak var table: UITableView!
     var indexSelected: Int = 0
@@ -66,6 +68,12 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             new = selfieClass(ownerID: val.value["owner"] as! Int, nbLike: val.value["nbLike"] as! Int, rate: val.value["rate"] as! Int, id: val.value["id"] as! Int, categoryName: self.catTab[indexSelected] as String, path: val.value["url"] as! String)
             selfieTab += [new]
         }
+    }
+
+    @IBAction func backButton(sender: UIButton) {
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier(prevID)
+        self.presentViewController(vc, animated: true, completion: nil)
     }
 
     /*
