@@ -63,7 +63,6 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         let tab: NSDictionary = result.valueForKey("content") as! NSDictionary;
         var new: selfieClass
-        print(tab)
         for val in tab {
             new = selfieClass(ownerID: val.value["owner"] as! Int, nbLike: val.value["nbLike"] as! Int, rate: val.value["rate"] as! Int, id: val.value["id"] as! Int, categoryName: self.catTab[indexSelected] as String, path: val.value["url"] as! String)
             selfieTab += [new]
