@@ -426,13 +426,24 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Er3-wF-bYN">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="349"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tj-8Z-9UT">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tj-8Z-9UT" customClass="FloatRatingView" customModule="happer" customModuleProvider="target">
                                                     <rect key="frame" x="107" y="301" width="200" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="Tet-sz-RhN"/>
                                                         <constraint firstAttribute="height" constant="40" id="WwB-Mr-CqX"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Mock_up_final_etoile_vide"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="Mock_up_final_Happ'like"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQF-kO-N3e">
                                                     <rect key="frame" x="356" y="291" width="50" height="50"/>
@@ -474,7 +485,7 @@
                                         <connections>
                                             <outlet property="cellImage" destination="Er3-wF-bYN" id="D6g-Bh-hxn"/>
                                             <outlet property="cellLikeCount" destination="Wju-EL-jlE" id="8rk-ee-x61"/>
-                                            <outlet property="cellRating" destination="9tj-8Z-9UT" id="KXG-yp-33p"/>
+                                            <outlet property="cellRating" destination="9tj-8Z-9UT" id="9nj-MK-3BV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -501,6 +512,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="mylabel" destination="j6j-LB-pSy" id="yMs-TS-kN5"/>
+                        <outlet property="table" destination="ZS4-TG-TAB" id="mbP-4V-qkO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIv-22-Yaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1096,4 +1108,8 @@
             <point key="canvasLocation" x="774" y="292"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Mock_up_final_Happ'like" width="131" height="129"/>
+        <image name="Mock_up_final_etoile_vide" width="131" height="129"/>
+    </resources>
 </document>

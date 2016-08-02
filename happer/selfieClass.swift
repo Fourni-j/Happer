@@ -29,10 +29,11 @@ class selfieClass {
         self.ownerID = ownerID
         self.nbLike = nbLike
         self.rate = rate
-        self.path = path
+        self.path = "http://\(path)"
         
-        let data = NSData(contentsOfURL: NSURL(string: path)!)
+        let data = NSData(contentsOfURL: NSURL(string: self.path)!)
         self.image = UIImage(data: data!)!
+
         
     }
     

@@ -13,8 +13,8 @@ class filActuCell: UITableViewCell {
     // MARK : - attributs
     
     @IBOutlet weak var cellImage: UIImageView!
-    @IBOutlet weak var cellRating: UIView!
     @IBOutlet weak var cellLikeCount: UILabel!
+    @IBOutlet weak var cellRating: FloatRatingView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

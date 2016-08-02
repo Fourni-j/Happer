@@ -14,6 +14,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var mylabel: UILabel!
     var jsonData = NSDictionary()
 
+    @IBOutlet weak var table: UITableView!
     var indexSelected: Int = 0
     let catTab: [String] = ["Ootd", "Ootn", "Sacs", "Accessoires", "Chaussures", "Decontracte"]
     var selfieTab: [selfieClass] = []
@@ -36,11 +37,15 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - tableView methods
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return selfieTab.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = self.table.dequeueReusableCellWithIdentifier("filActuCell", forIndexPath: indexPath) as! filActuCell
+        let selfie = selfieTab[indexPath.row]
+        cell.cellRating.rating = Float(selfie.getRate())
+        cell.cellImage.image = selfie.getImage()
+        cell.cellLikeCount.text = String(selfie.getNbLike())
         return cell
     }
 
