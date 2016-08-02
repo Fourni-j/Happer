@@ -15,15 +15,16 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var jsonData = NSDictionary()
 
     var indexSelected: Int = 0
-    let catTab: [String] = ["ootd", "ootn", "sacs", "accessoires", "chaussures", "decontracte"]
+    let catTab: [String] = ["Ootd", "Ootn", "Sacs", "Accessoires", "Chaussures", "Decontracte"]
     var selfieTab: [selfieClass] = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mylabel.text = catTab[indexSelected]
-        getSelfies()
-
+        let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/get\(catTab[indexSelected]).php")
+        getSelfies(url!)
+        //print(selfieTab)
         // Do any additional setup after loading the view.
     }
 
@@ -43,63 +44,23 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-    func getSelfies() {
-        let category = mylabel.text! as NSString
-        
-        let session = NSURLSession.sharedSession()
-        let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/byCategory.php")
-        
-        let body = "category=\(category)"
-        
-        let request = NSMutableURLRequest(URL: url!)
-        
-        request.HTTPMethod = "POST"
-        
-        let postData : NSData = body.dataUsingEncoding(NSUTF8StringEncoding)!
-        request.HTTPBody = postData
-        
-        let postLength: NSString = String(postData.length)
-        
-        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length")
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        
-        var res = NSHTTPURLResponse()
-        var urlData: NSData?
-        
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            urlData = data! as NSData
-            res = response as! NSHTTPURLResponse
-            if res.statusCode >= 200 && res.statusCode < 300
-            {
-                do
-                {
-                    self.jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                }
-                catch
-                {
-                    print("Catch failed")
-                    return
-                }
-            }
-            else
-            {
-                print("Erreur, statusCode : ")
-                print(res.statusCode)
-                return
-            }
-        })
-        task.resume()
-    }
-    
-    func makeTab() {
-        
-        let tab = jsonData.valueForKey("selfies") as! NSDictionary
+    func getSelfies(url: NSURL) {
+        let jsonData = NSData(contentsOfURL: url)
+        var result = NSDictionary()
+        do {
+            result = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+        }
+        catch {
+            print("Error catched, func getSelfie() in filactuVC.swift")
+            return
+        }
+        let tab: NSDictionary = result.valueForKey("content") as! NSDictionary;
+        var new: selfieClass
+        print(tab)
         for val in tab {
-            let elem: selfieClass = selfieClass(ownerID: val.value["owner"], nbLike: val.value["nb_like"], rate: val.value["rate"], id: val.value["id"], categoryName: val.value["category"], path: val.value["url"])
+            new = selfieClass(ownerID: val.value["owner"] as! Int, nbLike: val.value["nbLike"] as! Int, rate: val.value["rate"] as! Int, id: val.value["id"] as! Int, categoryName: self.catTab[indexSelected] as String, path: val.value["url"] as! String)
             selfieTab += [new]
         }
-        
     }
 
     /*

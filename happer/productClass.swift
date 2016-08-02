@@ -8,7 +8,7 @@
 
 import Foundation
 
-class productClass: categoryClass {
+class productClass {
 
     //MARK: - attributs
     
@@ -24,7 +24,6 @@ class productClass: categoryClass {
         self.winned = winned
         self.description = description
         self.circle = circle
-        super.init(id: id, name: name, categoryName: categoryName)
     }
     
     // getters
