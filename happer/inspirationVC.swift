@@ -8,7 +8,7 @@
 
 import UIKit
 
-class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
+class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
 
     // MARK : - attributs
     
@@ -19,6 +19,7 @@ class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.creatMenuView(57)
         initCat()
         // Do any additional setup after loading the view.
     }
@@ -55,6 +56,10 @@ class inspirationVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
         // Afficher historique notifications
     }
     
+    @IBAction func menuButton(sender: UIButton) {
+        super.toggleMenu()
+    }
+
     // MARK: - tableView methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
