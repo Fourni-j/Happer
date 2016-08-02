@@ -8,11 +8,11 @@
 
 import UIKit
 
-class cerclesVC: UIViewController {
+class cerclesVC: menuVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        super.creatMenuView(57)
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +21,9 @@ class cerclesVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func menuButton(sender: UIButton) {
+        super.toggleMenu()
+    }
 
     /*
     // MARK: - Navigation
