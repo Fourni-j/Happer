@@ -87,54 +87,67 @@ class menuVC: UIViewController {
         menuView.backgroundColor = UIColor.grayColor()
         view.addSubview(menuView)
     }
-    
+
     func inspisAction(sender: UIButton!) {
         print("inspiration")
-    }
-    
-    func happieAction(sender: UIButton!) {
-        print("happie")
-        if self.dynamicType === cerclesVC.self {
-            print("FROM[cercle]")
-        } else if self.dynamicType === inspirationVC.self {
-            print("FROM[inspiration]")
+        if self.dynamicType === inspirationVC.self {
+            print("You are alredy on inspirationVC")
         } else {
-            print("Where are you from ? :o")
+            move("inspiVC")
         }
     }
-    
+
+    func happieAction(sender: UIButton!) {
+        print("happie")
+    }
+
     func cercleAction(sender: UIButton!) {
         print("produit")
+        if self.dynamicType === cerclesVC.self {
+            print("You are alredy on cerclesVC")
+        } else {
+            move("cerclesVC")
+        }
     }
-    
+
     func dressAction(sender: UIButton!) {
         print("dressing")
+        move("dressingVC")
     }
-    
+
     func likesAction(sender: UIButton!) {
         print("coup de coeur")
+        move("coupDeCoeurVC")
     }
-    
+
     func wishsAction(sender: UIButton!) {
         print("wishlist")
+        move("wishListVC")
     }
-    
+
     func accountAction(sender: UIButton!) {
         print("compte")
+        move("monCompteVC")
     }
-    
+
     func facebookAction(sender: UIButton) {
         print("facebook")
     }
-    
+
     func instaAction(sender: UIButton!) {
         print("instagram")
     }
-    
+
     func youTubeAction(sender: UIButton!) {
         print("youtube")
     }
-    
+
+    func move(dest: String) {
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier(dest)
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+
     /*
      // MARK: - Navigation
      
