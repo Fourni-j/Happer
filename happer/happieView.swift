@@ -7,13 +7,8 @@
 //
 
 import UIKit
-import Foundation
 
 class happieView: UIView {
-    
-    // MARK: - NSUserDefault
-    
-    var cache = NSUserDefaults.standardUserDefaults()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,18 +39,15 @@ class happieView: UIView {
     }
 
     func happLikeTap(sender: UIButton) {
-        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
-        // envoie NSNotificationPush "happLike"
+        NSNotificationCenter.defaultCenter().postNotificationName("happLike", object: nil)
     }
 
     func shareTap(sender: UIButton) {
-        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
-        // envoie NSNotificationPush "share"
+        NSNotificationCenter.defaultCenter().postNotificationName("share", object: nil)
     }
 
     func friendTap(sender: UIButton) {
-        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
-        // envoie NSNotificationPush "friends"
+        NSNotificationCenter.defaultCenter().postNotificationName("friends", object: nil)
     }
 
     /*

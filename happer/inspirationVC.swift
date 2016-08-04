@@ -33,6 +33,10 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
         cache.setObject("inspiVC", forKey: "currentVC")
         initCat()
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToHappLike), name: "happLike", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToShare), name: "share", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToFriends), name: "friends", object: nil)
+
         let viewW = self.view.frame.width
         let viewH = self.view.frame.height
 
@@ -119,6 +123,28 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
         }
     }
 
+    func moveToHappLike() {
+        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func moveToShare() {
+        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
+        self.presentViewController(vc, animated: true, completion: nil)
+
+    }
+    
+    func moveToFriends() {
+        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
     // MARK : - Fonctions happies
 
     func callHappieView() {
