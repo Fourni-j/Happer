@@ -32,16 +32,19 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
         let viewH = self.view.frame.height
 
         let tapOut = UITapGestureRecognizer(target: self, action: #selector(inspirationVC.dismissHappieView))
-
+        
+        // préparation vue happies et filtre
+        
         self.custom = happieView(frame: CGRect(x: (viewW / 2 - 80), y: 200, width: 160, height: 130))
         self.filter = UIView(frame: CGRect(x: 0, y: 0, width: viewW, height: viewH))
         self.filter.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         self.filter.addGestureRecognizer(tapOut)
         self.view.addSubview(filter)
         self.filter.addSubview(custom)
-        self.dismissHappieView()
+        self.filter.hidden = true
 
-        let happerL = happerLogo(frame: CGRect(x: (viewW / 2 - 20), y: 10, width: 40, height: 40))
+        let happerL = happerLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
+        happerL.button.addTarget(self, action: #selector(inspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
         
         // Do any additional setup after loading the view.
@@ -114,19 +117,17 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
         }
   
     }
-    
+
     // MARK : - Fonctions happies
     
-    func applyFilter() {
-        print("testing area")
-    }
-    
-    func callHappieView() {
+    func callHappieView(sender: UIButton!) {
         self.filter.hidden = false
     }
     
-    func dismissHappieView() {
+    func dismissHappieView(sender: UIButton!) {
         self.filter.hidden = true
     }
+    
+    
 
 }

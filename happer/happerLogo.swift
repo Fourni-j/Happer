@@ -10,20 +10,19 @@ import UIKit
 
 class happerLogo: UIView {
 
+    let button = UIButton()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let button = UIButton()
-        button.frame = CGRectMake(0, 0, frame.width, frame.height)
-        button.setImage(UIImage(named: "Logo_transparent_100x100"), forState: UIControlState.Normal)
-        button.addTarget(self, action: #selector(inspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        self.addSubview(button)
+        self.button.frame = CGRectMake(0, 0, frame.width, frame.height)
+        self.button.setImage(UIImage(named: "Logo_transparent_100x100"), forState: UIControlState.Normal)
+        self.addSubview(self.button)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
