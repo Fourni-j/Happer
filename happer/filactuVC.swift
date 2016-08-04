@@ -27,7 +27,6 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.mylabel.text = catTab[indexSelected]
         let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/get\(catTab[indexSelected]).php")
         getSelfies(url!)
-        //print(selfieTab)
         // Do any additional setup after loading the view.
     }
 
