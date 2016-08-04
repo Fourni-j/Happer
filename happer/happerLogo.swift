@@ -13,6 +13,7 @@ class happerLogo: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         let button = UIButton()
+        button.frame = CGRectMake(0, 0, frame.width, frame.height)
         button.setImage(UIImage(named: "Logo_transparent_100x100"), forState: UIControlState.Normal)
         button.addTarget(self, action: #selector(inspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         
