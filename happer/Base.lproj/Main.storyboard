@@ -803,7 +803,7 @@
         <!--demande d'aide-->
         <scene sceneID="iHD-WX-Nc8">
             <objects>
-                <viewController title="demande d'aide" id="3RC-fv-AaD" customClass="amisVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="askHelpVC" title="demande d'aide" id="3RC-fv-AaD" customClass="amisVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JZG-dt-rwD"/>
                         <viewControllerLayoutGuide type="bottom" id="8hC-R3-zjN"/>
@@ -838,7 +838,7 @@
         <!--partager mon style-->
         <scene sceneID="Fgm-iV-HhV">
             <objects>
-                <viewController title="partager mon style" id="gg1-Cb-JKf" customClass="partageVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadVC" title="partager mon style" id="gg1-Cb-JKf" customClass="partageVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="60f-tc-nFy"/>
                         <viewControllerLayoutGuide type="bottom" id="fm7-6T-IP0"/>
@@ -873,7 +873,7 @@
         <!--happLike-->
         <scene sceneID="RzT-Rj-9yX">
             <objects>
-                <viewController title="happLike" id="wan-en-E7n" customClass="happlikeVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="happLikeVC" title="happLike" id="wan-en-E7n" customClass="happlikeVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1bY-db-2TS"/>
                         <viewControllerLayoutGuide type="bottom" id="zRR-VE-fTY"/>
@@ -891,6 +891,9 @@
                                             <constraint firstAttribute="width" constant="40" id="WlF-Nd-ddd"/>
                                         </constraints>
                                         <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="wan-en-E7n" eventType="touchUpInside" id="QBt-Rj-gA1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

@@ -12,22 +12,23 @@ class happieView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.brownColor()
+        
+        self.layer.cornerRadius = 5
+        
+        self.backgroundColor = UIColor.blackColor()
         let happLikeButton = UIButton()
         let shareButton = UIButton()
         let friendButton = UIButton()
+
         happLikeButton.addTarget(self, action: #selector(happieView.happLikeTap), forControlEvents: UIControlEvents.TouchUpInside)
-        happLikeButton.frame = CGRectMake(6, 50, 35, 35)
-        happLikeButton.backgroundColor = UIColor.blueColor()
-        happLikeButton.setTitle("H", forState: UIControlState.Normal)
+        happLikeButton.frame = CGRectMake((frame.width / 2 - 75), 70, 40, 40)
+        happLikeButton.setImage(UIImage(named: "Mock_up_final_Happ'like"), forState: UIControlState.Normal)
         shareButton.addTarget(self, action: #selector(happieView.shareTap), forControlEvents: UIControlEvents.TouchUpInside)
-        shareButton.frame = CGRectMake(65, 50, 35, 35)
-        shareButton.backgroundColor = UIColor.blueColor()
-        shareButton.setTitle("S", forState: UIControlState.Normal)
+        shareButton.frame = CGRectMake((frame.width / 2 - 20), 70, 40, 40)
+        shareButton.setImage(UIImage(named: "Mock_up_final_Partager"), forState: UIControlState.Normal)
         friendButton.addTarget(self, action: #selector(happieView.friendTap), forControlEvents: UIControlEvents.TouchUpInside)
-        friendButton.frame = CGRectMake(119, 50, 35, 35)
-        friendButton.backgroundColor = UIColor.blueColor()
-        friendButton.setTitle("F", forState: UIControlState.Normal)
+        friendButton.frame = CGRectMake((frame.width / 2 + 35), 70, 40, 40)
+        friendButton.setImage(UIImage(named: "Mock_up_final_Amis"), forState: UIControlState.Normal)
         self.addSubview(happLikeButton)
         self.addSubview(shareButton)
         self.addSubview(friendButton)

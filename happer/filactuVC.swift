@@ -25,10 +25,36 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let catTab: [String] = ["Ootd", "Ootn", "Sacs", "Accessoires", "Chaussures", "Decontracte"]
     var selfieTab: [selfieClass] = []
 
+    // filters
+    
+    var custom: happieView = happieView()
+    var filter: UIView = UIView()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         cache.setObject("actuVC", forKey: "currentVC")
+        
+        let viewW = self.view.frame.width
+        let viewH = self.view.frame.height
+        
+        let tapOut = UITapGestureRecognizer(target: self, action: #selector(inspirationVC.dismissHappieView))
+        
+        // préparation vue happies et filtre
+        
+        self.custom = happieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
+        self.filter = UIView(frame: CGRect(x: 0, y: 0, width: viewW, height: viewH))
+        self.filter.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        self.filter.addGestureRecognizer(tapOut)
+        self.view.addSubview(filter)
+        self.filter.addSubview(custom)
+        self.filter.hidden = true
+        
+        let happerL = happerLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
+        happerL.button.addTarget(self, action: #selector(filactuVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(happerL)
+
+        
         self.mylabel.text = catTab[indexSelected]
         let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/get\(catTab[indexSelected]).php")
         getSelfies(url!)
@@ -85,6 +111,16 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+    }
+    
+    // MARK : - Fonctions happies
+    
+    func callHappieView() {
+        self.filter.hidden = false
+    }
+    
+    func dismissHappieView() {
+        self.filter.hidden = true
     }
 
 }

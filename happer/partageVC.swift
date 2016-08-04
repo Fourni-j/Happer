@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Foundation
 
 class partageVC: UIViewController {
+    
+    // MARK : - NSUserDefault
 
+    var cache = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        cache.setObject("uploadVC", forKey: "currentVC")
 
         // Do any additional setup after loading the view.
     }

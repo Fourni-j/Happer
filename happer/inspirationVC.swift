@@ -40,7 +40,7 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
         
         // préparation vue happies et filtre
         
-        self.custom = happieView(frame: CGRect(x: (viewW / 2 - 80), y: 200, width: 160, height: 130))
+        self.custom = happieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
         self.filter = UIView(frame: CGRect(x: 0, y: 0, width: viewW, height: viewH))
         self.filter.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         self.filter.addGestureRecognizer(tapOut)
