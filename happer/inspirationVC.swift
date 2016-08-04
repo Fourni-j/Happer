@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Foundation
 
 class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
 
+    // MARK : - NSUSER
+    
+    var cache = NSUserDefaults.standardUserDefaults()
+    
     // MARK : - attributs
     
     var categories: [inspiClass] = []
     var indexSelected: Int = 0
-    let viewID = "inspiVC"
 
     // filters
     
@@ -26,6 +30,7 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         super.creatMenuView(57)
+        cache.setObject("inspiVC", forKey: "currentVC")
         initCat()
 
         let viewW = self.view.frame.width
@@ -46,15 +51,12 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
         let happerL = happerLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
         happerL.button.addTarget(self, action: #selector(inspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
+
     // MARK: - self.methods
     
     func initCat() {
@@ -107,27 +109,24 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+
         if segue.identifier == "goFilActu" {
             let destination = segue.destinationViewController as! filactuVC
             destination.indexSelected = indexSelected
-            destination.prevID = viewID
+            cache.setObject("inspiVC", forKey: "prevVC")
         }
-  
     }
 
     // MARK : - Fonctions happies
-    
-    func callHappieView(sender: UIButton!) {
+
+    func callHappieView() {
         self.filter.hidden = false
     }
-    
-    func dismissHappieView(sender: UIButton!) {
+
+    func dismissHappieView() {
         self.filter.hidden = true
     }
-    
-    
 
 }

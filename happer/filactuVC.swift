@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Foundation
 
 class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    //MARK : - NSUserDefault
+    
+    var cache = NSUserDefaults.standardUserDefaults()
+    
     //MARK : - attributs
+    
     @IBOutlet weak var mylabel: UILabel!
     var jsonData = NSDictionary()
-    var viewID = "actuVC"
-    var prevID = ""
 
     @IBOutlet weak var table: UITableView!
     var indexSelected: Int = 0
@@ -24,6 +28,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cache.setObject("actuVC", forKey: "currentVC")
         self.mylabel.text = catTab[indexSelected]
         let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/get\(catTab[indexSelected]).php")
         getSelfies(url!)
@@ -70,18 +75,16 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func backButton(sender: UIButton) {
         let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier(prevID)
+        let vc = story.instantiateViewControllerWithIdentifier(cache.objectForKey("prevVC") as! String)
+        cache.setObject("actuVC", forKey: "prevVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }
