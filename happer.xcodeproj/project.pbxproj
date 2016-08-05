@@ -18,6 +18,7 @@
 		357046931D50AD53003F87DC /* ratingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357046921D50AD53003F87DC /* ratingControl.swift */; };
 		357046951D536E5D003F87DC /* happieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357046941D536E5D003F87DC /* happieView.swift */; };
 		357046971D53867C003F87DC /* happerLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357046961D53867C003F87DC /* happerLogo.swift */; };
+		3570469B1D549F20003F87DC /* detailSelfieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3570469A1D549F20003F87DC /* detailSelfieVC.swift */; };
 		3587981E1D2E5B710038AAA8 /* filActuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3587981D1D2E5B710038AAA8 /* filActuCell.swift */; };
 		35D4F13A1D24016E00BEA8E1 /* mainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1391D24016E00BEA8E1 /* mainPageVC.swift */; };
 		35D4F13C1D24019A00BEA8E1 /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F13B1D24019A00BEA8E1 /* signUpVC.swift */; };
@@ -70,6 +71,7 @@
 		357046921D50AD53003F87DC /* ratingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ratingControl.swift; sourceTree = "<group>"; };
 		357046941D536E5D003F87DC /* happieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = happieView.swift; sourceTree = "<group>"; };
 		357046961D53867C003F87DC /* happerLogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = happerLogo.swift; sourceTree = "<group>"; };
+		3570469A1D549F20003F87DC /* detailSelfieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailSelfieVC.swift; sourceTree = "<group>"; };
 		3587981D1D2E5B710038AAA8 /* filActuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filActuCell.swift; sourceTree = "<group>"; };
 		35D4F1391D24016E00BEA8E1 /* mainPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainPageVC.swift; sourceTree = "<group>"; };
 		35D4F13B1D24019A00BEA8E1 /* signUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				35D4F14C1D240C6700BEA8E1 /* cerclesVC.swift */,
 				35D4F1551D240EFD00BEA8E1 /* produitsVC.swift */,
 				35D4F1571D240F1A00BEA8E1 /* detailProduitVC.swift */,
+				3570469A1D549F20003F87DC /* detailSelfieVC.swift */,
 			);
 			path = happer;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				35D4F1561D240EFD00BEA8E1 /* produitsVC.swift in Sources */,
 				35D4F1501D240CC000BEA8E1 /* happlikeVC.swift in Sources */,
 				35D4F13C1D24019A00BEA8E1 /* signUpVC.swift in Sources */,
+				3570469B1D549F20003F87DC /* detailSelfieVC.swift in Sources */,
 				35D4F13E1D2401C400BEA8E1 /* loginVC.swift in Sources */,
 				35D4F1471D240A4900BEA8E1 /* monCompteVC.swift in Sources */,
 				357046971D53867C003F87DC /* happerLogo.swift in Sources */,
