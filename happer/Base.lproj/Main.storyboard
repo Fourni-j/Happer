@@ -528,7 +528,7 @@
         <!--Cercles-->
         <scene sceneID="wmB-vj-QQc">
             <objects>
-                <viewController title="Cercles" id="rnR-JV-u41" customClass="cerclesVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="circleVC" title="Cercles" id="rnR-JV-u41" customClass="cerclesVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mHo-he-3Fe"/>
                         <viewControllerLayoutGuide type="bottom" id="3lU-1z-Oi9"/>
@@ -663,7 +663,7 @@
         <!--mes coups de coeur-->
         <scene sceneID="k5c-Zb-umY">
             <objects>
-                <viewController title="mes coups de coeur" id="WcS-I3-Clj" customClass="coupDeCoeurVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myLikeVC" title="mes coups de coeur" id="WcS-I3-Clj" customClass="coupDeCoeurVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uM1-Lr-gbD"/>
                         <viewControllerLayoutGuide type="bottom" id="afU-GR-WMJ"/>
@@ -698,7 +698,7 @@
         <!--ma wish list-->
         <scene sceneID="oIq-GS-7iw">
             <objects>
-                <viewController title="ma wish list" id="apU-A2-qCs" customClass="wishListVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wlVC" title="ma wish list" id="apU-A2-qCs" customClass="wishListVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jin-om-lBO"/>
                         <viewControllerLayoutGuide type="bottom" id="cce-vH-FuL"/>
@@ -733,7 +733,7 @@
         <!--Mon Dressing-->
         <scene sceneID="hme-hI-U40">
             <objects>
-                <viewController title="Mon Dressing" id="shu-GP-kQt" customClass="dressingVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dressVC" title="Mon Dressing" id="shu-GP-kQt" customClass="dressingVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cYm-Ug-SQc"/>
                         <viewControllerLayoutGuide type="bottom" id="bVq-BN-4DA"/>
@@ -768,7 +768,7 @@
         <!--Mon Compte-->
         <scene sceneID="wRR-PC-G8G">
             <objects>
-                <viewController title="Mon Compte" id="829-f4-DFi" customClass="monCompteVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="accountVC" title="Mon Compte" id="829-f4-DFi" customClass="monCompteVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bc0-nJ-jFb"/>
                         <viewControllerLayoutGuide type="bottom" id="cFd-SA-44D"/>
