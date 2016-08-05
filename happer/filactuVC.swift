@@ -30,10 +30,11 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var custom: happieView = happieView()
     var filter: UIView = UIView()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        cache.setObject("actuVC", forKey: "currentVC")
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToHappLike), name: "happLike", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToShare), name: "share", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToFriends), name: "friends", object: nil)
         
         let viewW = self.view.frame.width
         let viewH = self.view.frame.height
@@ -101,8 +102,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func backButton(sender: UIButton) {
         let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier(cache.objectForKey("prevVC") as! String)
-        cache.setObject("actuVC", forKey: "prevVC")
+        let vc = story.instantiateViewControllerWithIdentifier("inspiVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }
 
@@ -111,6 +111,28 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+    }
+    
+    func moveToHappLike() {
+        cache.setObject("actuVC", forKey: "prevVC")
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func moveToShare() {
+        cache.setObject("actuVC", forKey: "prevVC")
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+    }
+    
+    func moveToFriends() {
+        cache.setObject("actuVC", forKey: "prevVC")
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     // MARK : - Fonctions happies

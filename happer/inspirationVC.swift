@@ -124,14 +124,14 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     }
 
     func moveToHappLike() {
-        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
+        cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
     func moveToShare() {
-        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
+        cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
         self.presentViewController(vc, animated: true, completion: nil)
@@ -139,7 +139,7 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     }
     
     func moveToFriends() {
-        cache.setObject(cache.objectForKey("currentVC"), forKey: "prevVC")
+        cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
         self.presentViewController(vc, animated: true, completion: nil)
