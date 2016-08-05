@@ -54,14 +54,11 @@ class mainPageVC: UIViewController, FBSDKLoginButtonDelegate {
         }
         else
         {
-            let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,friends"], HTTPMethod: "GET")
+            let request = FBSDKGraphRequest(graphPath: "me/taggable_friends", parameters: ["fields":"email,first_name, last_name, picture"], HTTPMethod: "GET")
             request.startWithCompletionHandler({ (connection, result, error : NSError!) -> Void in
                 if(error == nil)
                 {
                     print("result \(result)")
-                    let name = result.valueForKey("name") as! NSString
-                    let email = result.valueForKey("email") as! NSString
-                    print("\(name) \(email)")
                     let story = UIStoryboard(name: "Main", bundle: nil)
                     let vc = story.instantiateViewControllerWithIdentifier("inspiVC")
                     self.presentViewController(vc, animated: true, completion: nil)
@@ -73,5 +70,4 @@ class mainPageVC: UIViewController, FBSDKLoginButtonDelegate {
             })
         }
     }
-
 }
