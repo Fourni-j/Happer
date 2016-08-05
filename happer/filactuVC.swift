@@ -24,6 +24,10 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var indexSelected: Int = 0
     let catTab: [String] = ["Ootd", "Ootn", "Sacs", "Accessoires", "Chaussures", "Decontracte"]
     var selfieTab: [selfieClass] = []
+    
+    // transmission
+    
+    var toTransmit = selfieClass(ownerID: 0, nbLike: 0, rate: 0, id: 0, categoryName: "default", path: "ec2-52-49-149-140.eu-west-1.compute.amazonaws.com/uploads/selfie20.jpg")
 
     // filters
     
@@ -81,6 +85,11 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.cellLikeCount.text = String(selfie.getNbLike())
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.toTransmit = selfieTab[indexPath.row]
+        performSegueWithIdentifier("goToInspi", sender: self)
+    }
 
     func getSelfies(url: NSURL) {
         let jsonData = NSData(contentsOfURL: url)
@@ -110,7 +119,11 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        if segue.identifier == "goToInspi" {
+            let destination = segue.destinationViewController as! detailSelfieVC
+            destination.selfie = self.toTransmit
+            destination.indexSelected = self.indexSelected
+        }
     }
     
     func moveToHappLike() {
