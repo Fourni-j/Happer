@@ -43,6 +43,8 @@
 		55A565711D3E583300D3C5CD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5656D1D3E583300D3C5CD /* FBSDKCoreKit.framework */; };
 		55A565721D3E583300D3C5CD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5656E1D3E583300D3C5CD /* FBSDKLoginKit.framework */; };
 		55A565731D3E583300D3C5CD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5656F1D3E583300D3C5CD /* FBSDKShareKit.framework */; };
+		55E189D61D74741300A4FF6F /* cropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D51D74741300A4FF6F /* cropVC.swift */; };
+		55E189D81D74795700A4FF6F /* hashtagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D71D74795700A4FF6F /* hashtagVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		55A5656D1D3E583300D3C5CD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		55A5656E1D3E583300D3C5CD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		55A5656F1D3E583300D3C5CD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		55E189D51D74741300A4FF6F /* cropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cropVC.swift; sourceTree = "<group>"; };
+		55E189D71D74795700A4FF6F /* hashtagVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hashtagVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				353C2B271D23E68F009D7968 /* dataClasses */,
 				353C2B071D23E4EE009D7968 /* AppDelegate.swift */,
 				353C2B0B1D23E4EE009D7968 /* Main.storyboard */,
+				55E189D51D74741300A4FF6F /* cropVC.swift */,
+				55E189D71D74795700A4FF6F /* hashtagVC.swift */,
 				353C2B0E1D23E4EE009D7968 /* Assets.xcassets */,
 				353C2B101D23E4EE009D7968 /* LaunchScreen.storyboard */,
 				353C2B131D23E4EE009D7968 /* Info.plist */,
@@ -356,9 +362,11 @@
 				35D4F1451D240A3400BEA8E1 /* dressingVC.swift in Sources */,
 				35D4F1651D26AE1F00BEA8E1 /* inspiClass.swift in Sources */,
 				557D4F521D50E708001D26BC /* menuVC.swift in Sources */,
+				55E189D81D74795700A4FF6F /* hashtagVC.swift in Sources */,
 				3587981E1D2E5B710038AAA8 /* filActuCell.swift in Sources */,
 				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
 				357046951D536E5D003F87DC /* happieView.swift in Sources */,
+				55E189D61D74741300A4FF6F /* cropVC.swift in Sources */,
 				35D4F1491D240A5F00BEA8E1 /* wishListVC.swift in Sources */,
 				35D4F1421D24099A00BEA8E1 /* filactuVC.swift in Sources */,
 			);
