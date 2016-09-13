@@ -38,6 +38,7 @@
 		35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */; };
 		35D4F1651D26AE1F00BEA8E1 /* inspiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */; };
 		35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */; };
+		5521FC8A1D87116C002812C1 /* DressingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */; };
 		557D4F521D50E708001D26BC /* menuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4F511D50E708001D26BC /* menuVC.swift */; };
 		55A565701D3E583300D3C5CD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5656C1D3E583300D3C5CD /* Bolts.framework */; };
 		55A565711D3E583300D3C5CD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A5656D1D3E583300D3C5CD /* FBSDKCoreKit.framework */; };
@@ -93,6 +94,7 @@
 		35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKLoginButtonFR.swift; sourceTree = "<group>"; };
 		35D4F1641D26AE1F00BEA8E1 /* inspiClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inspiClass.swift; sourceTree = "<group>"; };
 		35D4F1661D26B5ED00BEA8E1 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DressingCollectionViewCell.swift; sourceTree = "<group>"; };
 		557D4F511D50E708001D26BC /* menuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuVC.swift; sourceTree = "<group>"; };
 		55A5656C1D3E583300D3C5CD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../Documents/FacebookSDK/Bolts.framework; sourceTree = "<group>"; };
 		55A5656D1D3E583300D3C5CD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				35D4F1441D240A3400BEA8E1 /* dressingVC.swift */,
+				5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */,
 				35D4F1461D240A4900BEA8E1 /* monCompteVC.swift */,
 				35D4F1481D240A5F00BEA8E1 /* wishListVC.swift */,
 				35D4F14A1D240A8600BEA8E1 /* coupDeCoeurVC.swift */,
@@ -350,6 +353,7 @@
 				35D4F13E1D2401C400BEA8E1 /* loginVC.swift in Sources */,
 				35D4F1471D240A4900BEA8E1 /* monCompteVC.swift in Sources */,
 				357046971D53867C003F87DC /* happerLogo.swift in Sources */,
+				5521FC8A1D87116C002812C1 /* DressingCollectionViewCell.swift in Sources */,
 				35D4F1521D240CD000BEA8E1 /* partageVC.swift in Sources */,
 				353C2B291D23E6EA009D7968 /* userClass.swift in Sources */,
 				35D4F1581D240F1A00BEA8E1 /* detailProduitVC.swift in Sources */,

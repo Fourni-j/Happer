@@ -112,22 +112,22 @@ class menuVC: UIViewController {
 
     func dressAction(sender: UIButton!) {
         print("dressing")
-        move("dressingVC")
+        move("dressVC")
     }
 
     func likesAction(sender: UIButton!) {
         print("coup de coeur")
-        move("coupDeCoeurVC")
+        move("myLikeVC")
     }
 
     func wishsAction(sender: UIButton!) {
         print("wishlist")
-        move("wishListVC")
+        move("wlVC")
     }
 
     func accountAction(sender: UIButton!) {
         print("compte")
-        move("monCompteVC")
+        move("accountVC")
     }
 
     func facebookAction(sender: UIButton) {
