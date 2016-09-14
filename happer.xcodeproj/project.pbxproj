@@ -44,6 +44,9 @@
 		55E189D61D74741300A4FF6F /* cropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D51D74741300A4FF6F /* cropVC.swift */; };
 		55E189D81D74795700A4FF6F /* hashtagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D71D74795700A4FF6F /* hashtagVC.swift */; };
 		66158F2ECCC8B2C9443503D0 /* Pods_happer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D5FDC55069284B674BF500 /* Pods_happer.framework */; };
+		FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5D1D89841E00802025 /* Login.storyboard */; };
+		FC05BA601D8985A300802025 /* Happies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5F1D8985A300802025 /* Happies.storyboard */; };
+		FC05BA621D8987B900802025 /* UserPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA611D8987B900802025 /* UserPages.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		ADA46C2E3BA6F0456DC85CFA /* Pods-happerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.release.xcconfig"; sourceTree = "<group>"; };
 		B1D5FDC55069284B674BF500 /* Pods_happer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_happer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28BE142AAA4E3E3FEBC1FD3 /* Pods_happerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_happerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC05BA5D1D89841E00802025 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		FC05BA5F1D8985A300802025 /* Happies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Happies.storyboard; sourceTree = "<group>"; };
+		FC05BA611D8987B900802025 /* UserPages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserPages.storyboard; sourceTree = "<group>"; };
 		FF05981E9B77B97F668F17B6 /* Pods-happerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +198,7 @@
 		35D4F1381D24013200BEA8E1 /* connexion controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC05BA5D1D89841E00802025 /* Login.storyboard */,
 				35D4F1391D24016E00BEA8E1 /* mainPageVC.swift */,
 				35D4F13B1D24019A00BEA8E1 /* signUpVC.swift */,
 				35D4F13D1D2401C400BEA8E1 /* loginVC.swift */,
@@ -202,6 +209,7 @@
 		35D4F1431D240A0000BEA8E1 /* userPage controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC05BA611D8987B900802025 /* UserPages.storyboard */,
 				35D4F1441D240A3400BEA8E1 /* dressingVC.swift */,
 				5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */,
 				35D4F1461D240A4900BEA8E1 /* monCompteVC.swift */,
@@ -214,6 +222,7 @@
 		35D4F14E1D240CA400BEA8E1 /* happies controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC05BA5F1D8985A300802025 /* Happies.storyboard */,
 				35D4F14F1D240CC000BEA8E1 /* happlikeVC.swift */,
 				35D4F1511D240CD000BEA8E1 /* partageVC.swift */,
 				35D4F1531D240CF700BEA8E1 /* amisVC.swift */,
@@ -344,6 +353,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC05BA601D8985A300802025 /* Happies.storyboard in Resources */,
+				FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */,
+				FC05BA621D8987B900802025 /* UserPages.storyboard in Resources */,
 				353C2B121D23E4EE009D7968 /* LaunchScreen.storyboard in Resources */,
 				353C2B0F1D23E4EE009D7968 /* Assets.xcassets in Resources */,
 				353C2B0D1D23E4EE009D7968 /* Main.storyboard in Resources */,
