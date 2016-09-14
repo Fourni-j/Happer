@@ -93,7 +93,7 @@ class menuVC: UIViewController {
         if self.dynamicType === inspirationVC.self {
             print("You are alredy on inspirationVC")
         } else {
-            move("inspiVC")
+            move("Main", dest: "inspiVC")
         }
     }
 
@@ -106,28 +106,28 @@ class menuVC: UIViewController {
         if self.dynamicType === cerclesVC.self {
             print("You are alredy on cerclesVC")
         } else {
-            move("cerclesVC")
+            move("Main", dest: "cerclesVC")
         }
     }
 
     func dressAction(sender: UIButton!) {
         print("dressing")
-        move("dressVC")
+        move("UserPages", dest: "dressVC")
     }
 
     func likesAction(sender: UIButton!) {
         print("coup de coeur")
-        move("myLikeVC")
+        move("UserPages", dest: "myLikeVC")
     }
 
     func wishsAction(sender: UIButton!) {
         print("wishlist")
-        move("wlVC")
+        move("UserPages", dest: "wlVC")
     }
 
     func accountAction(sender: UIButton!) {
         print("compte")
-        move("accountVC")
+        move("UserPages", dest: "accountVC")
     }
 
     func facebookAction(sender: UIButton) {
@@ -142,10 +142,10 @@ class menuVC: UIViewController {
         print("youtube")
     }
 
-    func move(dest: String) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+    func move(storyboard: String, dest: String) {
+        let story = UIStoryboard.init(name: storyboard, bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier(dest)
-        self.presentViewController(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     /*
