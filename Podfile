@@ -8,7 +8,6 @@ target 'happer' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
-  pod 'Alamofire', '~> 3.0'
 
 end
 
