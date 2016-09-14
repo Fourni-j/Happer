@@ -79,7 +79,7 @@ class cropVC: UIViewController, UIScrollViewDelegate {
     @IBAction func cropButton(sender: UIButton) {
         UIGraphicsBeginImageContextWithOptions(scrollView.bounds.size, true, UIScreen.mainScreen().scale)
         let offset = scrollView.contentOffset
-        CGContextTranslateCTM(UIGraphicsGetCurrentContext(), -offset.x, -offset.y)
+        CGContextTranslateCTM(UIGraphicsGetCurrentContext()!, -offset.x, -offset.y)
         scrollView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         cropedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
