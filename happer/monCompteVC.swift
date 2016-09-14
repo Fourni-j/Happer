@@ -47,7 +47,7 @@ class monCompteVC: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func backButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "UserPages", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("dressVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }

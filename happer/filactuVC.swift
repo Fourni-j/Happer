@@ -128,14 +128,14 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func moveToHappLike() {
         cache.setObject("actuVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
     func moveToShare() {
         cache.setObject("actuVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
         self.presentViewController(vc, animated: true, completion: nil)
         
@@ -143,7 +143,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func moveToFriends() {
         cache.setObject("actuVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }

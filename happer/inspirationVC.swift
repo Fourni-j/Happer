@@ -87,8 +87,8 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     @IBAction func notifButton(sender: UIButton) {
         // Afficher historique notifications
     }
-    
-    @IBAction func menuButton(sender: UIButton) {
+        
+    @IBAction func menuAction(sender: AnyObject) {
         super.toggleMenu()
     }
 
@@ -125,14 +125,14 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
 
     func moveToHappLike() {
         cache.setObject("inspiVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
     func moveToShare() {
         cache.setObject("inspiVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
         self.presentViewController(vc, animated: true, completion: nil)
 
@@ -140,7 +140,7 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     
     func moveToFriends() {
         cache.setObject("inspiVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }

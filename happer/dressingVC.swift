@@ -64,7 +64,7 @@ class dressingVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
 
     @IBAction func UploadButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
         self.presentViewController(vc, animated: true, completion: nil)
     }
