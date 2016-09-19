@@ -10,7 +10,7 @@
         <!--demande d'aide-->
         <scene sceneID="iHD-WX-Nc8">
             <objects>
-                <viewController storyboardIdentifier="askHelpVC" title="demande d'aide" id="3RC-fv-AaD" customClass="amisVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="askHelpVC" title="demande d'aide" id="3RC-fv-AaD" customClass="FriendsVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JZG-dt-rwD"/>
                         <viewControllerLayoutGuide type="bottom" id="8hC-R3-zjN"/>
@@ -43,7 +43,7 @@
         <!--partager mon style-->
         <scene sceneID="Fgm-iV-HhV">
             <objects>
-                <viewController storyboardIdentifier="uploadVC" title="partager mon style" id="gg1-Cb-JKf" customClass="partageVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadVC" title="partager mon style" id="gg1-Cb-JKf" customClass="ShareVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="60f-tc-nFy"/>
                         <viewControllerLayoutGuide type="bottom" id="fm7-6T-IP0"/>
@@ -128,7 +128,7 @@
         <!--happLike-->
         <scene sceneID="RzT-Rj-9yX">
             <objects>
-                <viewController storyboardIdentifier="happLikeVC" title="happLike" id="wan-en-E7n" customClass="happlikeVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="happLikeVC" title="happLike" id="wan-en-E7n" customClass="HapplikeVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1bY-db-2TS"/>
                         <viewControllerLayoutGuide type="bottom" id="zRR-VE-fTY"/>
@@ -276,7 +276,7 @@
         <!--CropVC-->
         <scene sceneID="q61-ra-XCv">
             <objects>
-                <viewController id="QfE-RF-zCd" customClass="cropVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QfE-RF-zCd" customClass="CropVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6b-C0-sOP"/>
                         <viewControllerLayoutGuide type="bottom" id="fz9-tE-k7D"/>
@@ -328,7 +328,7 @@
         <!--HashtagVC-->
         <scene sceneID="0ZK-4C-l1j">
             <objects>
-                <viewController id="yAU-V5-rnw" customClass="hashtagVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yAU-V5-rnw" customClass="HashtagVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DEL-XI-Rbm"/>
                         <viewControllerLayoutGuide type="bottom" id="8VV-5P-Efc"/>

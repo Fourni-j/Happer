@@ -1,5 +1,5 @@
 //
-//  cerclesVC.swift
+//  CircleVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class cerclesVC: menuVC {
+class CircleVC: MenuVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.creatMenuView(57)
+        super.creatMenuView()
         // Do any additional setup after loading the view.
     }
 

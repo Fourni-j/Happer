@@ -1,5 +1,5 @@
 //
-//  happieView.swift
+//  HappieView.swift
 //  happer
 //
 //  Created by Josse on 04/08/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class happieView: UIView {
+class HappieView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,13 +20,13 @@ class happieView: UIView {
         let shareButton = UIButton()
         let friendButton = UIButton()
 
-        happLikeButton.addTarget(self, action: #selector(happieView.happLikeTap), forControlEvents: UIControlEvents.TouchUpInside)
+        happLikeButton.addTarget(self, action: #selector(HappieView.happLikeTap), forControlEvents: UIControlEvents.TouchUpInside)
         happLikeButton.frame = CGRectMake((frame.width / 2 - 75), 70, 40, 40)
         happLikeButton.setImage(UIImage(named: "Mock_up_final_Happ'like"), forState: UIControlState.Normal)
-        shareButton.addTarget(self, action: #selector(happieView.shareTap), forControlEvents: UIControlEvents.TouchUpInside)
+        shareButton.addTarget(self, action: #selector(HappieView.shareTap), forControlEvents: UIControlEvents.TouchUpInside)
         shareButton.frame = CGRectMake((frame.width / 2 - 20), 70, 40, 40)
         shareButton.setImage(UIImage(named: "Mock_up_final_Partager"), forState: UIControlState.Normal)
-        friendButton.addTarget(self, action: #selector(happieView.friendTap), forControlEvents: UIControlEvents.TouchUpInside)
+        friendButton.addTarget(self, action: #selector(HappieView.friendTap), forControlEvents: UIControlEvents.TouchUpInside)
         friendButton.frame = CGRectMake((frame.width / 2 + 35), 70, 40, 40)
         friendButton.setImage(UIImage(named: "Mock_up_final_Amis"), forState: UIControlState.Normal)
         self.addSubview(happLikeButton)

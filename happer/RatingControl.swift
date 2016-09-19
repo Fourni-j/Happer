@@ -1,5 +1,5 @@
 //
-//  ratingControl.swift
+//  RatingControl.swift
 //  happer
 //
 //  Created by Josse on 02/08/2016.

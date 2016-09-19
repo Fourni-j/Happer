@@ -1,5 +1,5 @@
 //
-//  partageVC.swift
+//  ShareVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class partageVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ShareVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     // MARK : - NSUserDefault
 
@@ -40,7 +40,7 @@ class partageVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! cropVC
+        let destination = segue.destinationViewController as! CropVC
         destination.pickedImage = pickedImage
     }
 

@@ -1,5 +1,5 @@
 //
-//  mainPageVC.swift
+//  MainPageVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class mainPageVC: UIViewController, FBSDKLoginButtonDelegate {
+class MainPageVC: UIViewController, FBSDKLoginButtonDelegate {
     
     // MARK: - properties
     

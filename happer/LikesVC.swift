@@ -1,14 +1,14 @@
 //
-//  coupDeCoeurVC.swift
+//  LikesVC.swift
 //  happer
 //
-//  Created by Josse on 29/06/2016.
+//  Created by paul on 19/09/2016.
 //  Copyright © 2016 mjosse. All rights reserved.
 //
 
 import UIKit
 
-class coupDeCoeurVC: UIViewController {
+class LikesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class coupDeCoeurVC: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

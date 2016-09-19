@@ -1,5 +1,5 @@
 //
-//  hashtagVC.swift
+//  HashtagVC.swift
 //  happer
 //
 //  Created by paul on 29/08/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class hashtagVC: UIViewController, UITextFieldDelegate {
+class HashtagVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -26,11 +26,11 @@ class hashtagVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         designFrame()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(hashtagVC.addDetails))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(HashtagVC.addDetails))
         tap.numberOfTapsRequired = 1
         containerView.addGestureRecognizer(tap)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(hashtagVC.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(hashtagVC.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HashtagVC.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HashtagVC.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,9 +104,9 @@ class hashtagVC: UIViewController, UITextFieldDelegate {
     }
 
     func creatTextField(touchPoint: CGPoint) {
-        let triangleView = UIImageView(frame: CGRectMake(touchPoint.x - 8, touchPoint.y, 16, 13.5))
-        triangleView.image = UIImage(named: "triangle")
-        imageView.addSubview(triangleView)
+        let indicatorView = UIImageView(frame: CGRectMake(touchPoint.x - 8, touchPoint.y, 16, 13.5))
+        indicatorView.image = UIImage(named: "triangle")
+        imageView.addSubview(indicatorView)
         let textField = UITextField(frame: CGRectMake(touchPoint.x - 8, touchPoint.y +  13.5, 100, 21))
         //textField.font = UIFont(name: "Helvetica", size: 12.0)
         textField.placeholder = "Marque"

@@ -1,5 +1,5 @@
 //
-//  inspirationVC.swift
+//  InspirationVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
+class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
 
     // MARK : - NSUSER
     
@@ -17,34 +17,34 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     
     // MARK : - attributs
     
-    var categories: [inspiClass] = []
-    var indexSelected: Int = 0
+    var categories: [InspiClass] = []
+    var indexSelected = 0
 
     // filters
     
-    var custom: happieView = happieView()
-    var filter: UIView = UIView()
+    var custom = HappieView()
+    var filter = UIView()
     
     @IBOutlet weak var catTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.creatMenuView(57)
+        super.creatMenuView()
         cache.setObject("inspiVC", forKey: "currentVC")
         initCat()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToHappLike), name: "happLike", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToShare), name: "share", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToFriends), name: "friends", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToShare), name: "share", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToFriends), name:  "friends", object: nil)
 
         let viewW = self.view.frame.width
         let viewH = self.view.frame.height
 
-        let tapOut = UITapGestureRecognizer(target: self, action: #selector(inspirationVC.dismissHappieView))
+        let tapOut = UITapGestureRecognizer(target: self, action: #selector(InspirationVC.dismissHappieView))
         
         // préparation vue happies et filtre
         
-        self.custom = happieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
+        self.custom = HappieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
         self.filter = UIView(frame: CGRect(x: 0, y: 0, width: viewW, height: viewH))
         self.filter.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         self.filter.addGestureRecognizer(tapOut)
@@ -52,8 +52,8 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
         self.filter.addSubview(custom)
         self.filter.hidden = true
 
-        let happerL = happerLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
-        happerL.button.addTarget(self, action: #selector(inspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
+        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
+        happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
     }
 
@@ -64,12 +64,12 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     // MARK: - self.methods
     
     func initCat() {
-        let ootd = inspiClass(name: "Tenue de Jour", keyWord: "ootd")
-        let ootn = inspiClass(name: "Tenue de Nuit", keyWord: "ootn")
-        let sacs = inspiClass(name: "Sacs", keyWord: "sacs")
-        let accessoires = inspiClass(name: "Accessoires", keyWord: "accessoires")
-        let chaussures = inspiClass(name: "Chaussures", keyWord: "chaussures")
-        let decontracte = inspiClass(name: "Decontracté", keyWord: "decontracte")
+        let ootd = InspiClass(name: "Tenue de Jour", keyWord: "ootd")
+        let ootn = InspiClass(name: "Tenue de Nuit", keyWord: "ootn")
+        let sacs = InspiClass(name: "Sacs", keyWord: "sacs")
+        let accessoires = InspiClass(name: "Accessoires", keyWord: "accessoires")
+        let chaussures = InspiClass(name: "Chaussures", keyWord: "chaussures")
+        let decontracte = InspiClass(name: "Decontracté", keyWord: "decontracte")
         categories += [ootd]
         categories += [ootn]
         categories += [sacs]
@@ -117,7 +117,7 @@ class inspirationVC: menuVC, UITabBarDelegate, UITableViewDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         if segue.identifier == "goFilActu" {
-            let destination = segue.destinationViewController as! filactuVC
+            let destination = segue.destinationViewController as! NewsFeedVC
             destination.indexSelected = indexSelected
             cache.setObject("inspiVC", forKey: "prevVC")
         }

@@ -1,5 +1,5 @@
 //
-//  cropVC.swift
+//  CropVC.swift
 //  happer
 //
 //  Created by paul on 29/08/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class cropVC: UIViewController, UIScrollViewDelegate {
+class CropVC: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     var imageView = UIImageView()
@@ -28,7 +28,7 @@ class cropVC: UIViewController, UIScrollViewDelegate {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! hashtagVC
+        let destination = segue.destinationViewController as! HashtagVC
         destination.cropedImage = cropedImage
     }
 

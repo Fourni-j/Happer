@@ -1,5 +1,5 @@
 //
-//  menuVC.swift
+//  MenuVC.swift
 //  happer
 //
 //  Created by paul on 02/08/2016.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class menuVC: UIViewController {
+class MenuVC: UIViewController {
 
-    let menuView: UIView = UIView()
+    let menuView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,61 +22,61 @@ class menuVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func creatMenuView(navbarHeight: CGFloat) {
+    func creatMenuView() {
         menuView.frame = CGRect(
             x: self.view.frame.origin.x - 260,
-            y: self.view.frame.origin.y + navbarHeight + 20,
+            y: self.view.frame.origin.y,
             width: 260.0,
-            height: self.view.frame.height - navbarHeight - 20)
-        let inspisButton: UIButton = UIButton(type: .System)
+            height: self.view.frame.height)
+        let inspisButton = UIButton(type: .System)
         inspisButton.frame = CGRectMake(0.0, 0.0, 260.0, 80.0)
         inspisButton.addTarget(self, action: #selector(inspisAction), forControlEvents: .TouchUpInside)
         inspisButton.setTitle("inspiration", forState: .Normal)
         menuView.addSubview(inspisButton)
-        let happieButton: UIButton = UIButton(type: .System)
+        let happieButton = UIButton(type: .System)
         happieButton.frame = CGRectMake(0.0, 80.0, 260.0, 80.0)
         happieButton.addTarget(self, action: #selector(happieAction), forControlEvents: .TouchUpInside)
         happieButton.setTitle("happies", forState: .Normal)
         menuView.addSubview(happieButton)
-        let cercleButton: UIButton = UIButton(type: .System)
+        let cercleButton = UIButton(type: .System)
         cercleButton.frame = CGRectMake(0.0, 160.0, 260.0, 80.0)
         cercleButton.addTarget(self, action: #selector(cercleAction), forControlEvents: .TouchUpInside)
         cercleButton.setTitle("produits", forState: .Normal)
         menuView.addSubview(cercleButton)
-        let dressButton: UIButton = UIButton(type: .System)
+        let dressButton = UIButton(type: .System)
         dressButton.frame = CGRectMake(0.0, 240.0, 260.0, 40.0)
         dressButton.addTarget(self, action: #selector(dressAction), forControlEvents: .TouchUpInside)
         dressButton.setTitle("mon dressing", forState: .Normal)
         menuView.addSubview(dressButton)
-        let likesButton: UIButton = UIButton(type: .System)
+        let likesButton = UIButton(type: .System)
         likesButton.frame = CGRectMake(0.0, 280.0, 260.0, 40.0)
         likesButton.addTarget(self, action: #selector(likesAction), forControlEvents: .TouchUpInside)
         likesButton.setTitle("mes coup de coeur", forState: .Normal)
         menuView.addSubview(likesButton)
-        let wishsButton: UIButton = UIButton(type: .System)
+        let wishsButton = UIButton(type: .System)
         wishsButton.frame = CGRectMake(0.0, 320.0, 260.0, 40.0)
         wishsButton.addTarget(self, action: #selector(wishsAction), forControlEvents: .TouchUpInside)
         wishsButton.setTitle("ma wishlist", forState: .Normal)
         menuView.addSubview(wishsButton)
-        let accountButton: UIButton = UIButton(type: .System)
+        let accountButton = UIButton(type: .System)
         accountButton.frame = CGRectMake(0.0, 360.0, 260.0, 40.0)
         accountButton.addTarget(self, action: #selector(accountAction), forControlEvents: .TouchUpInside)
         accountButton.setTitle("mon compte", forState: .Normal)
         menuView.addSubview(accountButton)
-        let reseauxView: UIView = UIView(frame: CGRect(x: 0.0, y: 400.0, width: 260.0, height: 80.0))
+        let reseauxView = UIView(frame: CGRect(x: 0.0, y: 400.0, width: 260.0, height: 80.0))
         let facebookButton: UIButton = UIButton(type: .System)
         facebookButton.frame = CGRectMake(65.0, 40.0, 30.0, 30.0)
         facebookButton.addTarget(self, action: #selector(facebookAction), forControlEvents: .TouchUpInside)
         facebookButton.layer.cornerRadius = facebookButton.frame.size.height / 2
         facebookButton.backgroundColor = UIColor.grayColor()
         reseauxView.addSubview(facebookButton)
-        let instaButton: UIButton = UIButton(type: .System)
+        let instaButton = UIButton(type: .System)
         instaButton.frame = CGRectMake(115.0, 40.0, 30.0, 30.0)
         instaButton.addTarget(self, action: #selector(instaAction), forControlEvents: .TouchUpInside)
         instaButton.layer.cornerRadius = instaButton.frame.size.height / 2
         instaButton.backgroundColor = UIColor.grayColor()
         reseauxView.addSubview(instaButton)
-        let youTubeButton: UIButton = UIButton(type: .System)
+        let youTubeButton = UIButton(type: .System)
         youTubeButton.frame = CGRectMake(165.0, 40.0, 30.0, 30.0)
         youTubeButton.addTarget(self, action: #selector(youTubeAction), forControlEvents: .TouchUpInside)
         youTubeButton.layer.cornerRadius = youTubeButton.frame.size.height / 2
@@ -90,7 +90,7 @@ class menuVC: UIViewController {
 
     func inspisAction(sender: UIButton!) {
         print("inspiration")
-        if self.dynamicType === inspirationVC.self {
+        if self.dynamicType === InspirationVC.self {
             print("You are alredy on inspirationVC")
         } else {
             move("Main", dest: "inspiVC")
@@ -103,7 +103,7 @@ class menuVC: UIViewController {
 
     func cercleAction(sender: UIButton!) {
         print("produit")
-        if self.dynamicType === cerclesVC.self {
+        if self.dynamicType === CircleVC.self {
             print("You are alredy on cerclesVC")
         } else {
             move("Main", dest: "cerclesVC")

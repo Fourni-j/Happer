@@ -10,7 +10,7 @@
         <!--Inspiration du jour-->
         <scene sceneID="nGH-Kf-P5E">
             <objects>
-                <viewController storyboardIdentifier="inspiVC" title="Inspiration du jour" id="mQV-13-i7a" customClass="inspirationVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inspiVC" title="Inspiration du jour" id="mQV-13-i7a" customClass="InspirationVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kAW-PF-Yqh"/>
                         <viewControllerLayoutGuide type="bottom" id="5bK-aR-gUQ"/>
@@ -69,7 +69,7 @@
                                         <rect key="frame" x="0.0" y="28" width="383" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fYF-Yh-eBe" id="air-A1-Nbs">
-                                            <frame key="frameInset" width="383" height="129"/>
+                                            <frame key="frameInset" width="383" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="40" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWi-VS-wOg">
@@ -130,9 +130,8 @@
         <!--Navigation Controller-->
         <scene sceneID="1ca-ev-qEF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kav-yJ-lsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="LC2-qD-NME" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="hZ8-dc-tJ4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hZ8-dc-tJ4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,13 +141,14 @@
                         <segue destination="mQV-13-i7a" kind="relationship" relationship="rootViewController" id="DSU-4Y-ERl"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kav-yJ-lsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-759" y="1486"/>
         </scene>
-        <!--FilactuVC-->
+        <!--News FeedVC-->
         <scene sceneID="6AF-0h-Oxl">
             <objects>
-                <viewController storyboardIdentifier="actuVC" id="BqL-1p-IRn" customClass="filactuVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="actuVC" id="BqL-1p-IRn" customClass="NewsFeedVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8q4-lj-LKo"/>
                         <viewControllerLayoutGuide type="bottom" id="Zxu-W7-6mz"/>
@@ -203,11 +203,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZS4-TG-TAB">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filActuCell" id="73y-GJ-6b7" customClass="filActuCell" customModule="happer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsFeedCell" id="73y-GJ-6b7" userLabel="NewsFeedCell" customClass="NewsFeedCell" customModule="happer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="383" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="73y-GJ-6b7" id="z29-E6-t2Y">
-                                            <frame key="frameInset" width="383" height="349"/>
+                                            <frame key="frameInset" width="383" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Er3-wF-bYN"/>
@@ -296,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="1118"/>
         </scene>
-        <!--Detail SelfieVC-->
+        <!--Selfie DetailsVC-->
         <scene sceneID="Dxu-2K-u0v">
             <objects>
-                <viewController storyboardIdentifier="dsVC" id="mge-Jn-2Qu" customClass="detailSelfieVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dsVC" id="mge-Jn-2Qu" customClass="SelfieDetailsVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Ng-Ud-s2N"/>
                         <viewControllerLayoutGuide type="bottom" id="3r1-fi-jBQ"/>
@@ -409,7 +409,7 @@
         <!--Cercles-->
         <scene sceneID="wmB-vj-QQc">
             <objects>
-                <viewController storyboardIdentifier="cerclesVC" title="Cercles" id="rnR-JV-u41" customClass="cerclesVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cerclesVC" title="Cercles" id="rnR-JV-u41" customClass="CircleVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mHo-he-3Fe"/>
                         <viewControllerLayoutGuide type="bottom" id="3lU-1z-Oi9"/>
@@ -442,7 +442,7 @@
         <!--produits-->
         <scene sceneID="0Ce-oo-5Wr">
             <objects>
-                <viewController storyboardIdentifier="productVC" title="produits" id="xKh-Qq-GST" customClass="produitsVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productVC" title="produits" id="xKh-Qq-GST" customClass="ProductsVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pmf-RZ-2Cd"/>
                         <viewControllerLayoutGuide type="bottom" id="Zgx-xh-4fe"/>
@@ -475,7 +475,7 @@
         <!--détails produit-->
         <scene sceneID="7Cm-gV-M5N">
             <objects>
-                <viewController storyboardIdentifier="productDetailsVC" title="détails produit" id="kKt-SO-WAg" customClass="detailProduitVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productDetailsVC" title="détails produit" id="kKt-SO-WAg" customClass="ProductDetailsVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D65-of-FHJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Hst-BO-4Zy"/>

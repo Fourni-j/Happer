@@ -1,5 +1,5 @@
 //
-//  inspiClass.swift
+//  InspiClass.swift
 //  happer
 //
 //  Created by Josse on 01/07/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class inspiClass {
+class InspiClass {
     
     // MARK: - attributs
     

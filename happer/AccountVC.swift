@@ -1,5 +1,5 @@
 //
-//  monCompteVC.swift
+//  AccountVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,26 +8,26 @@
 
 import UIKit
 
-class monCompteVC: UIViewController, UITextFieldDelegate {
+class AccountVC: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var prenomLabel: UITextField!
-    @IBOutlet weak var nomLabel: UITextField!
-    @IBOutlet weak var adresseLabel: UITextField!
+    @IBOutlet weak var firstnameLabel: UITextField!
+    @IBOutlet weak var nameLabel: UITextField!
+    @IBOutlet weak var adressLabel: UITextField!
     @IBOutlet weak var postalCodeLabel: UITextField!
-    @IBOutlet weak var villeLabel: UITextField!
+    @IBOutlet weak var cityLabel: UITextField!
     @IBOutlet weak var emailLabel: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.prenomLabel.delegate = self
-        self.nomLabel.delegate = self
-        self.adresseLabel.delegate = self
+        self.firstnameLabel.delegate = self
+        self.nameLabel.delegate = self
+        self.adressLabel.delegate = self
         self.postalCodeLabel.delegate = self
-        self.villeLabel.delegate = self
+        self.cityLabel.delegate = self
         self.emailLabel.delegate = self
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginVC.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
@@ -56,7 +56,7 @@ class monCompteVC: UIViewController, UITextFieldDelegate {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let strDate = dateFormatter.stringFromDate(datePicker.date)
-        let postString: String = "prenom=\(prenomLabel.text!)&nom=\(nomLabel.text!)&adresse=\(adresseLabel.text!)&postalCode=\(postalCodeLabel.text!)&ville=\(villeLabel.text!)&email=\(emailLabel.text!)&borndate=\(strDate)"
+        let postString: String = "prenom=\(firstnameLabel.text!)&nom=\(nameLabel.text!)&adresse=\(adressLabel.text!)&postalCode=\(postalCodeLabel.text!)&ville=\(cityLabel.text!)&email=\(emailLabel.text!)&borndate=\(strDate)"
         print(postString)
     }
 
