@@ -1,5 +1,5 @@
 //
-//  coupDeCoeurVC.swift
+//  ProductsVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class coupDeCoeurVC: UIViewController {
+class ProductsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

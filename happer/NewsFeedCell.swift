@@ -1,5 +1,5 @@
 //
-//  filActuCell.swift
+//  NewsFeedCell.swift
 //  happer
 //
 //  Created by Josse on 07/07/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class filActuCell: UITableViewCell {
+class NewsFeedCell: UITableViewCell {
 
     // MARK : - attributs
     

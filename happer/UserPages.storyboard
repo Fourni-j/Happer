@@ -10,7 +10,7 @@
         <!--mes coups de coeur-->
         <scene sceneID="k5c-Zb-umY">
             <objects>
-                <viewController storyboardIdentifier="myLikeVC" title="mes coups de coeur" id="WcS-I3-Clj" customClass="coupDeCoeurVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myLikeVC" title="mes coups de coeur" id="WcS-I3-Clj" customClass="LikesVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uM1-Lr-gbD"/>
                         <viewControllerLayoutGuide type="bottom" id="afU-GR-WMJ"/>
@@ -43,7 +43,7 @@
         <!--ma wish list-->
         <scene sceneID="oIq-GS-7iw">
             <objects>
-                <viewController storyboardIdentifier="wlVC" title="ma wish list" id="apU-A2-qCs" customClass="wishListVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wlVC" title="ma wish list" id="apU-A2-qCs" customClass="WishListVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jin-om-lBO"/>
                         <viewControllerLayoutGuide type="bottom" id="cce-vH-FuL"/>
@@ -76,7 +76,7 @@
         <!--Mon Dressing-->
         <scene sceneID="hme-hI-U40">
             <objects>
-                <viewController storyboardIdentifier="dressVC" title="Mon Dressing" id="shu-GP-kQt" customClass="dressingVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dressVC" title="Mon Dressing" id="shu-GP-kQt" customClass="DressingVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cYm-Ug-SQc"/>
                         <viewControllerLayoutGuide type="bottom" id="bVq-BN-4DA"/>
@@ -168,7 +168,7 @@
         <!--Mon Compte-->
         <scene sceneID="wRR-PC-G8G">
             <objects>
-                <viewController storyboardIdentifier="accountVC" title="Mon Compte" id="829-f4-DFi" customClass="monCompteVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="accountVC" title="Mon Compte" id="829-f4-DFi" customClass="AccountVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bc0-nJ-jFb"/>
                         <viewControllerLayoutGuide type="bottom" id="cFd-SA-44D"/>
@@ -352,18 +352,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adresseLabel" destination="IEL-Sv-aWc" id="eNM-27-34z"/>
+                        <outlet property="adressLabel" destination="IEL-Sv-aWc" id="Jc7-tB-vKi"/>
+                        <outlet property="cityLabel" destination="DEl-DQ-Rqv" id="eOm-AI-8yB"/>
                         <outlet property="datePicker" destination="Zz9-gl-avn" id="Rjd-Ra-UFA"/>
                         <outlet property="emailLabel" destination="5dZ-0D-8Xh" id="s0M-6E-iOF"/>
-                        <outlet property="nomLabel" destination="2zx-FK-ORL" id="iHj-ht-RI3"/>
+                        <outlet property="firstnameLabel" destination="hDG-Ow-TFM" id="4Z9-ON-vSb"/>
+                        <outlet property="nameLabel" destination="2zx-FK-ORL" id="ddR-SY-2Y4"/>
                         <outlet property="postalCodeLabel" destination="upr-xU-nz6" id="ppC-cR-QUa"/>
-                        <outlet property="prenomLabel" destination="hDG-Ow-TFM" id="FMh-AQ-AZq"/>
-                        <outlet property="villeLabel" destination="DEl-DQ-Rqv" id="fCg-kt-Gbx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCa-XQ-gUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="1942"/>
+            <point key="canvasLocation" x="767" y="1942"/>
         </scene>
     </scenes>
 </document>

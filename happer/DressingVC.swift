@@ -1,5 +1,5 @@
 //
-//  dressingVC.swift
+//  DressingVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class dressingVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class DressingVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var dressingCollectionView: UICollectionView!
     let reuseIdentifier = "dressingCell"

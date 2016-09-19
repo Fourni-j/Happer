@@ -1,5 +1,5 @@
 //
-//  happerLogo.swift
+//  HapperLogo.swift
 //  happer
 //
 //  Created by Josse on 04/08/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class happerLogo: UIView {
+class HapperLogo: UIView {
 
     let button = UIButton()
     

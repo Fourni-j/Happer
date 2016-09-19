@@ -1,5 +1,5 @@
 //
-//  signUpVC.swift
+//  SignUpVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class signUpVC: UIViewController, UITextFieldDelegate {
+class SignUpVC: UIViewController, UITextFieldDelegate {
 
     // MARK: - properties
     
@@ -25,7 +25,7 @@ class signUpVC: UIViewController, UITextFieldDelegate {
         self.mailField.delegate = self
         self.passwdField.delegate = self
         self.confpassField.delegate = self
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signUpVC.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
 
@@ -114,7 +114,7 @@ class signUpVC: UIViewController, UITextFieldDelegate {
             if (success > 0) {
                 print("SUCCESS")
                 let story = UIStoryboard(name: "Main", bundle: nil)
-                let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! mainPageVC
+                let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! MainPageVC
                 self.presentViewController(vc, animated: true, completion: nil)
             }
             else {
@@ -126,7 +126,7 @@ class signUpVC: UIViewController, UITextFieldDelegate {
 
     @IBAction func back(sender: UITapGestureRecognizer) {
         let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! mainPageVC
+        let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! MainPageVC
         self.presentViewController(vc, animated: true, completion: nil)
     }
 

@@ -1,5 +1,5 @@
 //
-//  userClass.swift
+//  UserClass.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-class userClass {
+class UserClass {
     
     // MARK : - attributs
     
     private let id: Int
-    private var name: String
+    private var username: String
     private var circle: Int
     private var level: Int
     private var exp: Float
@@ -21,9 +21,9 @@ class userClass {
     
     // MARK : - Initialiseur
     
-    init (id: Int, name: String, circle: Int, level: Int, exp: Float, credit: Int) {
+    init (id: Int, username: String, circle: Int, level: Int, exp: Float, credit: Int) {
         self.id = id
-        self.name = name
+        self.username = username
         self.circle = circle
         self.level = level
         self.exp = exp
@@ -36,7 +36,7 @@ class userClass {
         return id
     }
     func getName() -> String {
-        return name
+        return username
     }
     func getCircle() -> Int {
         return circle

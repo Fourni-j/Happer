@@ -1,5 +1,5 @@
 //
-//  selfieClass.swift
+//  SelfieClass.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class selfieClass {
+class SelfieClass {
     
     //MARK : - attributs
     

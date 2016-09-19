@@ -1,5 +1,5 @@
 //
-//  happlikeVC.swift
+//  LikesVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -7,19 +7,11 @@
 //
 
 import UIKit
-import Foundation
 
-class happlikeVC: UIViewController {
+class LikesVC: UIViewController {
 
-    // MARK : - NSUserDefault
-    
-    var cache = NSUserDefaults.standardUserDefaults()
-    
-    // MARK : - attributs
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        cache.setObject("happLikeVC", forKey: "currentVC")
 
         // Do any additional setup after loading the view.
     }
@@ -28,6 +20,7 @@ class happlikeVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
     /*
     // MARK: - Navigation
@@ -38,13 +31,5 @@ class happlikeVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @IBAction func backButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier(cache.objectForKey("prevVC") as! String)
-        cache.setObject("happLikeVC", forKey: "prevVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-
-    }
 
 }

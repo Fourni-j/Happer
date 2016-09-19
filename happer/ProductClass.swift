@@ -1,5 +1,5 @@
 //
-//  productClass.swift
+//  ProductClass.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class productClass {
+class ProductClass {
 
     //MARK: - attributs
     

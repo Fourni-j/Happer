@@ -1,5 +1,5 @@
 //
-//  loginVC.swift
+//  LoginVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class loginVC: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate {
 
     // MARK: - properties
     
@@ -22,7 +22,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.loginField.delegate = self
         self.passwdField.delegate = self
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(loginVC.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
@@ -101,7 +101,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
 
     @IBAction func back(sender: UITapGestureRecognizer) {
         let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! mainPageVC
+        let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! MainPageVC
         self.presentViewController(vc, animated: true, completion: nil)
         
     }

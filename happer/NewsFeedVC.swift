@@ -1,5 +1,5 @@
 //
-//  filactuVC.swift
+//  NewsFeedVC.swift
 //  happer
 //
 //  Created by Josse on 29/06/2016.
@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK : - NSUserDefault
     
@@ -21,33 +21,33 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var jsonData = NSDictionary()
 
     @IBOutlet weak var table: UITableView!
-    var indexSelected: Int = 0
-    let catTab: [String] = ["Ootd", "Ootn", "Sacs", "Accessoires", "Chaussures", "Decontracte"]
-    var selfieTab: [selfieClass] = []
+    var indexSelected = 0
+    let catTab = ["Ootd", "Ootn", "Sacs", "Accessoires", "Chaussures", "Decontracte"]
+    var selfieTab: [SelfieClass] = []
     
     // transmission
     
-    var toTransmit = selfieClass(ownerID: 0, nbLike: 0, rate: 0, id: 0, categoryName: "default", path: "ec2-52-49-149-140.eu-west-1.compute.amazonaws.com/uploads/selfie20.jpg")
+    var toTransmit = SelfieClass(ownerID: 0, nbLike: 0, rate: 0, id: 0, categoryName: "default", path: "ec2-52-49-149-140.eu-west-1.compute.amazonaws.com/uploads/selfie20.jpg")
 
     // filters
     
-    var custom: happieView = happieView()
-    var filter: UIView = UIView()
+    var custom = HappieView()
+    var filter = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToHappLike), name: "happLike", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToShare), name: "share", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(inspirationVC.moveToFriends), name: "friends", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToShare), name: "share", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToFriends), name: "friends", object: nil)
         
         let viewW = self.view.frame.width
         let viewH = self.view.frame.height
         
-        let tapOut = UITapGestureRecognizer(target: self, action: #selector(inspirationVC.dismissHappieView))
+        let tapOut = UITapGestureRecognizer(target: self, action: #selector(InspirationVC.dismissHappieView))
         
         // préparation vue happies et filtre
         
-        self.custom = happieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
+        self.custom = HappieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
         self.filter = UIView(frame: CGRect(x: 0, y: 0, width: viewW, height: viewH))
         self.filter.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         self.filter.addGestureRecognizer(tapOut)
@@ -55,8 +55,8 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.filter.addSubview(custom)
         self.filter.hidden = true
         
-        let happerL = happerLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
-        happerL.button.addTarget(self, action: #selector(filactuVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
+        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
+        happerL.button.addTarget(self, action: #selector(NewsFeedVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
 
         
@@ -78,7 +78,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.table.dequeueReusableCellWithIdentifier("filActuCell", forIndexPath: indexPath) as! filActuCell
+        let cell = self.table.dequeueReusableCellWithIdentifier("newsFeedCell", forIndexPath: indexPath) as! NewsFeedCell
         let selfie = selfieTab[indexPath.row]
         cell.cellRating.rating = Float(selfie.getRate())
         cell.cellImage.image = selfie.getImage()
@@ -101,10 +101,10 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             print("Error catched, func getSelfie() in filactuVC.swift")
             return
         }
-        let tab: NSDictionary = result.valueForKey("content") as! NSDictionary;
-        var new: selfieClass
+        let tab = result.valueForKey("content") as! NSDictionary
+        var new: SelfieClass
         for val in tab {
-            new = selfieClass(ownerID: val.value["owner"] as! Int, nbLike: val.value["nbLike"] as! Int, rate: val.value["rate"] as! Int, id: val.value["id"] as! Int, categoryName: self.catTab[indexSelected] as String, path: val.value["url"] as! String)
+            new = SelfieClass(ownerID: val.value["owner"] as! Int, nbLike: val.value["nbLike"] as! Int, rate: val.value["rate"] as! Int, id: val.value["id"] as! Int, categoryName: self.catTab[indexSelected] as String, path: val.value["url"] as! String)
             selfieTab += [new]
         }
     }
@@ -120,7 +120,7 @@ class filactuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToInspi" {
-            let destination = segue.destinationViewController as! detailSelfieVC
+            let destination = segue.destinationViewController as! SelfieDetailsVC
             destination.selfie = self.toTransmit
             destination.indexSelected = self.indexSelected
         }
