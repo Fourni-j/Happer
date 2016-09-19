@@ -44,6 +44,9 @@
 		FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5D1D89841E00802025 /* Login.storyboard */; };
 		FC05BA601D8985A300802025 /* Happies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5F1D8985A300802025 /* Happies.storyboard */; };
 		FC05BA621D8987B900802025 /* UserPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA611D8987B900802025 /* UserPages.storyboard */; };
+		FC0C70D91D90346F002AA0F6 /* AuthentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C70D81D90346F002AA0F6 /* AuthentInteractor.swift */; };
+		FC0C70DB1D903474002AA0F6 /* AuthentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C70DA1D903474002AA0F6 /* AuthentPresenter.swift */; };
+		FC0C70DE1D903480002AA0F6 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C70DD1D903480002AA0F6 /* Bus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		FC05BA5D1D89841E00802025 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FC05BA5F1D8985A300802025 /* Happies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Happies.storyboard; sourceTree = "<group>"; };
 		FC05BA611D8987B900802025 /* UserPages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserPages.storyboard; sourceTree = "<group>"; };
+		FC0C70D81D90346F002AA0F6 /* AuthentInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentInteractor.swift; sourceTree = "<group>"; };
+		FC0C70DA1D903474002AA0F6 /* AuthentPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentPresenter.swift; sourceTree = "<group>"; };
+		FC0C70DD1D903480002AA0F6 /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		FF05981E9B77B97F668F17B6 /* Pods-happerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,10 +153,11 @@
 		353C2B061D23E4EE009D7968 /* happer */ = {
 			isa = PBXGroup;
 			children = (
+				FC0C70DC1D903476002AA0F6 /* Shared */,
+				FC0C70D41D90343B002AA0F6 /* Authent */,
 				35D4F1611D2547DB00BEA8E1 /* useClass */,
 				35D4F14E1D240CA400BEA8E1 /* happies controllers */,
 				35D4F1431D240A0000BEA8E1 /* userPage controllers */,
-				35D4F1381D24013200BEA8E1 /* connexion controllers */,
 				353C2B271D23E68F009D7968 /* dataClasses */,
 				353C2B071D23E4EE009D7968 /* AppDelegate.swift */,
 				353C2B0B1D23E4EE009D7968 /* Main.storyboard */,
@@ -183,17 +190,6 @@
 				353C2B321D23F53F009D7968 /* ProductClass.swift */,
 			);
 			name = dataClasses;
-			sourceTree = "<group>";
-		};
-		35D4F1381D24013200BEA8E1 /* connexion controllers */ = {
-			isa = PBXGroup;
-			children = (
-				FC05BA5D1D89841E00802025 /* Login.storyboard */,
-				35D4F1391D24016E00BEA8E1 /* MainPageVC.swift */,
-				35D4F13B1D24019A00BEA8E1 /* SignUpVC.swift */,
-				35D4F13D1D2401C400BEA8E1 /* LoginVC.swift */,
-			);
-			name = "connexion controllers";
 			sourceTree = "<group>";
 		};
 		35D4F1431D240A0000BEA8E1 /* userPage controllers */ = {
@@ -253,6 +249,51 @@
 				C28BE142AAA4E3E3FEBC1FD3 /* Pods_happerTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC0C70D41D90343B002AA0F6 /* Authent */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C70D51D903445002AA0F6 /* Interactor */,
+				FC0C70D61D90344A002AA0F6 /* Presenter */,
+				FC0C70D71D903451002AA0F6 /* View */,
+			);
+			name = Authent;
+			sourceTree = "<group>";
+		};
+		FC0C70D51D903445002AA0F6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C70D81D90346F002AA0F6 /* AuthentInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		FC0C70D61D90344A002AA0F6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C70DA1D903474002AA0F6 /* AuthentPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		FC0C70D71D903451002AA0F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC05BA5D1D89841E00802025 /* Login.storyboard */,
+				35D4F1391D24016E00BEA8E1 /* MainPageVC.swift */,
+				35D4F13B1D24019A00BEA8E1 /* SignUpVC.swift */,
+				35D4F13D1D2401C400BEA8E1 /* LoginVC.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC0C70DC1D903476002AA0F6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C70DD1D903480002AA0F6 /* Bus.swift */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,11 +501,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0C70DB1D903474002AA0F6 /* AuthentPresenter.swift in Sources */,
 				35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */,
 				35D4F1541D240CF700BEA8E1 /* FriendsVC.swift in Sources */,
 				353C2B331D23F53F009D7968 /* ProductClass.swift in Sources */,
 				35D4F1501D240CC000BEA8E1 /* HapplikeVC.swift in Sources */,
 				35D4F13C1D24019A00BEA8E1 /* SignUpVC.swift in Sources */,
+				FC0C70DE1D903480002AA0F6 /* Bus.swift in Sources */,
 				3570469B1D549F20003F87DC /* SelfieDetailsVC.swift in Sources */,
 				35D4F13E1D2401C400BEA8E1 /* LoginVC.swift in Sources */,
 				35D4F1471D240A4900BEA8E1 /* AccountVC.swift in Sources */,
@@ -483,6 +526,7 @@
 				35D4F1651D26AE1F00BEA8E1 /* InspiClass.swift in Sources */,
 				557D4F521D50E708001D26BC /* MenuVC.swift in Sources */,
 				55E189D81D74795700A4FF6F /* HashtagVC.swift in Sources */,
+				FC0C70D91D90346F002AA0F6 /* AuthentInteractor.swift in Sources */,
 				3587981E1D2E5B710038AAA8 /* NewsFeedCell.swift in Sources */,
 				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
 				357046951D536E5D003F87DC /* HappieView.swift in Sources */,

@@ -16,7 +16,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mailField: UITextField!
     @IBOutlet weak var passwdField: UITextField!
     @IBOutlet weak var confpassField: UITextField!
-
+    var authentInteractor = AuthentInteractor()
     // MARK: - parent.methods
     
     override func viewDidLoad() {
@@ -29,6 +29,16 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        AuthentPresenter.register(self, events: .SubscribeSuccess, .SubscribeFailure)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        AuthentPresenter.unregisterAll(self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -68,66 +78,62 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             confpassField.text = ""
             return
         }
-        let login = loginField.text!.lowercaseString as NSString
-        let mail = mailField.text!.lowercaseString as NSString
-        let passwd = passwdField.text!.lowercaseString as NSString
+        authentInteractor.subscribe(loginField.text!, pass: passwdField.text!, mail: mailField.text!)
         
-        let session = NSURLSession.sharedSession()
-        var jsonData = NSDictionary()
-        let postr = NSString(string : "login=\(login)&passwd=\(passwd)&mail=\(mail)")
-        let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/adduser.php")
-        let request = NSMutableURLRequest(URL :url!)
-        request.HTTPMethod = "POST"
-        
-        let postData: NSData = postr.dataUsingEncoding(NSUTF8StringEncoding)!
-        request.HTTPBody = postData
-        
-        
-        let postLength: NSString = String(postData.length)
-        
-        
-        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length")
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        
-        var urlData: NSData?
-        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            urlData = data! as NSData
-            let res = response as! NSHTTPURLResponse
-            if res.statusCode >= 200 && res.statusCode < 300 {
-                do
-                {
-                    jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                }
-                catch
-                {
-                    print("Catch-Location:: 'signUpVC' :: Serialization of server's response <jsonData>")
-                    return
-                }
-            }
-            else {
-                print(res.statusCode)
-                return
-            }
-            print(jsonData)
-            let success = jsonData.valueForKey("success") as! NSInteger
-            if (success > 0) {
-                print("SUCCESS")
-                let story = UIStoryboard(name: "Main", bundle: nil)
-                let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! MainPageVC
-                self.presentViewController(vc, animated: true, completion: nil)
-            }
-            else {
-                print("FAIL")
-            }
-        })
-        task.resume()
-    }
-
-    @IBAction func back(sender: UITapGestureRecognizer) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! MainPageVC
-        self.presentViewController(vc, animated: true, completion: nil)
+//        let login = loginField.text!.lowercaseString as NSString
+//        let mail = mailField.text!.lowercaseString as NSString
+//        let passwd = passwdField.text!.lowercaseString as NSString
+//        
+//        let session = NSURLSession.sharedSession()
+//        var jsonData = NSDictionary()
+//        let postr = NSString(string : "login=\(login)&passwd=\(passwd)&mail=\(mail)")
+//        let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/adduser.php")
+//        let request = NSMutableURLRequest(URL :url!)
+//        request.HTTPMethod = "POST"
+//        
+//        let postData: NSData = postr.dataUsingEncoding(NSUTF8StringEncoding)!
+//        request.HTTPBody = postData
+//        
+//        
+//        let postLength: NSString = String(postData.length)
+//        
+//        
+//        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length")
+//        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+//        request.setValue("application/json", forHTTPHeaderField: "Accept")
+//        
+//        var urlData: NSData?
+//        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+//            urlData = data! as NSData
+//            let res = response as! NSHTTPURLResponse
+//            if res.statusCode >= 200 && res.statusCode < 300 {
+//                do
+//                {
+//                    jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+//                }
+//                catch
+//                {
+//                    print("Catch-Location:: 'signUpVC' :: Serialization of server's response <jsonData>")
+//                    return
+//                }
+//            }
+//            else {
+//                print(res.statusCode)
+//                return
+//            }
+//            print(jsonData)
+//            let success = jsonData.valueForKey("success") as! NSInteger
+//            if (success > 0) {
+//                print("SUCCESS")
+//                let story = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! MainPageVC
+//                self.presentViewController(vc, animated: true, completion: nil)
+//            }
+//            else {
+//                print("FAIL")
+//            }
+//        })
+//        task.resume()
     }
 
     /*
@@ -139,4 +145,14 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+extension SignUpVC : AuthentEvent {
+    func subscribeSuccess() {
+        print("success")
+    }
+    
+    func subscribeFailure(error: NSError) {
+        print("failure")
+    }
 }
