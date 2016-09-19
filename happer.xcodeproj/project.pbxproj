@@ -27,13 +27,10 @@
 		35D4F1421D24099A00BEA8E1 /* NewsFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1411D24099A00BEA8E1 /* NewsFeedVC.swift */; };
 		35D4F1451D240A3400BEA8E1 /* DressingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1441D240A3400BEA8E1 /* DressingVC.swift */; };
 		35D4F1471D240A4900BEA8E1 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1461D240A4900BEA8E1 /* AccountVC.swift */; };
-		35D4F1491D240A5F00BEA8E1 /* WishListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1481D240A5F00BEA8E1 /* WishListVC.swift */; };
-		35D4F14B1D240A8600BEA8E1 /* LikesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F14A1D240A8600BEA8E1 /* LikesVC.swift */; };
 		35D4F14D1D240C6700BEA8E1 /* CircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F14C1D240C6700BEA8E1 /* CircleVC.swift */; };
 		35D4F1501D240CC000BEA8E1 /* HapplikeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F14F1D240CC000BEA8E1 /* HapplikeVC.swift */; };
 		35D4F1521D240CD000BEA8E1 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1511D240CD000BEA8E1 /* ShareVC.swift */; };
 		35D4F1541D240CF700BEA8E1 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1531D240CF700BEA8E1 /* FriendsVC.swift */; };
-		35D4F1561D240EFD00BEA8E1 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1551D240EFD00BEA8E1 /* ProductsVC.swift */; };
 		35D4F1581D240F1A00BEA8E1 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1571D240F1A00BEA8E1 /* ProductDetailsVC.swift */; };
 		35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */; };
 		35D4F1651D26AE1F00BEA8E1 /* InspiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1641D26AE1F00BEA8E1 /* InspiClass.swift */; };
@@ -84,13 +81,10 @@
 		35D4F1411D24099A00BEA8E1 /* NewsFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedVC.swift; sourceTree = "<group>"; };
 		35D4F1441D240A3400BEA8E1 /* DressingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DressingVC.swift; sourceTree = "<group>"; };
 		35D4F1461D240A4900BEA8E1 /* AccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
-		35D4F1481D240A5F00BEA8E1 /* WishListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListVC.swift; sourceTree = "<group>"; };
-		35D4F14A1D240A8600BEA8E1 /* LikesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesVC.swift; sourceTree = "<group>"; };
 		35D4F14C1D240C6700BEA8E1 /* CircleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleVC.swift; sourceTree = "<group>"; };
 		35D4F14F1D240CC000BEA8E1 /* HapplikeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapplikeVC.swift; sourceTree = "<group>"; };
 		35D4F1511D240CD000BEA8E1 /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		35D4F1531D240CF700BEA8E1 /* FriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
-		35D4F1551D240EFD00BEA8E1 /* ProductsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
 		35D4F1571D240F1A00BEA8E1 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKLoginButtonFR.swift; sourceTree = "<group>"; };
 		35D4F1641D26AE1F00BEA8E1 /* InspiClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspiClass.swift; sourceTree = "<group>"; };
@@ -166,7 +160,6 @@
 				35D4F13F1D2408E000BEA8E1 /* InspirationVC.swift */,
 				35D4F1411D24099A00BEA8E1 /* NewsFeedVC.swift */,
 				35D4F14C1D240C6700BEA8E1 /* CircleVC.swift */,
-				35D4F1551D240EFD00BEA8E1 /* ProductsVC.swift */,
 				35D4F1571D240F1A00BEA8E1 /* ProductDetailsVC.swift */,
 				3570469A1D549F20003F87DC /* SelfieDetailsVC.swift */,
 			);
@@ -210,8 +203,6 @@
 				35D4F1441D240A3400BEA8E1 /* DressingVC.swift */,
 				5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */,
 				35D4F1461D240A4900BEA8E1 /* AccountVC.swift */,
-				35D4F1481D240A5F00BEA8E1 /* WishListVC.swift */,
-				35D4F14A1D240A8600BEA8E1 /* LikesVC.swift */,
 			);
 			name = "userPage controllers";
 			sourceTree = "<group>";
@@ -472,8 +463,6 @@
 				35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */,
 				35D4F1541D240CF700BEA8E1 /* FriendsVC.swift in Sources */,
 				353C2B331D23F53F009D7968 /* ProductClass.swift in Sources */,
-				35D4F14B1D240A8600BEA8E1 /* LikesVC.swift in Sources */,
-				35D4F1561D240EFD00BEA8E1 /* ProductsVC.swift in Sources */,
 				35D4F1501D240CC000BEA8E1 /* HapplikeVC.swift in Sources */,
 				35D4F13C1D24019A00BEA8E1 /* SignUpVC.swift in Sources */,
 				3570469B1D549F20003F87DC /* SelfieDetailsVC.swift in Sources */,
@@ -498,7 +487,6 @@
 				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
 				357046951D536E5D003F87DC /* HappieView.swift in Sources */,
 				55E189D61D74741300A4FF6F /* CropVC.swift in Sources */,
-				35D4F1491D240A5F00BEA8E1 /* WishListVC.swift in Sources */,
 				35D4F1421D24099A00BEA8E1 /* NewsFeedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
