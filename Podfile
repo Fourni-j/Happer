@@ -9,6 +9,8 @@ target 'happer' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
   pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :tag => '3.5.0'
+  pod 'AlamofireImage', '~> 2.5'
+  pod 'RealmSwift', '~> 1.1.0'
 
 end
 
