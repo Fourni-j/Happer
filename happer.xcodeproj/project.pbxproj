@@ -12,9 +12,9 @@
 		353C2B0F1D23E4EE009D7968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353C2B0E1D23E4EE009D7968 /* Assets.xcassets */; };
 		353C2B121D23E4EE009D7968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353C2B101D23E4EE009D7968 /* LaunchScreen.storyboard */; };
 		353C2B1D1D23E4F0009D7968 /* happerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B1C1D23E4F0009D7968 /* happerTests.swift */; };
-		353C2B291D23E6EA009D7968 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B281D23E6EA009D7968 /* UserClass.swift */; };
-		353C2B311D23F1D0009D7968 /* SelfieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B301D23F1D0009D7968 /* SelfieClass.swift */; };
-		353C2B331D23F53F009D7968 /* ProductClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B321D23F53F009D7968 /* ProductClass.swift */; };
+		353C2B291D23E6EA009D7968 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B281D23E6EA009D7968 /* User.swift */; };
+		353C2B311D23F1D0009D7968 /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B301D23F1D0009D7968 /* Selfie.swift */; };
+		353C2B331D23F53F009D7968 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353C2B321D23F53F009D7968 /* Product.swift */; };
 		357046931D50AD53003F87DC /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357046921D50AD53003F87DC /* RatingControl.swift */; };
 		357046951D536E5D003F87DC /* HappieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357046941D536E5D003F87DC /* HappieView.swift */; };
 		357046971D53867C003F87DC /* HapperLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357046961D53867C003F87DC /* HapperLogo.swift */; };
@@ -69,9 +69,9 @@
 		353C2B181D23E4F0009D7968 /* happerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = happerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		353C2B1C1D23E4F0009D7968 /* happerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = happerTests.swift; sourceTree = "<group>"; };
 		353C2B1E1D23E4F0009D7968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		353C2B281D23E6EA009D7968 /* UserClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
-		353C2B301D23F1D0009D7968 /* SelfieClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieClass.swift; sourceTree = "<group>"; };
-		353C2B321D23F53F009D7968 /* ProductClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductClass.swift; sourceTree = "<group>"; };
+		353C2B281D23E6EA009D7968 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		353C2B301D23F1D0009D7968 /* Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selfie.swift; sourceTree = "<group>"; };
+		353C2B321D23F53F009D7968 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		357046921D50AD53003F87DC /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		357046941D536E5D003F87DC /* HappieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappieView.swift; sourceTree = "<group>"; };
 		357046961D53867C003F87DC /* HapperLogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapperLogo.swift; sourceTree = "<group>"; };
@@ -196,9 +196,9 @@
 		353C2B271D23E68F009D7968 /* dataClasses */ = {
 			isa = PBXGroup;
 			children = (
-				353C2B281D23E6EA009D7968 /* UserClass.swift */,
-				353C2B301D23F1D0009D7968 /* SelfieClass.swift */,
-				353C2B321D23F53F009D7968 /* ProductClass.swift */,
+				353C2B281D23E6EA009D7968 /* User.swift */,
+				353C2B301D23F1D0009D7968 /* Selfie.swift */,
+				353C2B321D23F53F009D7968 /* Product.swift */,
 			);
 			name = dataClasses;
 			sourceTree = "<group>";
@@ -504,7 +504,7 @@
 				FC0C70DB1D903474002AA0F6 /* AuthentPresenter.swift in Sources */,
 				35D4F1671D26B5ED00BEA8E1 /* CategoryCell.swift in Sources */,
 				35D4F1541D240CF700BEA8E1 /* FriendsVC.swift in Sources */,
-				353C2B331D23F53F009D7968 /* ProductClass.swift in Sources */,
+				353C2B331D23F53F009D7968 /* Product.swift in Sources */,
 				35D4F1501D240CC000BEA8E1 /* HapplikeVC.swift in Sources */,
 				35D4F13C1D24019A00BEA8E1 /* SignUpVC.swift in Sources */,
 				FC0C70DE1D903480002AA0F6 /* Bus.swift in Sources */,
@@ -514,13 +514,13 @@
 				357046971D53867C003F87DC /* HapperLogo.swift in Sources */,
 				5521FC8A1D87116C002812C1 /* DressingCollectionViewCell.swift in Sources */,
 				35D4F1521D240CD000BEA8E1 /* ShareVC.swift in Sources */,
-				353C2B291D23E6EA009D7968 /* UserClass.swift in Sources */,
+				353C2B291D23E6EA009D7968 /* User.swift in Sources */,
 				35D4F1581D240F1A00BEA8E1 /* ProductDetailsVC.swift in Sources */,
 				357046931D50AD53003F87DC /* RatingControl.swift in Sources */,
 				35D4F14D1D240C6700BEA8E1 /* CircleVC.swift in Sources */,
 				35D4F1401D2408E000BEA8E1 /* InspirationVC.swift in Sources */,
 				35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */,
-				353C2B311D23F1D0009D7968 /* SelfieClass.swift in Sources */,
+				353C2B311D23F1D0009D7968 /* Selfie.swift in Sources */,
 				35D4F13A1D24016E00BEA8E1 /* MainPageVC.swift in Sources */,
 				35D4F1451D240A3400BEA8E1 /* DressingVC.swift in Sources */,
 				35D4F1651D26AE1F00BEA8E1 /* InspiClass.swift in Sources */,
