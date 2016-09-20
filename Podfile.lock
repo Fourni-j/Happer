@@ -12,12 +12,18 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.15.1):
     - FBSDKCoreKit
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, tag `3.5.0`)
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - RealmSwift (~> 1.1.0)
 
 EXTERNAL SOURCES:
   Alamofire:
@@ -35,7 +41,9 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
   FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
   FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
 
-PODFILE CHECKSUM: 89114e0e44171d77c9b013c04ef7e63838274ce2
+PODFILE CHECKSUM: 0831f3fd4c4e58a9e9b18fb80d1e7d79bd793c48
 
 COCOAPODS: 1.0.1
