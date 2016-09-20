@@ -26,6 +26,16 @@ class Selfie : Object {
         case Invalidated
         case Unknown
         
+        var value : String {
+            switch self {
+            case .Created: return "Created"
+            case .Promoted: return "Promoted"
+            case .Signaled: return "Signaled"
+            case .Invalidated: return "Invalidated"
+            case .Unknown: return "Unknown"
+            }
+        }
+        
         init(value: Int) {
             if let state = State(rawValue: value) {
                 self = state

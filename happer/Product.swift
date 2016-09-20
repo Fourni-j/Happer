@@ -17,6 +17,18 @@ enum Circle : Int {
     case Platine
     case Unknown
     
+    var value : String {
+        switch self {
+        case .Silver: return "Silver"
+        case .Gold: return "Gold"
+        case .Rubis: return "Rubis"
+        case .Saphire: return "Saphire"
+        case .Platine: return "Platines"
+        case .Unknown: return "Unknown"
+        }
+    }
+    
+    
     init(value: Int) {
         if let circle = Circle(rawValue: value) {
             self = circle
@@ -47,8 +59,8 @@ class Product : Object {
     dynamic var desc = ""
     dynamic var title = ""
     dynamic var brand = ""
-    dynamic var total_time = 0
-    dynamic var completed_time = 0
+    dynamic var totalTime = 0
+    dynamic var completedTime = 0
 
     dynamic var stateRawValue = State.Unknown.rawValue
     var state : State {
@@ -71,6 +83,6 @@ class Product : Object {
     }
     
     var remaining_time : Int {
-        return total_time - completed_time
+        return totalTime - completedTime
     }
 }
