@@ -8,9 +8,10 @@
 
 import UIKit
 import Foundation
+import AlamofireImage
 
 class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     //MARK : - NSUserDefault
     
     var cache = NSUserDefaults.standardUserDefaults()
@@ -19,21 +20,21 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var mylabel: UILabel!
     var jsonData = NSDictionary()
-
+    
     @IBOutlet weak var table: UITableView!
     var indexSelected = 0
     let catTab = ["Ootd", "Ootn", "Sacs", "Accessoires", "Chaussures", "Decontracte"]
-    var selfieTab: [SelfieClass] = []
+    var selfieTab: [Selfie] = []
     
     // transmission
     
-    var toTransmit = SelfieClass(ownerID: 0, nbLike: 0, rate: 0, id: 0, categoryName: "default", path: "ec2-52-49-149-140.eu-west-1.compute.amazonaws.com/uploads/selfie20.jpg")
-
+    var toTransmit = Selfie()
+    
     // filters
     
     var custom = HappieView()
     var filter = UIView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
@@ -58,31 +59,31 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
         happerL.button.addTarget(self, action: #selector(NewsFeedVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
-
+        
         
         self.mylabel.text = catTab[indexSelected]
         let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/get\(catTab[indexSelected]).php")
         getSelfies(url!)
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - tableView methods
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selfieTab.count
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.table.dequeueReusableCellWithIdentifier("newsFeedCell", forIndexPath: indexPath) as! NewsFeedCell
         let selfie = selfieTab[indexPath.row]
-        cell.cellRating.rating = Float(selfie.getRate())
-        cell.cellImage.image = selfie.getImage()
-        cell.cellLikeCount.text = String(selfie.getNbLike())
+        cell.cellRating.rating = Float(selfie.rating)
+        cell.cellImage.af_setImageWithURL(selfie.imageURL)
+        cell.cellLikeCount.text = "\(selfie.nbLike)"
         return cell
     }
     
@@ -90,7 +91,7 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.toTransmit = selfieTab[indexPath.row]
         performSegueWithIdentifier("goToInspi", sender: self)
     }
-
+    
     func getSelfies(url: NSURL) {
         let jsonData = NSData(contentsOfURL: url)
         var result = NSDictionary()
@@ -102,21 +103,21 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return
         }
         let tab = result.valueForKey("content") as! NSDictionary
-        var new: SelfieClass
+        var new: Selfie
         for val in tab {
-            new = SelfieClass(ownerID: val.value["owner"] as! Int, nbLike: val.value["nbLike"] as! Int, rate: val.value["rate"] as! Int, id: val.value["id"] as! Int, categoryName: self.catTab[indexSelected] as String, path: val.value["url"] as! String)
+            new = Selfie()
+            new.id = val.value["id"] as! Int
+            new.category = Selfie.Category.init(value: self.catTab[indexSelected] as String)
+            new.state = Selfie.State.init(value: -1)
+            new.nbLike = val.value["nbLike"] as! Int
+            new.rating = val.value["rate"] as! Int
+            new.imageURLString = val.value["url"] as! String
             selfieTab += [new]
         }
     }
-
-    @IBAction func backButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("inspiVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToInspi" {
@@ -157,5 +158,5 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func dismissHappieView() {
         self.filter.hidden = true
     }
-
+    
 }

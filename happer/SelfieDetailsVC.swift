@@ -30,14 +30,15 @@ class SelfieDetailsVC: UIViewController {
     // MARK: - Donnees selfie a detailler
     
     var indexSelected = 0
-    var selfie = SelfieClass(ownerID: 0, nbLike: 0, rate: 0, id: 0, categoryName: "default", path: "ec2-52-49-149-140.eu-west-1.compute.amazonaws.com/uploads/selfie20.jpg")
+    var selfie = Selfie()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.catLabel.text = self.selfie.getCategory()
-        self.nbLikeLabel.text = String(self.selfie.getNbLike())
-        self.ratingView.rating = Float(self.selfie.getRate())
-        self.imageSelfie.image = self.selfie.getImage()
+    
+        self.catLabel.text = selfie.category.rawValue
+        self.nbLikeLabel.text = "\(selfie.nbLike)"
+        self.ratingView.rating = Float(selfie.rating)
+        self.imageSelfie.af_setImageWithURL(selfie.imageURL)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SelfieDetailsVC.moveToHappLike), name: "happLike", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SelfieDetailsVC.moveToShare), name: "share", object: nil)
@@ -71,16 +72,8 @@ class SelfieDetailsVC: UIViewController {
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "goBack" {
-            let destination = segue.destinationViewController as! NewsFeedVC
-            destination.indexSelected = self.indexSelected
-        }
     }
 
-    @IBAction func backButton(sender: UIButton) {
-        performSegueWithIdentifier("goBack", sender: self)
-    }
-    
     func moveToHappLike() {
         cache.setObject("actuVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Happies", bundle: nil)
