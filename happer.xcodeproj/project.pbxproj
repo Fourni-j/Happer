@@ -39,6 +39,10 @@
 		557D4F521D50E708001D26BC /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4F511D50E708001D26BC /* MenuVC.swift */; };
 		55E189D61D74741300A4FF6F /* CropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D51D74741300A4FF6F /* CropVC.swift */; };
 		55E189D81D74795700A4FF6F /* HashtagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D71D74795700A4FF6F /* HashtagVC.swift */; };
+		55ED74D51D92E52F00DCA3A6 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74D41D92E52F00DCA3A6 /* Api.swift */; };
+		55ED74D71D92E58200DCA3A6 /* Api+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74D61D92E58200DCA3A6 /* Api+User.swift */; };
+		55ED74D91D92E5B100DCA3A6 /* Api+Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */; };
+		55ED74DB1D92E6AF00DCA3A6 /* Api+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */; };
 		5B62C3D10B2FAFB3E84495AD /* Pods_happerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06DD7220FED88A991F3A73E /* Pods_happerTests.framework */; };
 		F36990969B814DF09662C77D /* Pods_happer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B780CC6D3316909D2C7F36 /* Pods_happer.framework */; };
 		FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5D1D89841E00802025 /* Login.storyboard */; };
@@ -96,6 +100,10 @@
 		557D4F511D50E708001D26BC /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		55E189D51D74741300A4FF6F /* CropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropVC.swift; sourceTree = "<group>"; };
 		55E189D71D74795700A4FF6F /* HashtagVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagVC.swift; sourceTree = "<group>"; };
+		55ED74D41D92E52F00DCA3A6 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		55ED74D61D92E58200DCA3A6 /* Api+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+User.swift"; sourceTree = "<group>"; };
+		55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Selfie.swift"; sourceTree = "<group>"; };
+		55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Product.swift"; sourceTree = "<group>"; };
 		860EB53265692BB47FFF2AF8 /* Pods-happer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happer.release.xcconfig"; path = "Pods/Target Support Files/Pods-happer/Pods-happer.release.xcconfig"; sourceTree = "<group>"; };
 		A06DD7220FED88A991F3A73E /* Pods_happerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_happerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B670C51156A976660D47FDF8 /* Pods-happer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happer/Pods-happer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,8 +178,9 @@
 				35D4F14E1D240CA400BEA8E1 /* happies controllers */,
 				35D4F1431D240A0000BEA8E1 /* userPage controllers */,
 				353C2B271D23E68F009D7968 /* dataClasses */,
-				353C2B071D23E4EE009D7968 /* AppDelegate.swift */,
+				55ED74D31D92E51200DCA3A6 /* Api */,
 				353C2B0B1D23E4EE009D7968 /* Main.storyboard */,
+				353C2B071D23E4EE009D7968 /* AppDelegate.swift */,
 				353C2B0E1D23E4EE009D7968 /* Assets.xcassets */,
 				353C2B101D23E4EE009D7968 /* LaunchScreen.storyboard */,
 				353C2B131D23E4EE009D7968 /* Info.plist */,
@@ -240,6 +249,17 @@
 				357046961D53867C003F87DC /* HapperLogo.swift */,
 			);
 			name = useClass;
+			sourceTree = "<group>";
+		};
+		55ED74D31D92E51200DCA3A6 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				55ED74D41D92E52F00DCA3A6 /* Api.swift */,
+				55ED74D61D92E58200DCA3A6 /* Api+User.swift */,
+				55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */,
+				55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */,
+			);
+			name = Api;
 			sourceTree = "<group>";
 		};
 		909F678AFFD572609EF02BE1 /* Frameworks */ = {
@@ -510,9 +530,12 @@
 				FC0C70DE1D903480002AA0F6 /* Bus.swift in Sources */,
 				3570469B1D549F20003F87DC /* SelfieDetailsVC.swift in Sources */,
 				35D4F13E1D2401C400BEA8E1 /* LoginVC.swift in Sources */,
+				55ED74D71D92E58200DCA3A6 /* Api+User.swift in Sources */,
+				55ED74D91D92E5B100DCA3A6 /* Api+Selfie.swift in Sources */,
 				35D4F1471D240A4900BEA8E1 /* AccountVC.swift in Sources */,
 				357046971D53867C003F87DC /* HapperLogo.swift in Sources */,
 				5521FC8A1D87116C002812C1 /* DressingCollectionViewCell.swift in Sources */,
+				55ED74DB1D92E6AF00DCA3A6 /* Api+Product.swift in Sources */,
 				35D4F1521D240CD000BEA8E1 /* ShareVC.swift in Sources */,
 				353C2B291D23E6EA009D7968 /* User.swift in Sources */,
 				35D4F1581D240F1A00BEA8E1 /* ProductDetailsVC.swift in Sources */,
@@ -531,6 +554,7 @@
 				353C2B081D23E4EE009D7968 /* AppDelegate.swift in Sources */,
 				357046951D536E5D003F87DC /* HappieView.swift in Sources */,
 				55E189D61D74741300A4FF6F /* CropVC.swift in Sources */,
+				55ED74D51D92E52F00DCA3A6 /* Api.swift in Sources */,
 				35D4F1421D24099A00BEA8E1 /* NewsFeedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

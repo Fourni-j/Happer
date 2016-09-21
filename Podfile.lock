@@ -14,6 +14,7 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.15.1):
     - FBSDKCoreKit
+  - FutureSwift (1.1.9)
   - Realm (1.1.0):
     - Realm/Headers (= 1.1.0)
   - Realm/Headers (1.1.0)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
+  - FutureSwift
   - RealmSwift (~> 1.1.0)
 
 EXTERNAL SOURCES:
@@ -45,9 +47,10 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
   FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
   FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
+  FutureSwift: d3f9572b6a45ca742b51e003359f52f09a0ae246
   Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
 
-PODFILE CHECKSUM: f5f755722bcb9934d9807d114a91bdee16918c86
+PODFILE CHECKSUM: 82eb67a85efbcd0e494889d1601dad9620c1fad7
 
 COCOAPODS: 1.0.1
