@@ -17,4 +17,18 @@ class DAL {
     private init() {
         realm = try! Realm()
     }
+
+    func delete(objet: Object) {
+        try! realm.write {
+            realm.delete(objet)
+        }
+    }
+
+    func add(objet: Object) {
+        try! realm.write {
+            realm.add(objet)
+        }
+    }
+
+    
 }

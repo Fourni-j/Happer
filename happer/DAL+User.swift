@@ -35,23 +35,4 @@ extension DAL {
         let users = self.realm.objects(User.self).filter("credit = \(credit)")
         return users
     }
-    
-    func addUser(user: User) {
-        try! realm.write{
-            realm.add(user)
-        }
-    }
-    
-    func deleteUser(user: User) {
-        try! realm.write{
-            realm.delete(user)
-        }
-    }
-
-//    func updateUser(user: User) {
-//        try! realm.write{
-//            realm.up
-//        }
-//    }
-    
 }
