@@ -50,4 +50,18 @@ extension DAL {
         let products = self.realm.objects(Product.self).filter("completedTime = \(completedTime)")
         return products
     }
+    
+    func addProduct(product: Product) {
+        try! realm.write {
+            realm.add(product)
+        }
+    }
+
+    func deleteProduct(product: Product) {
+        try! realm.write {
+            realm.delete(product)
+        }
+    }
+
+    
 }

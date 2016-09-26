@@ -40,4 +40,17 @@ extension DAL {
         let selfies = self.realm.objects(Selfie.self).filter("rating = \(rating)")
         return selfies
     }
+    
+    func addSelfie(selfie: Selfie) {
+        try! realm.write {
+            realm.add(selfie)
+        }
+    }
+    
+    func deleteSelfie(selfie: Selfie) {
+        try! realm.write {
+            realm.delete(selfie)
+        }
+    }
+    
 }
