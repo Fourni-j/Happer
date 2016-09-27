@@ -94,7 +94,6 @@ class TaggableImageView : UIImageView {
         textFields += [textField]
         self.addSubview(textField)
         textField.delegate = self
-//        textField.becomeFirstResponder()
         activeTextField = textField
     }
     
