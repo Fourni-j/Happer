@@ -8,10 +8,10 @@
 
 import UIKit
 
-class HashtagVC: UIViewController, UITextFieldDelegate {
+class HashtagVC: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: TaggableImageView!
     var cropedImage: UIImage!
     @IBOutlet weak var OOTD: UIButton!
     var ootdLeftBar: UIView!
@@ -19,19 +19,13 @@ class HashtagVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var OOTN: UIButton!
     var ootnLeftBar: UIView!
     var ootnRightBar: UIView!
-    var editingTextField: Bool = false
-    var filledArea: [Int: [String: CGPoint]] = [:]
-    var textFields: [UITextField] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         designFrame()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(HashtagVC.addDetails))
-        tap.numberOfTapsRequired = 1
-        containerView.addGestureRecognizer(tap)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HashtagVC.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HashtagVC.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
-    }
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -62,70 +56,6 @@ class HashtagVC: UIViewController, UITextFieldDelegate {
         OOTN.addSubview(ootnRightBar)
     }
 
-    func addDetails(touch: UITapGestureRecognizer) {
-        if editingTextField == false {
-            let touchPoint = touch.locationInView(imageView)
-            print("touchPoint is \(touchPoint)...")
-            if touchPoint.y + 34.5 < imageView.frame.height &&
-                touchPoint.x + 92 < imageView.frame.width &&
-                touchPoint.x - 8 > 0 &&
-                checkIfAreaIsEmpty(touchPoint) {
-                creatTextField(touchPoint)
-            } else {
-                print(" ... but we cant creat textField here")
-            }
-        } else {
-            view.endEditing(true)
-            editingTextField = false
-            imageView.becomeFirstResponder()
-        }
-    }
-
-    func checkIfAreaIsEmpty(touchPoint: CGPoint) -> Bool {
-        let nSP: CGPoint = CGPoint(x: touchPoint.x - 8, y: touchPoint.y)
-        let nEP: CGPoint = CGPoint(x: touchPoint.x + 92, y: touchPoint.y + 34.5)
-        let nW: CGFloat = nEP.x - nSP.x
-        let nH: CGFloat = nEP.y - nSP.y
-        var i: Int = 0
-        while let area:[String: CGPoint] = filledArea[i] {
-            let sP: CGPoint = area["startPoint"]!
-            let eP: CGPoint = area["endPoint"]!
-            let w: CGFloat = eP.x - sP.x
-            let h: CGFloat = eP.y - sP.y
-            if nSP.x - sP.x < nW && sP.x - nSP.x < w && nSP.y - sP.y < nH && sP.y - nSP.y < h {
-                return false
-            } else {
-                i += 1
-            }
-        }
-        let area = ["startPoint": nSP, "endPoint": nEP]
-        filledArea[i] = area
-        return true
-    }
-
-    func creatTextField(touchPoint: CGPoint) {
-        let indicatorView = UIImageView(frame: CGRectMake(touchPoint.x - 8, touchPoint.y, 16, 13.5))
-        indicatorView.image = UIImage(named: "triangle")
-        imageView.addSubview(indicatorView)
-        let textField = UITextField(frame: CGRectMake(touchPoint.x - 8, touchPoint.y +  13.5, 100, 21))
-        //textField.font = UIFont(name: "Helvetica", size: 12.0)
-        textField.placeholder = "Marque"
-        textField.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.8)
-        textField.layer.borderWidth = 2
-        textField.layer.borderColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.8).CGColor
-        let textFieldImageView = UIView(frame: CGRectMake(0, 0, 9, 21))
-        textFieldImageView.backgroundColor = UIColor.clearColor()
-        let textFieldImage = UIView(frame: CGRectMake(3, 3, 3, 15))
-        textFieldImage.backgroundColor = UIColor(red: 60/255, green: 60/255, blue: 60/255, alpha: 1)
-        textFieldImageView.addSubview(textFieldImage)
-        textField.leftView = textFieldImageView
-        textField.leftViewMode = UITextFieldViewMode.Always
-        textFields += [textField]
-        imageView.addSubview(textField)
-        textField.delegate = self
-        textField.becomeFirstResponder()
-    }
-
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.view.frame.origin.y = -keyboardSize.height + imageView.frame.origin.y
@@ -135,17 +65,12 @@ class HashtagVC: UIViewController, UITextFieldDelegate {
     func keyboardWillHide(notification: NSNotification) {
         self.view.frame.origin.y = 0
     }
-
-    func textFieldDidBeginEditing(textField: UITextField) {
-        editingTextField = true
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        imageView.endEditing(true)
     }
-
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        view.endEditing(true)
-        editingTextField = false
-        return true
-    }
-
+    
+    
     @IBAction func OOTDButton(sender: UIButton) {
         if ootdLeftBar.frame.origin.x == -5 && ootdRightBar.frame.origin.x == OOTD.frame.size.width - 5 {
             ootdLeftBar.frame.origin.x += 5
@@ -182,11 +107,11 @@ class HashtagVC: UIViewController, UITextFieldDelegate {
             } else {
                 postString += "OutfitOfThe=Night"
             }
-            var i: Int = 0
-            while let area:[String: CGPoint] = filledArea[i] {
-                postString += "&label\(i + 1)=\(textFields[i].text!)&sp\(i + 1)X=\(area["startPoint"]!.x)&sp\(i + 1)Y=\(area["startPoint"]!.y)&ep\(i + 1)X=\(area["endPoint"]!.x)&ep\(i + 1)Y=\(area["endPoint"]!.y)"
-                i += 1
-            }
+//            var i: Int = 0
+//            while let area:[String: CGPoint] = filledArea[i] {
+//                postString += "&label\(i + 1)=\(textFields[i].text!)&sp\(i + 1)X=\(area["startPoint"]!.x)&sp\(i + 1)Y=\(area["startPoint"]!.y)&ep\(i + 1)X=\(area["endPoint"]!.x)&ep\(i + 1)Y=\(area["endPoint"]!.y)"
+//                i += 1
+//            }
             print(postString)
             /*
              var jsonData = NSDictionary()
