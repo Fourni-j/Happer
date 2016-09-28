@@ -52,6 +52,7 @@
 		FC0C70DB1D903474002AA0F6 /* AuthentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C70DA1D903474002AA0F6 /* AuthentPresenter.swift */; };
 		FC0C70DE1D903480002AA0F6 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C70DD1D903480002AA0F6 /* Bus.swift */; };
 		FC359A4C1D9A663000030C7D /* TaggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC359A4B1D9A663000030C7D /* TaggableImageView.swift */; };
+		FC9ED5DC1D9BB8F5005F031C /* UserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ED5DB1D9BB8F5005F031C /* UserWorker.swift */; };
 		FCEF9EB11D99045000CF3B95 /* DAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EAD1D99045000CF3B95 /* DAL.swift */; };
 		FCEF9EB21D99045000CF3B95 /* DAL+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EAE1D99045000CF3B95 /* DAL+Product.swift */; };
 		FCEF9EB31D99045000CF3B95 /* DAL+Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EAF1D99045000CF3B95 /* DAL+Selfie.swift */; };
@@ -122,6 +123,7 @@
 		FC0C70DA1D903474002AA0F6 /* AuthentPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentPresenter.swift; sourceTree = "<group>"; };
 		FC0C70DD1D903480002AA0F6 /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		FC359A4B1D9A663000030C7D /* TaggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggableImageView.swift; sourceTree = "<group>"; };
+		FC9ED5DB1D9BB8F5005F031C /* UserWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWorker.swift; sourceTree = "<group>"; };
 		FCEF9EAD1D99045000CF3B95 /* DAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAL.swift; sourceTree = "<group>"; };
 		FCEF9EAE1D99045000CF3B95 /* DAL+Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAL+Product.swift"; sourceTree = "<group>"; };
 		FCEF9EAF1D99045000CF3B95 /* DAL+Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAL+Selfie.swift"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				35D4F14C1D240C6700BEA8E1 /* CircleVC.swift */,
 				35D4F1571D240F1A00BEA8E1 /* ProductDetailsVC.swift */,
 				3570469A1D549F20003F87DC /* SelfieDetailsVC.swift */,
+				FC9ED5DB1D9BB8F5005F031C /* UserWorker.swift */,
 			);
 			path = happer;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				35D4F13C1D24019A00BEA8E1 /* SignUpVC.swift in Sources */,
 				FC0C70DE1D903480002AA0F6 /* Bus.swift in Sources */,
 				3570469B1D549F20003F87DC /* SelfieDetailsVC.swift in Sources */,
+				FC9ED5DC1D9BB8F5005F031C /* UserWorker.swift in Sources */,
 				35D4F13E1D2401C400BEA8E1 /* LoginVC.swift in Sources */,
 				55ED74D71D92E58200DCA3A6 /* Api+User.swift in Sources */,
 				55ED74D91D92E5B100DCA3A6 /* Api+Selfie.swift in Sources */,
