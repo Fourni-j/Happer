@@ -61,6 +61,9 @@ class Product : Object {
     dynamic var brand = ""
     dynamic var totalTime = 0
     dynamic var completedTime = 0
+    dynamic var owner: User?
+    
+    let happers = List<User>()
 
     dynamic var stateRawValue = State.Unknown.rawValue
     var state : State {
