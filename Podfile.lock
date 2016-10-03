@@ -15,6 +15,7 @@ PODS:
   - FBSDKShareKit (4.15.1):
     - FBSDKCoreKit
   - FutureSwift (1.1.9)
+  - MagicSwiftBus (1.0.3)
   - Realm (1.1.0):
     - Realm/Headers (= 1.1.0)
   - Realm/Headers (1.1.0)
@@ -28,17 +29,24 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - FutureSwift
+  - MagicSwiftBus (from `https://github.com/favret/Magic-Swift-Bus.git`, branch `swift2.3`)
   - RealmSwift (~> 1.1.0)
 
 EXTERNAL SOURCES:
   Alamofire:
     :git: https://github.com/Alamofire/Alamofire.git
     :tag: 3.5.0
+  MagicSwiftBus:
+    :branch: swift2.3
+    :git: https://github.com/favret/Magic-Swift-Bus.git
 
 CHECKOUT OPTIONS:
   Alamofire:
     :git: https://github.com/Alamofire/Alamofire.git
     :tag: 3.5.0
+  MagicSwiftBus:
+    :commit: 49474fa5b52494418bbfcdd45cbfe5795efc6076
+    :git: https://github.com/favret/Magic-Swift-Bus.git
 
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
@@ -48,9 +56,10 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
   FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
   FutureSwift: d3f9572b6a45ca742b51e003359f52f09a0ae246
+  MagicSwiftBus: 8b4296b5e591f1a537f8a31a183d16d4af6d852b
   Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
 
-PODFILE CHECKSUM: 82eb67a85efbcd0e494889d1601dad9620c1fad7
+PODFILE CHECKSUM: 49634fe2ac3173caac8224421d555709d13ccb6e
 
 COCOAPODS: 1.0.1

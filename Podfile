@@ -12,6 +12,7 @@ target 'happer' do
   pod 'AlamofireImage', '~> 2.5'
   pod 'RealmSwift', '~> 1.1.0'
   pod 'FutureSwift'
+  pod 'MagicSwiftBus', :git => 'https://github.com/favret/Magic-Swift-Bus.git', :branch => 'swift2.3'
 
 end
 
