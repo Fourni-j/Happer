@@ -54,6 +54,8 @@
 		FC0ED3751DA25AA200115DA2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0ED3741DA25AA200115DA2 /* Session.swift */; };
 		FC359A4C1D9A663000030C7D /* TaggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC359A4B1D9A663000030C7D /* TaggableImageView.swift */; };
 		FC57A93C1DA266F80023DF14 /* ProductWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57A93B1DA266F80023DF14 /* ProductWorker.swift */; };
+		FC7C3BDE1DA28A0600014F6D /* ProductInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3BDC1DA28A0600014F6D /* ProductInteractor.swift */; };
+		FC7C3BDF1DA28A0600014F6D /* ProductPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C3BDD1DA28A0600014F6D /* ProductPresenter.swift */; };
 		FC9ED5DC1D9BB8F5005F031C /* UserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9ED5DB1D9BB8F5005F031C /* UserWorker.swift */; };
 		FCEF9EB11D99045000CF3B95 /* DAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EAD1D99045000CF3B95 /* DAL.swift */; };
 		FCEF9EB21D99045000CF3B95 /* DAL+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EAE1D99045000CF3B95 /* DAL+Product.swift */; };
@@ -127,6 +129,8 @@
 		FC0ED3741DA25AA200115DA2 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FC359A4B1D9A663000030C7D /* TaggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggableImageView.swift; sourceTree = "<group>"; };
 		FC57A93B1DA266F80023DF14 /* ProductWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductWorker.swift; sourceTree = "<group>"; };
+		FC7C3BDC1DA28A0600014F6D /* ProductInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInteractor.swift; sourceTree = "<group>"; };
+		FC7C3BDD1DA28A0600014F6D /* ProductPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPresenter.swift; sourceTree = "<group>"; };
 		FC9ED5DB1D9BB8F5005F031C /* UserWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWorker.swift; sourceTree = "<group>"; };
 		FCEF9EAD1D99045000CF3B95 /* DAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAL.swift; sourceTree = "<group>"; };
 		FCEF9EAE1D99045000CF3B95 /* DAL+Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAL+Product.swift"; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				35D4F1571D240F1A00BEA8E1 /* ProductDetailsVC.swift */,
 				3570469A1D549F20003F87DC /* SelfieDetailsVC.swift */,
 				FC9ED5DB1D9BB8F5005F031C /* UserWorker.swift */,
+				FC7C3BDC1DA28A0600014F6D /* ProductInteractor.swift */,
+				FC7C3BDD1DA28A0600014F6D /* ProductPresenter.swift */,
 				FC57A93B1DA266F80023DF14 /* ProductWorker.swift */,
 				FC0ED3741DA25AA200115DA2 /* Session.swift */,
 			);
@@ -567,6 +573,7 @@
 				55ED74D71D92E58200DCA3A6 /* Api+User.swift in Sources */,
 				55ED74D91D92E5B100DCA3A6 /* Api+Selfie.swift in Sources */,
 				35D4F1471D240A4900BEA8E1 /* AccountVC.swift in Sources */,
+				FC7C3BDF1DA28A0600014F6D /* ProductPresenter.swift in Sources */,
 				FC0ED3751DA25AA200115DA2 /* Session.swift in Sources */,
 				357046971D53867C003F87DC /* HapperLogo.swift in Sources */,
 				5521FC8A1D87116C002812C1 /* DressingCollectionViewCell.swift in Sources */,
@@ -595,6 +602,7 @@
 				357046951D536E5D003F87DC /* HappieView.swift in Sources */,
 				55E189D61D74741300A4FF6F /* CropVC.swift in Sources */,
 				55ED74D51D92E52F00DCA3A6 /* Api.swift in Sources */,
+				FC7C3BDE1DA28A0600014F6D /* ProductInteractor.swift in Sources */,
 				35D4F1421D24099A00BEA8E1 /* NewsFeedVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
