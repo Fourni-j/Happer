@@ -40,13 +40,13 @@ enum Circle : String {
 
 class Product : Object {
 
-    enum State : Int {
+    enum State : String {
         case Soon
         case Available
         case Won
         case Unknown
     
-        init(value: Int) {
+        init(value: String) {
             if let state = State(rawValue: value) {
                 self = state
             }
@@ -62,6 +62,7 @@ class Product : Object {
     dynamic var totalTime = 0
     dynamic var completedTime = 0
     dynamic var owner: User?
+    dynamic var imageURLString = ""
     
     let happers = List<User>()
 
@@ -83,6 +84,10 @@ class Product : Object {
         set {
             circleRawValue = newValue.rawValue
         }
+    }
+    
+    var imageURL : NSURL {
+        return NSURL(string: "http://" + self.imageURLString)!
     }
     
     var remaining_time : Int {
