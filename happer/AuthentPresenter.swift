@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MagicSwiftBus
 
 @objc protocol AuthentEvent {
     optional func connectSuccess()
