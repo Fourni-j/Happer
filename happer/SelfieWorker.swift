@@ -31,7 +31,7 @@ class SelfieWorker {
                     let nbLike = dictionary["nb_like"] as? Int,
                     let rating = dictionary["rating"] as? Int,
                     let urlImage = dictionary["url_image"] as? String
-                    else { break }
+                    else { fatalError("Something goes wrong in SelfieWorker.parse") }
                 let selfie = Selfie()
                 selfie.id = ID
                 selfie.category = Selfie.Category.init(value: category)
