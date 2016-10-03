@@ -19,7 +19,7 @@ class RealmString: Object {
 
 class Selfie : Object {
    
-    enum State : Int {
+    enum State : String {
         case Created
         case Promoted
         case Signaled
@@ -36,7 +36,7 @@ class Selfie : Object {
             }
         }
         
-        init(value: Int) {
+        init(value: String) {
             if let state = State(rawValue: value) {
                 self = state
             }
