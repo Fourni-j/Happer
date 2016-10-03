@@ -10,7 +10,7 @@ import Foundation
 import Future
 
 class UserWorker {
-
+    
     static func insert(users: [User]){
         for user in users {
             UserWorker.insert(user)
@@ -22,37 +22,35 @@ class UserWorker {
     }
     
     static func parse(data: AnyObject) -> Future<[User]> {
-        let future = Future<[User]>()
-        var users = [User]()
-        let array = data as! [[String: AnyObject]]
-
-        for userJSON in array {
+        return Future<[User]> {
+            var users = [User]()
+            let array = data as! [[String: AnyObject]]
             
-            guard let id = userJSON["id"] as? Int,
-                let email = userJSON["email"] as? String,
-                let exp = userJSON["experience"] as? Double,
-                let credit = userJSON["credit"] as? Int,
-                let circle = userJSON["circle"] as? String,
-                let _ = userJSON["selfies"] as? [String: AnyObject]
-                else {
-                    print("Something goes wrong ==> User")
-                    future.reject()
-                    return future
+            for userJSON in array {
+                
+                guard let id = userJSON["id"] as? Int,
+                    let email = userJSON["email"] as? String,
+                    let exp = userJSON["experience"] as? Double,
+                    let credit = userJSON["credit"] as? Int,
+                    let circle = userJSON["circle"] as? String,
+                    let _ = userJSON["selfies"] as? [String: AnyObject]
+                    else {
+                        fatalError("Something goes wrong")
+                }
+                
+                let user = User()
+                user.id = id
+                user.email = email
+                user.exp = exp
+                user.credit = credit
+                user.circle = Circle.init(value: circle)
+                
+                //SelfieWorker.parse(selfies)
+                // .then { selfies in }
+                
+                users.append(user)
             }
-
-            let user = User()
-            user.id = id
-            user.email = email
-            user.exp = exp
-            user.credit = credit
-            user.circle = Circle.init(value: circle)
-
-            //SelfieWorker.parse(selfies)
-            // .then { selfies in }
-            
-            users.append(user)
+            return users
         }
-        future.resolve(users)
-        return future
     }
 }
