@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-enum Circle : Int {
+enum Circle : String {
     case Silver
     case Gold
     case Rubis
@@ -29,7 +29,7 @@ enum Circle : Int {
     }
     
     
-    init(value: Int) {
+    init(value: String) {
         if let circle = Circle(rawValue: value) {
             self = circle
         }
