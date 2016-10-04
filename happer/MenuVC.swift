@@ -103,7 +103,7 @@ class MenuVC: UIViewController {
 
     func cercleAction(sender: UIButton!) {
         print("produit")
-        if self.dynamicType === CircleVC.self {
+        if self.dynamicType === ProductVC.self {
             print("You are alredy on cerclesVC")
         } else {
             move("Main", dest: "cerclesVC")
