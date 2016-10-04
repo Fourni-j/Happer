@@ -108,8 +108,8 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             new = Selfie()
             new.id = val.value["id"] as! Int
             new.category = Selfie.Category.init(value: self.catTab[indexSelected] as String)
-            new.state = Selfie.State.init(value: -1)
             new.nbLike = val.value["nbLike"] as! Int
+            new.state = Selfie.State.Unknown
             new.rating = val.value["rate"] as! Int
             new.imageURLString = val.value["url"] as! String
             selfieTab += [new]
