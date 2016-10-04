@@ -59,8 +59,12 @@ extension ProductVC : ProductEvent {
     }
     
     func getProductFailure(error: NSError) {
-        print("Get product Failure")
-        self.navigationController?.popViewControllerAnimated(true)
+        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Default) { (action:UIAlertAction!) in
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func bidSuccess() {
@@ -72,3 +76,4 @@ extension ProductVC : ProductEvent {
     }
     
 }
+
