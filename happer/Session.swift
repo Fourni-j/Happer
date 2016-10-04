@@ -13,9 +13,11 @@ class Session {
     static let sharedInstance = Session()
 
     var user: User?
+    let router: MyRouter
     
     private init() {
         user = nil
+        router = MyRouter()
     }
     
 }
