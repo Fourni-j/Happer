@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--produits-->
+        <scene sceneID="0Ce-oo-5Wr">
+            <objects>
+                <viewController storyboardIdentifier="productVC" title="produits" id="xKh-Qq-GST" customClass="ProductVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pmf-RZ-2Cd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zgx-xh-4fe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QJB-sS-UKt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FID-E9-IH4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FID-E9-IH4" firstAttribute="centerX" secondItem="QJB-sS-UKt" secondAttribute="centerX" id="AeW-Y8-rjB"/>
+                            <constraint firstItem="FID-E9-IH4" firstAttribute="centerY" secondItem="QJB-sS-UKt" secondAttribute="centerY" id="hWp-7j-nxj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USf-D0-LFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479.19999999999999" y="492.50374812593708"/>
+        </scene>
+        <!--détails produit-->
+        <scene sceneID="7Cm-gV-M5N">
+            <objects>
+                <viewController storyboardIdentifier="productDetailsVC" title="détails produit" id="kKt-SO-WAg" customClass="ProductDetailsVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D65-of-FHJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hst-BO-4Zy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WvA-WW-D3x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="product detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba7-Nh-g7S">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ba7-Nh-g7S" firstAttribute="centerX" secondItem="WvA-WW-D3x" secondAttribute="centerX" id="LTp-Aw-wTX"/>
+                            <constraint firstItem="ba7-Nh-g7S" firstAttribute="centerY" secondItem="WvA-WW-D3x" secondAttribute="centerY" id="pIW-jK-PFR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfC-ol-kTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215.19999999999999" y="492.50374812593708"/>
+        </scene>
+        <!--ProductCircleVC-->
+        <scene sceneID="UGr-X9-vX2">
+            <objects>
+                <viewController storyboardIdentifier="productCircleVC" title="ProductCircleVC" id="uN5-OP-W4S" customClass="ProductCircleVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Zb-qg-iF0"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Go-iG-6rC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YHR-F8-XHG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKU-La-eez">
+                                <state key="normal" title="Silver"/>
+                                <connections>
+                                    <action selector="silverButtonAction:" destination="uN5-OP-W4S" eventType="touchUpInside" id="SS9-ki-mDQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCr-6h-EyA">
+                                <state key="normal" title="Gold"/>
+                                <connections>
+                                    <action selector="goldButtonAction:" destination="uN5-OP-W4S" eventType="touchUpInside" id="cyU-GR-ttl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBo-gl-pN0">
+                                <state key="normal" title="Platine"/>
+                                <connections>
+                                    <action selector="platineButtonAction:" destination="uN5-OP-W4S" eventType="touchUpInside" id="w0f-Oe-bhJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSv-qe-Dcc">
+                                <state key="normal" title="Sapphire"/>
+                                <connections>
+                                    <action selector="sapphireButtonAction:" destination="uN5-OP-W4S" eventType="touchUpInside" id="shb-eF-cjH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-WS-FbR">
+                                <state key="normal" title="Ruby"/>
+                                <connections>
+                                    <action selector="rubyButtonAction:" destination="uN5-OP-W4S" eventType="touchUpInside" id="2BH-yA-vkZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0bd-WS-FbR" firstAttribute="top" secondItem="vBo-gl-pN0" secondAttribute="bottom" constant="50" id="2a8-Uc-pSy"/>
+                            <constraint firstItem="vBo-gl-pN0" firstAttribute="centerY" secondItem="YHR-F8-XHG" secondAttribute="centerY" id="BTU-il-k9z"/>
+                            <constraint firstItem="OCr-6h-EyA" firstAttribute="centerX" secondItem="YHR-F8-XHG" secondAttribute="centerX" id="PAx-K8-kLq"/>
+                            <constraint firstItem="OCr-6h-EyA" firstAttribute="top" secondItem="tKU-La-eez" secondAttribute="bottom" constant="50" id="RmO-z6-pTo"/>
+                            <constraint firstItem="0bd-WS-FbR" firstAttribute="centerX" secondItem="YHR-F8-XHG" secondAttribute="centerX" id="Tvs-5X-6HS"/>
+                            <constraint firstItem="vBo-gl-pN0" firstAttribute="centerX" secondItem="YHR-F8-XHG" secondAttribute="centerX" id="abm-cP-Ha5"/>
+                            <constraint firstItem="tKU-La-eez" firstAttribute="centerX" secondItem="YHR-F8-XHG" secondAttribute="centerX" id="c16-aN-1h6"/>
+                            <constraint firstItem="JSv-qe-Dcc" firstAttribute="top" secondItem="0bd-WS-FbR" secondAttribute="bottom" constant="50" id="gMR-kp-wb9"/>
+                            <constraint firstItem="JSv-qe-Dcc" firstAttribute="centerX" secondItem="YHR-F8-XHG" secondAttribute="centerX" id="zjE-dW-Iyd"/>
+                            <constraint firstItem="vBo-gl-pN0" firstAttribute="top" secondItem="OCr-6h-EyA" secondAttribute="bottom" constant="50" id="zjM-4D-LKd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5cB-rF-HhN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hin-d6-ymK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1183.2" y="492.50374812593708"/>
+        </scene>
+    </scenes>
+</document>
