@@ -13,6 +13,7 @@ target 'happer' do
   pod 'RealmSwift', '~> 1.1.0'
   pod 'FutureSwift'
   pod 'MagicSwiftBus', :git => 'https://github.com/favret/Magic-Swift-Bus.git', :branch => 'swift2.3'
+  pod 'Router', :git => 'https://github.com/favret/Router.git', :branch => 'swift2.3'
 
 end
 
