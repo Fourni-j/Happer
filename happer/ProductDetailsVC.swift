@@ -32,3 +32,15 @@ class ProductDetailsVC: UIViewController {
     */
 
 }
+
+extension ProductDetailsVC : ProductEvent {
+
+    func bidSuccess() {
+        
+    }
+    
+    func bidFailure(error: NSError) {
+        
+    }
+    
+}
