@@ -12,9 +12,9 @@ import RealmSwift
 enum Circle : String {
     case Silver
     case Gold
+    case Platine
     case Ruby
     case Sapphire
-    case Platine
     case Unknown
     
     var value : String {
