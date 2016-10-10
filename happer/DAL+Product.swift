@@ -17,7 +17,7 @@ extension DAL {
     }
     
     func readProduct(byCircle circle: Circle) -> Results<Product> {
-        let products = self.realm.objects(Product.self).filter("circleRawValye = \(circle.rawValue)")
+        let products = self.realm.objects(Product.self).filter("circleRawValue = \'\(circle.rawValue)\'")
         return products
     }
     
@@ -48,6 +48,11 @@ extension DAL {
 
     func readProduct(byCompletedTime completedTime: Int) -> Results<Product> {
         let products = self.realm.objects(Product.self).filter("completedTime = \(completedTime)")
+        return products
+    }
+    
+    func readAllProducts() -> Results<Product> {
+        let products = self.realm.objects(Product.self)
         return products
     }
 }

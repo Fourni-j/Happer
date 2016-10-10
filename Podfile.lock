@@ -21,6 +21,7 @@ PODS:
   - Realm/Headers (1.1.0)
   - RealmSwift (1.1.0):
     - Realm (= 1.1.0)
+  - Router (1.0.0)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, tag `3.5.0`)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - FutureSwift
   - MagicSwiftBus (from `https://github.com/favret/Magic-Swift-Bus.git`, branch `swift2.3`)
   - RealmSwift (~> 1.1.0)
+  - Router (from `https://github.com/favret/Router.git`, branch `swift2.3`)
 
 EXTERNAL SOURCES:
   Alamofire:
@@ -39,6 +41,9 @@ EXTERNAL SOURCES:
   MagicSwiftBus:
     :branch: swift2.3
     :git: https://github.com/favret/Magic-Swift-Bus.git
+  Router:
+    :branch: swift2.3
+    :git: https://github.com/favret/Router.git
 
 CHECKOUT OPTIONS:
   Alamofire:
@@ -47,6 +52,9 @@ CHECKOUT OPTIONS:
   MagicSwiftBus:
     :commit: 49474fa5b52494418bbfcdd45cbfe5795efc6076
     :git: https://github.com/favret/Magic-Swift-Bus.git
+  Router:
+    :commit: c3cdf54871cfa5a8dda895d61ae6ca3ed32a5bfd
+    :git: https://github.com/favret/Router.git
 
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
@@ -59,7 +67,8 @@ SPEC CHECKSUMS:
   MagicSwiftBus: 8b4296b5e591f1a537f8a31a183d16d4af6d852b
   Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
+  Router: 250afa9737008a796731a16c31ff1f9091256e79
 
-PODFILE CHECKSUM: 49634fe2ac3173caac8224421d555709d13ccb6e
+PODFILE CHECKSUM: 85d014ee4bfd4739c96a7e686a96537e991da9e2
 
 COCOAPODS: 1.0.1

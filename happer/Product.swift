@@ -12,17 +12,17 @@ import RealmSwift
 enum Circle : String {
     case Silver
     case Gold
-    case Rubis
-    case Saphire
     case Platine
+    case Ruby
+    case Sapphire
     case Unknown
     
     var value : String {
         switch self {
         case .Silver: return "Silver"
         case .Gold: return "Gold"
-        case .Rubis: return "Rubis"
-        case .Saphire: return "Saphire"
+        case .Ruby: return "Ruby"
+        case .Sapphire: return "Sapphire"
         case .Platine: return "Platines"
         case .Unknown: return "Unknown"
         }
