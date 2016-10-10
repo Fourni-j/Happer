@@ -134,9 +134,7 @@ extension ProductPageVC : UIPageViewControllerDelegate, UIPageViewControllerData
 extension ProductPageVC : ProductEvent {
     
     func getProductSuccess() {
-        print("Get Product Success")
         activityIndicator.stopAnimating()
-        
         for vc in orderedViewControllers as! [ProductVC] {
             vc.buildFromCircle(Circle.init(value: vc.title!))
         }
