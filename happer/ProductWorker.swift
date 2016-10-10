@@ -24,13 +24,9 @@ class ProductWorker {
     static func parse(data: AnyObject) -> Future<[Product]> {
         return Future<[Product]> {
             var products = [Product]()
-            
-            print(data)
-            
             let array = data as! [[String: AnyObject]]
             
             for productJSON in array {
-                
                 guard let id = productJSON["id"] as? Int,
                     let brand = productJSON["brand"] as? String,
                     let circle = productJSON["circle"] as? String,
@@ -56,12 +52,9 @@ class ProductWorker {
                 product.title = title
                 product.totalTime = totalTime
                 product.imageURLString = urlImage
-
                 products.append(product)
             }
             return products
         }
     }
-    
-    
 }
