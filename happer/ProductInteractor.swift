@@ -15,7 +15,7 @@ class ProductInteractor {
             .then { data in ProductWorker.parse(data!) }
             .then { products in ProductWorker.insert(products)}
             .then { ProductPresenter.post(.GetProductSuccess) }
-            .fail { error in ProductPresenter.post(.GetProductFailure, object: error) }
+            .fail { error in ProductPresenter.postOnMainThread(.GetProductFailure, object: error) }
     }
     
     func bid(on product: Product) {
