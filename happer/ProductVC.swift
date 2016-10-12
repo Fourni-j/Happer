@@ -60,12 +60,7 @@ extension ProductVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("productCollectionViewCell", forIndexPath: indexPath) as! ProductCollectionViewCell
-        cell.backgroundColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.00)
-        cell.brandLabel.text = resultProducts[indexPath.row].brand
-        cell.descriptionLabel.text = resultProducts[indexPath.row].desc
-        cell.priceLabel.text = "Price : \(resultProducts[indexPath.row].price)€"
-        cell.imageView.af_setImageWithURL(resultProducts[indexPath.row].imageURL)
-        cell.cellState = resultProducts[indexPath.row].state
+        cell.setup(resultProducts[indexPath.row])
         return cell
     }
     
@@ -87,5 +82,4 @@ extension ProductVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
         selectedProduct = resultProducts[indexPath.row]
         Session.sharedInstance.router.perform("route://Product/productDetailsVC#push", sender: self)
     }
-    
 }
