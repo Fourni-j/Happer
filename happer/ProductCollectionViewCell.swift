@@ -15,10 +15,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var overlayLabel: UILabel!
-    
+    @IBOutlet weak var bidView: BidView!
+
     private var _cellState = Product.State.Unknown
     var cellState : Product.State {
-        
         get { return _cellState }
         set(newCelleState) {
             _cellState = newCelleState
@@ -30,7 +30,18 @@ class ProductCollectionViewCell: UICollectionViewCell {
                 overlayLabel.text = cellState.rawValue
             }
         }
-        
+    }
+    
+    func setup(product: Product) {
+        layoutIfNeeded()
+        backgroundColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.00)
+        brandLabel.text = product.brand
+        descriptionLabel.text = product.desc
+        priceLabel.text = "\(product.price)"
+        imageView.af_setImageWithURL(product.imageURL)
+        cellState = product.state
+        bidView.setup(true)
+        bidView.updateFillWith(completedTime: CGFloat(product.completedTime), totalTime: CGFloat(product.totalTime))
     }
     
 }
