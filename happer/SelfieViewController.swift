@@ -60,8 +60,4 @@ extension SelfieViewController : UIImagePickerControllerDelegate, UINavigationCo
         pickedImage = image
         dismissViewControllerAnimated(false, completion: {() -> Void in self.performSegueWithIdentifier("partageToCrop", sender: nil)})
     }
-    
-
-    
-    
 }
