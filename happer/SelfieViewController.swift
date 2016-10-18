@@ -9,35 +9,33 @@
 import UIKit
 
 class SelfieViewController: UIViewController {
-
+    
     let imagePicker = UIImagePickerController()
     var pickedImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        imagePicker.allowsEditing = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! CropVC
-        destination.pickedImage = pickedImage
+        let destination = segue.destinationViewController as! SelfieTagViewController
+        destination.cropedImage = pickedImage
     }
-
+    
     @IBAction func loadPicture(sender: AnyObject) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePicker.sourceType = .PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: { UIApplication.sharedApplication().statusBarHidden = true })
     }
     
     @IBAction func takePicture(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            imagePicker.allowsEditing = false
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            imagePicker.sourceType = .Camera
             imagePicker.cameraCaptureMode = .Photo
             presentViewController(imagePicker, animated: true, completion: { UIApplication.sharedApplication().statusBarHidden = true })
         } else {
@@ -50,14 +48,16 @@ class SelfieViewController: UIViewController {
 }
 
 extension SelfieViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
- 
+    
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
         pickedImage = image
-        dismissViewControllerAnimated(false, completion: {() -> Void in self.performSegueWithIdentifier("partageToCrop", sender: nil)})
+        dismissViewControllerAnimated(false) {
+            Session.sharedInstance.router.perform("route://Happies/selfieTagViewController#push")
+        }
     }
 }
