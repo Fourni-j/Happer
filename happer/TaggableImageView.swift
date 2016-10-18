@@ -43,11 +43,12 @@ class TaggableImageView : UIImageView {
         tapGestureRecognizer.numberOfTapsRequired = 1;
         self.addGestureRecognizer(tapGestureRecognizer)
         self.userInteractionEnabled = true
+        self.contentMode = .ScaleAspectFit
     }
     
     func tap(touch: UITapGestureRecognizer) {
         let touchPoint = touch.locationInView(self)
-        add("bonjour", atPoint: touchPoint)
+        add("", atPoint: touchPoint)
     }
     
     private func checkIfAreaIsEmpty(touchPoint: CGPoint) -> Bool {
@@ -110,23 +111,17 @@ class TaggableImageView : UIImageView {
                 point.x - 8 > 0 &&
                 checkIfAreaIsEmpty(point) {
                 creatTextField(text, atPoint: point)
+                activeTextField.becomeFirstResponder()
             } else {
                 print(" ... but we cant creat textField here")
+                return
             }
         } else {
             endEditing(true)
             editingTextField = false
             self.becomeFirstResponder()
         }
-        
-        if text.isEmpty == false {
-            endEditing(true)
-        } else {
-            activeTextField.becomeFirstResponder()
-        }
-        
     }
-    
 }
 
 extension TaggableImageView : UITextFieldDelegate {

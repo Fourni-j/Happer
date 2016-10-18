@@ -65,16 +65,30 @@ class Selfie : Object {
             case .Unknown: return "Unknown"
             }
         }
-        
+
+        static var count: Int { return Category.Unknown.hashValue}
+
         init(value: String) {
             if let category = Category(rawValue: value) {
                 self = category
             }
             else { self = .Unknown }
         }
+
+        init(value: Int) {
+            switch value {
+            case OOTD.hashValue: self = .OOTD
+            case OOTN.hashValue: self = .OOTN
+            case Bags.hashValue: self = .Bags
+            case Accessories.hashValue: self = .Accessories
+            case Shoes.hashValue: self = .Shoes
+            case Relaxed.hashValue: self = .Relaxed
+            default: self = .Unknown
+            }
+        }
+        
     }
 
-    
     dynamic var id = 0
     dynamic var owner: User?
     dynamic var nbLike = 0
