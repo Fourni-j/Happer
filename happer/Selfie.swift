@@ -134,4 +134,8 @@ class Selfie : Object {
     override class func ignoredProperties() -> [String] {
         return ["comments"]
     }
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

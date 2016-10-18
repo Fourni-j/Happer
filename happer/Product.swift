@@ -93,4 +93,8 @@ class Product : Object {
     var remaining_time : Int {
         return totalTime - completedTime
     }
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

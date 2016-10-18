@@ -27,4 +27,8 @@ class User : Object {
             circleRawValue = newValue.rawValue
         }
     }
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
