@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzk-pC-7i2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1426" y="4924"/>
+            <point key="canvasLocation" x="-1434" y="5122"/>
         </scene>
         <!--partager mon style-->
         <scene sceneID="Fgm-iV-HhV">
@@ -117,9 +118,6 @@
                             <constraint firstItem="mxz-ox-Io5" firstAttribute="top" secondItem="XM1-bI-fbx" secondAttribute="bottom" constant="8" id="ynB-Wn-rv3"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="QfE-RF-zCd" kind="showDetail" identifier="partageToCrop" id="eu8-wn-Xl0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkS-YZ-Q77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,8 +182,7 @@
                                     <constraint firstItem="hlX-Xk-arv" firstAttribute="centerY" secondItem="4X9-7d-j9j" secondAttribute="centerY" constant="-10" id="wXs-jz-T6V"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0d-ie-QTC">
-                                <frame key="frameInset" minX="-4" minY="467" width="383" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0d-ie-QTC">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asD-SR-0fh">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -219,8 +216,7 @@
                                     <constraint firstItem="aw4-U0-bLX" firstAttribute="top" secondItem="q0d-ie-QTC" secondAttribute="top" constant="8" id="tij-eQ-bWl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMo-W5-Jd9">
-                                <frame key="frameInset" minX="-4" minY="167" width="383" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMo-W5-Jd9">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5z-GM-mdR"/>
                                 </subviews>
@@ -256,7 +252,7 @@
         <!--CropVC-->
         <scene sceneID="q61-ra-XCv">
             <objects>
-                <viewController id="QfE-RF-zCd" customClass="CropVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cropvc" id="QfE-RF-zCd" customClass="CropVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6b-C0-sOP"/>
                         <viewControllerLayoutGuide type="bottom" id="fz9-tE-k7D"/>
@@ -267,7 +263,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibw-We-3fS">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="ldD-4p-Xe6"/>
+                                    <constraint firstAttribute="height" constant="500" id="ldD-4p-Xe6"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwR-Pl-uGG">
@@ -298,17 +294,16 @@
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="Ibw-We-3fS" id="6YP-Ug-Dtb"/>
-                        <segue destination="yAU-V5-rnw" kind="showDetail" identifier="cropToMarque" id="9lw-mb-YaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1L-Mj-9D7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="3611"/>
+            <point key="canvasLocation" x="679" y="4831"/>
         </scene>
-        <!--HashtagVC-->
+        <!--Selfie Tag View Controller-->
         <scene sceneID="0ZK-4C-l1j">
             <objects>
-                <viewController id="yAU-V5-rnw" customClass="HashtagVC" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selfieTagViewController" id="yAU-V5-rnw" customClass="SelfieTagViewController" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DEL-XI-Rbm"/>
                         <viewControllerLayoutGuide type="bottom" id="8VV-5P-Efc"/>
@@ -323,7 +318,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveSelfieButton:" destination="yAU-V5-rnw" eventType="touchUpInside" id="j8N-9E-DqD"/>
+                                    <action selector="saveAction:" destination="yAU-V5-rnw" eventType="touchUpInside" id="yUv-3F-bsc"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10w-Ea-9SG">
@@ -334,61 +329,39 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="YzR-Gj-XK5" secondAttribute="trailing" id="3ac-lc-v8y"/>
                                     <constraint firstItem="YzR-Gj-XK5" firstAttribute="top" secondItem="10w-Ea-9SG" secondAttribute="top" id="LCi-Jv-CgJ"/>
-                                    <constraint firstAttribute="height" constant="300" id="cqs-Eh-b8x"/>
                                     <constraint firstItem="YzR-Gj-XK5" firstAttribute="leading" secondItem="10w-Ea-9SG" secondAttribute="leading" id="nwG-9o-t42"/>
+                                    <constraint firstAttribute="width" secondItem="YzR-Gj-XK5" secondAttribute="height" multiplier="1:1" id="xub-dp-Saq"/>
                                     <constraint firstAttribute="bottom" secondItem="YzR-Gj-XK5" secondAttribute="bottom" id="yk7-FA-ywM"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5o-z0-OcV">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oai-0I-Htf">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bXC-MF-Eo3"/>
-                                    <constraint firstAttribute="width" constant="80" id="cxZ-yy-vRt"/>
+                                    <constraint firstAttribute="height" constant="80" id="bx8-mF-2JA"/>
                                 </constraints>
-                                <state key="normal" title="#OOTN">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                                 <connections>
-                                    <action selector="OOTNButton:" destination="yAU-V5-rnw" eventType="touchUpInside" id="UeF-9O-Kki"/>
+                                    <outlet property="dataSource" destination="yAU-V5-rnw" id="b9L-DY-Brz"/>
+                                    <outlet property="delegate" destination="yAU-V5-rnw" id="LHi-pN-qlH"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2H-6W-wE7">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9ZM-HG-h23"/>
-                                    <constraint firstAttribute="width" constant="80" id="zwX-46-syX"/>
-                                </constraints>
-                                <state key="normal" title="#OOTD">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="OOTDButton:" destination="yAU-V5-rnw" eventType="touchUpInside" id="POx-Ww-wwA"/>
-                                </connections>
-                            </button>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="10w-Ea-9SG" firstAttribute="centerY" secondItem="nlI-6x-YTA" secondAttribute="centerY" id="4zW-Nl-k8P"/>
-                            <constraint firstItem="YNr-q7-2EJ" firstAttribute="top" secondItem="U2H-6W-wE7" secondAttribute="bottom" constant="8" id="53V-iH-sRW"/>
+                            <constraint firstItem="8VV-5P-Efc" firstAttribute="top" secondItem="YNr-q7-2EJ" secondAttribute="bottom" constant="8" id="Abw-Bj-RlH"/>
                             <constraint firstItem="YNr-q7-2EJ" firstAttribute="centerX" secondItem="nlI-6x-YTA" secondAttribute="centerX" id="D4V-qx-M2E"/>
-                            <constraint firstItem="U2H-6W-wE7" firstAttribute="top" secondItem="10w-Ea-9SG" secondAttribute="bottom" constant="8" id="HAC-9L-T5m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="10w-Ea-9SG" secondAttribute="trailing" constant="-20" id="HVe-Sf-caS"/>
-                            <constraint firstItem="U2H-6W-wE7" firstAttribute="centerX" secondItem="nlI-6x-YTA" secondAttribute="centerX" constant="-59" id="LuL-xx-p3L"/>
-                            <constraint firstItem="x5o-z0-OcV" firstAttribute="top" secondItem="10w-Ea-9SG" secondAttribute="bottom" constant="8" id="Taz-cN-qvB"/>
+                            <constraint firstItem="YNr-q7-2EJ" firstAttribute="top" secondItem="oai-0I-Htf" secondAttribute="bottom" constant="8" id="XUE-Ch-qN8"/>
                             <constraint firstItem="10w-Ea-9SG" firstAttribute="leading" secondItem="nlI-6x-YTA" secondAttribute="leadingMargin" constant="-20" id="ZdP-Hr-vNI"/>
-                            <constraint firstItem="x5o-z0-OcV" firstAttribute="centerX" secondItem="nlI-6x-YTA" secondAttribute="centerX" constant="60" id="cwd-M8-zzs"/>
+                            <constraint firstItem="oai-0I-Htf" firstAttribute="centerX" secondItem="nlI-6x-YTA" secondAttribute="centerX" id="dom-Il-roD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="OOTD" destination="U2H-6W-wE7" id="uqN-xP-NM8"/>
-                        <outlet property="OOTN" destination="x5o-z0-OcV" id="PKe-K4-5Tg"/>
-                        <outlet property="containerView" destination="10w-Ea-9SG" id="gdD-oV-p7J"/>
-                        <outlet property="imageView" destination="YzR-Gj-XK5" id="uRQ-vq-bt2"/>
+                        <outlet property="taggableImageView" destination="YzR-Gj-XK5" id="tHs-AF-BRO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSa-rk-NPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="3611"/>
+            <point key="canvasLocation" x="-676" y="3608.5457271364321"/>
         </scene>
     </scenes>
 </document>
