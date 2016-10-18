@@ -28,7 +28,6 @@
 		35D4F1451D240A3400BEA8E1 /* DressingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1441D240A3400BEA8E1 /* DressingVC.swift */; };
 		35D4F1471D240A4900BEA8E1 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1461D240A4900BEA8E1 /* AccountVC.swift */; };
 		35D4F1501D240CC000BEA8E1 /* HapplikeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F14F1D240CC000BEA8E1 /* HapplikeVC.swift */; };
-		35D4F1521D240CD000BEA8E1 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1511D240CD000BEA8E1 /* ShareVC.swift */; };
 		35D4F1541D240CF700BEA8E1 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1531D240CF700BEA8E1 /* FriendsVC.swift */; };
 		35D4F1581D240F1A00BEA8E1 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1571D240F1A00BEA8E1 /* ProductDetailsVC.swift */; };
 		35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */; };
@@ -107,7 +106,6 @@
 		35D4F1441D240A3400BEA8E1 /* DressingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DressingVC.swift; sourceTree = "<group>"; };
 		35D4F1461D240A4900BEA8E1 /* AccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		35D4F14F1D240CC000BEA8E1 /* HapplikeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapplikeVC.swift; sourceTree = "<group>"; };
-		35D4F1511D240CD000BEA8E1 /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		35D4F1531D240CF700BEA8E1 /* FriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
 		35D4F1571D240F1A00BEA8E1 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		35D4F1621D25482600BEA8E1 /* FBSDKLoginButtonFR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSDKLoginButtonFR.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 			children = (
 				FC05BA5F1D8985A300802025 /* Happies.storyboard */,
 				35D4F14F1D240CC000BEA8E1 /* HapplikeVC.swift */,
-				35D4F1511D240CD000BEA8E1 /* ShareVC.swift */,
 				55E189D51D74741300A4FF6F /* CropVC.swift */,
 				55E189D71D74795700A4FF6F /* HashtagVC.swift */,
 				35D4F1531D240CF700BEA8E1 /* FriendsVC.swift */,
@@ -622,7 +619,6 @@
 				5521FC8A1D87116C002812C1 /* DressingCollectionViewCell.swift in Sources */,
 				FC4701841DA2A39C00417B81 /* ProductVC.swift in Sources */,
 				55ED74DB1D92E6AF00DCA3A6 /* Api+Product.swift in Sources */,
-				35D4F1521D240CD000BEA8E1 /* ShareVC.swift in Sources */,
 				FC664ED11DA3DC0D00CEF9D8 /* ProductPageVC.swift in Sources */,
 				FC57A93C1DA266F80023DF14 /* ProductWorker.swift in Sources */,
 				353C2B291D23E6EA009D7968 /* User.swift in Sources */,
