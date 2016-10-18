@@ -52,7 +52,7 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
         self.filter.addSubview(custom)
         self.filter.hidden = true
 
-        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
+        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 180), width: 50, height: 50))
         happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
     }
@@ -127,22 +127,24 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
         cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
-        self.presentViewController(vc, animated: true, completion: nil)
+//        self.presentViewController(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func moveToShare() {
         cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-
+//        self.presentViewController(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func moveToFriends() {
         cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
-        self.presentViewController(vc, animated: true, completion: nil)
+//        self.presentViewController(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK : - Fonctions happies
