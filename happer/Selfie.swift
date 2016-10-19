@@ -94,8 +94,8 @@ class Selfie : Object {
     dynamic var nbLike = 0
     dynamic var rating = 0
     dynamic var imageURLString = ""
-    
-    
+    dynamic var uuid = 0
+
     dynamic var stateRawValue = State.Created.rawValue
     var state: State {
         get {

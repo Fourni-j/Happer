@@ -63,7 +63,8 @@ class Product : Object {
     dynamic var completedTime = 0
     dynamic var owner: User?
     dynamic var imageURLString = ""
-    
+    dynamic var uuid = 0
+
     let happers = List<User>()
 
     dynamic var stateRawValue = State.Unknown.rawValue
