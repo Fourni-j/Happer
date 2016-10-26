@@ -26,7 +26,7 @@ class DAL {
 
     func add(objet: Object) {
         try! realm.write {
-            realm.add(objet)
+            realm.add(objet, update: true)
         }
     }
 
