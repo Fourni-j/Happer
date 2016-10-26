@@ -94,8 +94,8 @@ class Selfie : Object {
     dynamic var nbLike = 0
     dynamic var rating = 0
     dynamic var imageURLString = ""
-    
-    
+    dynamic var uuid = 0
+
     dynamic var stateRawValue = State.Created.rawValue
     var state: State {
         get {
@@ -133,5 +133,9 @@ class Selfie : Object {
     
     override class func ignoredProperties() -> [String] {
         return ["comments"]
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

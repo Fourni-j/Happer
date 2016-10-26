@@ -15,6 +15,7 @@ class User : Object {
     dynamic var email = ""
     dynamic var exp = 0.0
     dynamic var credit = 0
+    dynamic var uuid = 0
     
     let selfies = List<Selfie>()
     
@@ -26,5 +27,9 @@ class User : Object {
         set {
             circleRawValue = newValue.rawValue
         }
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
