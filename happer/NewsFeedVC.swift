@@ -12,13 +12,8 @@ import AlamofireImage
 
 class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //MARK : - NSUserDefault
-    
-    var cache = NSUserDefaults.standardUserDefaults()
-    
     //MARK : - attributs
     
-    @IBOutlet weak var mylabel: UILabel!
     var jsonData = NSDictionary()
     
     @IBOutlet weak var table: UITableView!
@@ -30,46 +25,19 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var toTransmit = Selfie()
     
-    // filters
-    
-    var custom = HappieView()
-    var filter = UIView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToShare), name: "share", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToFriends), name: "friends", object: nil)
         
-        let viewW = self.view.frame.width
-        let viewH = self.view.frame.height
-        
-        let tapOut = UITapGestureRecognizer(target: self, action: #selector(InspirationVC.dismissHappieView))
-        
-        // préparation vue happies et filtre
-        
-        self.custom = HappieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
-        self.filter = UIView(frame: CGRect(x: 0, y: 0, width: viewW, height: viewH))
-        self.filter.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
-        self.filter.addGestureRecognizer(tapOut)
-        self.view.addSubview(filter)
-        self.filter.addSubview(custom)
-        self.filter.hidden = true
-        
-        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 80), width: 50, height: 50))
-        happerL.button.addTarget(self, action: #selector(NewsFeedVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(happerL)
-        
-        
-        self.mylabel.text = catTab[indexSelected]
+        title = catTab[indexSelected]
         let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/get\(catTab[indexSelected]).php")
         getSelfies(url!)
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - tableView methods
@@ -84,12 +52,15 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.cellRating.rating = Float(selfie.rating)
         cell.cellImage.af_setImageWithURL(selfie.imageURL)
         cell.cellLikeCount.text = "\(selfie.nbLike)"
+        cell.cellImage.userInteractionEnabled = false
+        cell.cellImage.clipsToBounds = true
+        cell.cellImage.contentMode = .ScaleAspectFill
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.toTransmit = selfieTab[indexPath.row]
-        performSegueWithIdentifier("goToInspi", sender: self)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as!  NewsFeedCell
+        cell.cellImage.tagHidden = !cell.cellImage.tagHidden
     }
     
     func getSelfies(url: NSURL) {
@@ -126,37 +97,4 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             destination.indexSelected = self.indexSelected
         }
     }
-    
-    func moveToHappLike() {
-        cache.setObject("actuVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Happies", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-    
-    func moveToShare() {
-        cache.setObject("actuVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Happies", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-        
-    }
-    
-    func moveToFriends() {
-        cache.setObject("actuVC", forKey: "prevVC")
-        let story = UIStoryboard.init(name: "Happies", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-    
-    // MARK : - Fonctions happies
-    
-    func callHappieView() {
-        self.filter.hidden = false
-    }
-    
-    func dismissHappieView() {
-        self.filter.hidden = true
-    }
-    
 }
