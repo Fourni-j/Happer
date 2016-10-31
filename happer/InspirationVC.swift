@@ -11,10 +11,6 @@ import Foundation
 
 class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
 
-    // MARK : - NSUSER
-    
-    var cache = NSUserDefaults.standardUserDefaults()
-    
     // MARK : - attributs
     
     var categories: [InspiClass] = []
@@ -30,7 +26,6 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         super.creatMenuView()
-        cache.setObject("inspiVC", forKey: "currentVC")
         initCat()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
@@ -52,7 +47,9 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
         self.filter.addSubview(custom)
         self.filter.hidden = true
 
-        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 180), width: 50, height: 50))
+        title = "Inspiration du jour"
+        
+        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 150), width: 50, height: 50))
         happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
     }
@@ -80,14 +77,6 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
     
     // MARK: - topBar methods
     
-    @IBAction func circlesButton(sender: UIButton) {
-        performSegueWithIdentifier("goCercles", sender: self)
-    }
-    
-    @IBAction func notifButton(sender: UIButton) {
-        // Afficher historique notifications
-    }
-        
     @IBAction func menuAction(sender: AnyObject) {
         super.toggleMenu()
     }
@@ -105,6 +94,7 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         self.indexSelected = indexPath.row
         performSegueWithIdentifier("goFilActu", sender: self)
@@ -119,31 +109,24 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
         if segue.identifier == "goFilActu" {
             let destination = segue.destinationViewController as! NewsFeedVC
             destination.indexSelected = indexSelected
-            cache.setObject("inspiVC", forKey: "prevVC")
         }
     }
 
     func moveToHappLike() {
-        cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("happLikeVC")
-//        self.presentViewController(vc, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func moveToShare() {
-        cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
-//        self.presentViewController(vc, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func moveToFriends() {
-        cache.setObject("inspiVC", forKey: "prevVC")
         let story = UIStoryboard.init(name: "Happies", bundle: nil)
         let vc = story.instantiateViewControllerWithIdentifier("askHelpVC")
-//        self.presentViewController(vc, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
