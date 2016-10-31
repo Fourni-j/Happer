@@ -12,7 +12,7 @@ class NewsFeedCell: UITableViewCell {
 
     // MARK : - attributs
     
-    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellImage: TaggableImageView!
     @IBOutlet weak var cellLikeCount: UILabel!
     @IBOutlet weak var cellRating: FloatRatingView!
 
@@ -23,7 +23,6 @@ class NewsFeedCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
