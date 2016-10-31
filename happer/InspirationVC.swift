@@ -47,6 +47,8 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
         self.filter.addSubview(custom)
         self.filter.hidden = true
 
+        title = "Inspiration du jour"
+        
         let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 150), width: 50, height: 50))
         happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
