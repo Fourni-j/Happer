@@ -15,8 +15,24 @@ class TaggableImageView : UIImageView {
     private var editingTextField: Bool = false
     private var filledArea: [Int: [String: CGPoint]] = [:]
     private var textFields: [UITextField] = []
+    private var indicators: [UIImageView] = []
     private var activeTextField: UITextField!
+    private var _tagHidden: Bool = false
     
+    var tagHidden : Bool {
+        get {
+           return _tagHidden
+        }
+        set {
+            _tagHidden = newValue
+            for textField in textFields {
+                textField.hidden = _tagHidden
+            }
+            for indicator in indicators {
+                indicator.hidden = _tagHidden
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -93,6 +109,7 @@ class TaggableImageView : UIImageView {
         textField.returnKeyType = .Done
         textField.text = text
         textFields += [textField]
+        indicators += [indicatorView]
         self.addSubview(textField)
         textField.delegate = self
         activeTextField = textField
