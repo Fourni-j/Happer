@@ -20,9 +20,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         let textAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         UINavigationBar.appearance().titleTextAttributes = textAttributes
+        
+        
+        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
+        let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+        
+        application.registerUserNotificationSettings(pushNotificationSettings)
+        application.registerForRemoteNotifications()
+        
+        
         return true
     }
 
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        print("Device token : \(deviceToken)")
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("Notification error : \(error.localizedDescription)")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print("Receive notification : \(userInfo)")
+    }
+    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }

@@ -135,6 +135,7 @@
 		FC05BA5D1D89841E00802025 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		FC05BA5F1D8985A300802025 /* Happies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Happies.storyboard; sourceTree = "<group>"; };
 		FC05BA611D8987B900802025 /* UserPages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserPages.storyboard; sourceTree = "<group>"; };
+		FC06300C1DD0873900E1383B /* happer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = happer.entitlements; sourceTree = "<group>"; };
 		FC0C70D81D90346F002AA0F6 /* AuthentInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentInteractor.swift; sourceTree = "<group>"; };
 		FC0C70DA1D903474002AA0F6 /* AuthentPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentPresenter.swift; sourceTree = "<group>"; };
 		FC0ED3741DA25AA200115DA2 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 		353C2B061D23E4EE009D7968 /* happer */ = {
 			isa = PBXGroup;
 			children = (
+				FC06300C1DD0873900E1383B /* happer.entitlements */,
 				FCEF9EA41D99043000CF3B95 /* DAL */,
 				FC0C70DC1D903476002AA0F6 /* Shared */,
 				FC0C70D41D90343B002AA0F6 /* Authent */,
@@ -466,6 +468,11 @@
 					353C2B031D23E4ED009D7968 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = HWY6V6F9L7;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					353C2B171D23E4F0009D7968 = {
 						CreatedOnToolsVersion = 7.3.1;
