@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
+class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSource {
 
     // MARK : - attributs
     
@@ -25,7 +25,6 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.creatMenuView()
         initCat()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
@@ -52,12 +51,13 @@ class InspirationVC: MenuVC, UITabBarDelegate, UITableViewDataSource {
         let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 150), width: 50, height: 50))
         happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
+        addSlideMenuButton()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     // MARK: - self.methods
     
     func initCat() {
