@@ -13,9 +13,9 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
 
     // MARK : - attributs
     
-    var categories: [InspiClass] = []
-    var indexSelected = 0
-
+    var categories: [Selfie.Category] = [.OOTD, .OOTN, .Bags, .Accessories, .Shoes, .Relaxed]
+    var selectedCategory = Selfie.Category.Unknown
+    
     // filters
     
     var custom = HappieView()
@@ -25,7 +25,6 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initCat()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToShare), name: "share", object: nil)
@@ -58,23 +57,6 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - self.methods
-    
-    func initCat() {
-        let ootd = InspiClass(name: "Tenue de Jour", keyWord: "ootd")
-        let ootn = InspiClass(name: "Tenue de Nuit", keyWord: "ootn")
-        let sacs = InspiClass(name: "Sacs", keyWord: "sacs")
-        let accessoires = InspiClass(name: "Accessoires", keyWord: "accessoires")
-        let chaussures = InspiClass(name: "Chaussures", keyWord: "chaussures")
-        let decontracte = InspiClass(name: "Decontracté", keyWord: "decontracte")
-        categories += [ootd]
-        categories += [ootn]
-        categories += [sacs]
-        categories += [accessoires]
-        categories += [chaussures]
-        categories += [decontracte]
-    }
-    
     // MARK: - topBar methods
     
     @IBAction func menuAction(sender: AnyObject) {
@@ -84,19 +66,19 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
     // MARK: - tableView methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return categories.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.catTable.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath) as! CategoryCell
-        cell.cellName.text = categories[indexPath.row].getName()
+        cell.cellName.text = categories[indexPath.row].value
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        self.indexSelected = indexPath.row
+        selectedCategory = categories[indexPath.row]
         performSegueWithIdentifier("goFilActu", sender: self)
     }
 
@@ -108,7 +90,7 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
 
         if segue.identifier == "goFilActu" {
             let destination = segue.destinationViewController as! NewsFeedVC
-            destination.indexSelected = indexSelected
+            destination.currentCategory = selectedCategory
         }
     }
 
