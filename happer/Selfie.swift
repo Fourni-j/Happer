@@ -117,7 +117,7 @@ class Selfie : Object {
     }
     
     var imageURL : NSURL {
-        return NSURL(string: "http://" + self.imageURLString)!
+        return NSURL(string: "http:" + self.imageURLString)!
     }
     
     var comments: [String] {
