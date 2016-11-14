@@ -17,12 +17,12 @@ extension DAL {
     }
 
     func readSelfie(byCategory category: Selfie.Category) -> Results<Selfie> {
-        let selfies = self.realm.objects(Selfie.self).filter("categoryRawValue = \(category.rawValue)")
+        let selfies = self.realm.objects(Selfie.self).filter("categoryRawValue = '\(category.rawValue)'")
         return selfies
     }
 
     func readSelfie(byState state: Selfie.State) -> Results<Selfie> {
-        let selfies = self.realm.objects(Selfie.self).filter("stateRawValue = \(state.rawValue)")
+        let selfies = self.realm.objects(Selfie.self).filter("stateRawValue = '\(state.rawValue)'")
         return selfies
     }
 
@@ -38,6 +38,11 @@ extension DAL {
 
     func readSelfie(byRating rating: Int) -> Results<Selfie> {
         let selfies = self.realm.objects(Selfie.self).filter("rating = \(rating)")
+        return selfies
+    }
+    
+    func readAllSelfies() -> Results<Selfie> {
+        let selfies = self.realm.objects(Selfie.self)
         return selfies
     }
 }
