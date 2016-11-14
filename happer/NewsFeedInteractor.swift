@@ -10,8 +10,12 @@ import Foundation
 
 class NewsFeedInteractor {
     
-    func getSelfies(byCategory category: Selfie.Category) {
-        
+    func getSelfies() {
+        Api.getSelfie()
+            .then { data in NewsFeedWorker.parse(data!) }
+            .then { selfies in NewsFeedWorker.insert(selfies) }
+            .then { NewsFeedPresenter.post(.GetSelfiesSuccess) }
+            .fail { error in NewsFeedPresenter.postOnMainThread(.GetSelfiesFailure, object: error) }
     }
     
 }
