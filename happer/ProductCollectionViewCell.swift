@@ -16,7 +16,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var overlayLabel: UILabel!
     @IBOutlet weak var bidView: BidView!
-
+    
     private var _cellState = Product.State.Unknown
     var cellState : Product.State {
         get { return _cellState }
@@ -41,7 +41,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         imageView.af_setImageWithURL(product.imageURL)
         cellState = product.state
         bidView.setup(true)
-        bidView.updateFillWith(completedTime: CGFloat(product.completedTime), totalTime: CGFloat(product.totalTime))
+        //        bidView.updateFillWith(completedTime: CGFloat(product.completedTime), totalTime: CGFloat(product.totalTime))
     }
     
 }
