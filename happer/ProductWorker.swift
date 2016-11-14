@@ -24,35 +24,39 @@ class ProductWorker {
     static func parse(data: AnyObject) -> Future<[Product]> {
         return Future<[Product]> {
             var products = [Product]()
-            let array = data as! [[String: AnyObject]]
-            
+            let type = data as! [String: AnyObject]
+            let array = type["products"] as! [[String: AnyObject]]
             for productJSON in array {
                 guard let id = productJSON["id"] as? Int,
                     let brand = productJSON["brand"] as? String,
-                    let circle = productJSON["circle"] as? String,
-                    let completedTime = productJSON["completed_time"] as? Int,
                     let description = productJSON["description"] as? String,
-                    let price = productJSON["price"] as? Double,
-                    let state = productJSON["state"] as? String,
+                    let price = productJSON["price"] as? String,
                     let title = productJSON["title"] as? String,
-                    let totalTime = productJSON["total_time"] as? Int,
-                    let urlImage = productJSON["url_image"] as? String
+                    var urlImage = productJSON["picture_url"] as? String
+                    //                    let state = productJSON["state"] as? String,
+                    //                    let totalTime = productJSON["total_time"] as? Int,
+                    //                    let circle = productJSON["circle"] as? Int,
+                    //                    let completedTime = productJSON["completed_time"] as? Int,
                     else {
                         fatalError("Something goes wrong")
                 }
-
+                
                 let product = Product()
                 product.id = id
                 product.brand = brand
-                product.circle = Circle.init(value: circle)
-                product.completedTime = completedTime
+                product.circle = Circle.init(value: "Silver")
                 product.desc = description
-                product.price = price
-                product.state = Product.State.init(value: state)
+                product.price = Double(price)!
+                product.state = Product.State.init(value: "available")
                 product.title = title
-                product.totalTime = totalTime
+                urlImage.removeAtIndex(urlImage.startIndex)
+                urlImage.removeAtIndex(urlImage.startIndex)
                 product.imageURLString = urlImage
                 products.append(product)
+                
+                //                product.totalTime = totalTime
+                //                product.completedTime = completedTime
+                
             }
             return products
         }
