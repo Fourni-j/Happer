@@ -11,25 +11,26 @@ import Alamofire
 import Future
 
 public class Api {
-    public static let rootUrl = "http://localhost:8080/"
-    public static let webServices = ["connection" : "login.php",
-                                     "subscribe" : "adduser.php",
-                                     "getUser" : "getUser.php",
-                                     "putUser" : "putUser.php",
-                                     "postUser" : "postUser.php",
-                                     "deleteUser" : "deleteUser.php",
-                                     "getSelfie" : "getSelfie.php",
-                                     "putSelfie" : "putSelfie.php",
-                                     "postSelfie" : "postSelfie.php",
-                                     "deleteSelfie" : "deleteSelfie.php",
-                                     "getProduct" : "getProduct.php",
-                                     "putProduct" : "putProduct.php",
-                                     "postProduct" : "postProduct.php",
-                                     "deleteProduct" : "deleteProduct.php"]
+    public static let rootUrl = "http://52.57.64.123/v1/"
+    public static let webServices = ["connection" : "login.php", // Update
+                                     "subscribe" : "adduser.php", // Update
+                                     "getUser" : "users",
+                                     "putUser" : "users", // Update
+                                     "postUser" : "users", // Update
+                                     "deleteUser" : "users", // Update
+                                     "getSelfie" : "selfies",
+                                     "putSelfie" : "selfies", // Update
+                                     "postSelfie" : "selfies", // Update
+                                     "deleteSelfie" : "selfies", // Update
+                                     "getProduct" : "products", // Update
+                                     "putProduct" : "products", // Update
+                                     "postProduct" : "products", // Update
+                                     "deleteProduct" : "products"] // Update
 
     /**
      Entry point for all web services request
      */
+    
     public static func request(method:Alamofire.Method, URLString: URLStringConvertible, parameters:[String:AnyObject]? = nil, options: NSJSONReadingOptions = .AllowFragments) -> Future<AnyObject?> {
         let future = Future<AnyObject?>()
         let completion:(Response<AnyObject, NSError> -> Void) = { response in
