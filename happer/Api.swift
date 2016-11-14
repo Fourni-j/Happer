@@ -15,17 +15,17 @@ public class Api {
     public static let webServices = ["connection" : "login.php", // Update
                                      "subscribe" : "adduser.php", // Update
                                      "getUser" : "users",
-                                     "putUser" : "users", // Update
-                                     "postUser" : "users", // Update
-                                     "deleteUser" : "users", // Update
+                                     "putUser" : "users",
+                                     "postUser" : "users",
+                                     "deleteUser" : "users",
                                      "getSelfie" : "selfies",
-                                     "putSelfie" : "selfies", // Update
-                                     "postSelfie" : "selfies", // Update
-                                     "deleteSelfie" : "selfies", // Update
-                                     "getProduct" : "products", // Update
-                                     "putProduct" : "products", // Update
-                                     "postProduct" : "products", // Update
-                                     "deleteProduct" : "products"] // Update
+                                     "putSelfie" : "selfies",
+                                     "postSelfie" : "selfies",
+                                     "deleteSelfie" : "selfies",
+                                     "getProduct" : "products",
+                                     "putProduct" : "products",
+                                     "postProduct" : "products",
+                                     "deleteProduct" : "products"]
 
     /**
      Entry point for all web services request
