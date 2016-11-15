@@ -39,9 +39,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = product.desc
         priceLabel.text = "\(product.price)"
         imageView.af_setImageWithURL(product.imageURL)
+        imageView.clipsToBounds = true
+        imageView.contentMode = .ScaleAspectFit
         cellState = product.state
         bidView.setup(true)
-        //        bidView.updateFillWith(completedTime: CGFloat(product.completedTime), totalTime: CGFloat(product.totalTime))
+        bidView.updateFillWith(completedTime: CGFloat(240), totalTime: CGFloat(480))
     }
     
 }
