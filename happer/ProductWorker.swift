@@ -32,8 +32,8 @@ class ProductWorker {
                     let description = productJSON["description"] as? String,
                     let price = productJSON["price"] as? String,
                     let title = productJSON["title"] as? String,
-                    var urlImage = productJSON["picture_url"] as? String
-                    //                    let state = productJSON["state"] as? String,
+                    var urlImage = productJSON["picture_url"] as? String,
+                    let state = productJSON["state"] as? String
                     //                    let totalTime = productJSON["total_time"] as? Int,
                     //                    let circle = productJSON["circle"] as? Int,
                     //                    let completedTime = productJSON["completed_time"] as? Int,
@@ -47,7 +47,7 @@ class ProductWorker {
                 product.circle = Circle.init(value: "Silver")
                 product.desc = description
                 product.price = Double(price)!
-                product.state = Product.State.init(value: "available")
+                product.state = Product.State.init(value: state)
                 product.title = title
                 urlImage.removeAtIndex(urlImage.startIndex)
                 urlImage.removeAtIndex(urlImage.startIndex)
