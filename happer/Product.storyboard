@@ -31,11 +31,11 @@
                                     <size key="itemSize" width="299" height="200"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productCollectionViewCell" id="7nU-Tc-fXA" customClass="ProductCollectionViewCell" customModule="happer" customModuleProvider="target">
-                                        <rect key="frame" x="38" y="50" width="299" height="200"/>
+                                        <rect key="frame" x="38" y="60" width="299" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="299" height="200"/>
@@ -115,6 +115,71 @@
                                             <outlet property="overlayLabel" destination="ykZ-Ky-Ohd" id="qG2-co-7iZ"/>
                                             <outlet property="overlayView" destination="9s3-Si-O0c" id="xvW-2i-B6A"/>
                                             <outlet property="priceLabel" destination="TmK-84-d7V" id="fDT-SX-noX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productSmallCollectionViewCell" id="jOk-e0-I92" customClass="ProductSmallCollectionViewCell" customModule="happer" customModuleProvider="target">
+                                        <rect key="frame" x="113" y="270" width="150" height="222"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HW6-Kl-eRX">
+                                                    <rect key="frame" x="20" y="34" width="110" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="HW6-Kl-eRX" secondAttribute="height" multiplier="1:1" id="gjb-ad-HML"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-pG-0Pl">
+                                                    <rect key="frame" x="20" y="5" width="110" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOj-Az-1o4">
+                                                    <rect key="frame" x="54" y="149" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfw-xJ-17d" customClass="BidView" customModule="happer" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="180" width="110" height="30"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Oho-fL-We8"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="HW6-Kl-eRX" firstAttribute="leading" secondItem="jOk-e0-I92" secondAttribute="leadingMargin" constant="12" id="6xA-D5-699"/>
+                                            <constraint firstItem="zOj-Az-1o4" firstAttribute="centerX" secondItem="jOk-e0-I92" secondAttribute="centerX" id="9nu-Be-WUn"/>
+                                            <constraint firstItem="c2E-pG-0Pl" firstAttribute="leading" secondItem="jOk-e0-I92" secondAttribute="leading" constant="20" id="E3I-jj-xgD"/>
+                                            <constraint firstItem="bfw-xJ-17d" firstAttribute="centerX" secondItem="jOk-e0-I92" secondAttribute="centerX" id="JQc-2N-bNv"/>
+                                            <constraint firstAttribute="trailing" secondItem="c2E-pG-0Pl" secondAttribute="trailing" constant="20" id="LaO-FW-jcb"/>
+                                            <constraint firstItem="bfw-xJ-17d" firstAttribute="top" secondItem="zOj-Az-1o4" secondAttribute="bottom" constant="10" id="Ool-Gw-iom"/>
+                                            <constraint firstItem="zOj-Az-1o4" firstAttribute="top" secondItem="HW6-Kl-eRX" secondAttribute="bottom" constant="5" id="URP-Bj-8u6"/>
+                                            <constraint firstItem="bfw-xJ-17d" firstAttribute="leading" secondItem="jOk-e0-I92" secondAttribute="leadingMargin" constant="12" id="VEl-zu-8du"/>
+                                            <constraint firstItem="HW6-Kl-eRX" firstAttribute="top" secondItem="c2E-pG-0Pl" secondAttribute="bottom" constant="5" id="bB0-Sd-aoL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="HW6-Kl-eRX" secondAttribute="trailing" constant="12" id="bPw-Gi-SSs"/>
+                                            <constraint firstItem="HW6-Kl-eRX" firstAttribute="centerY" secondItem="jOk-e0-I92" secondAttribute="centerY" id="bWO-Oa-sG5"/>
+                                            <constraint firstItem="c2E-pG-0Pl" firstAttribute="top" secondItem="jOk-e0-I92" secondAttribute="top" constant="5" id="fiu-ai-wUJ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="bfw-xJ-17d" secondAttribute="trailing" constant="12" id="joq-Et-3HA"/>
+                                            <constraint firstItem="HW6-Kl-eRX" firstAttribute="centerY" secondItem="jOk-e0-I92" secondAttribute="centerY" multiplier="0.8" id="r52-4q-7zH"/>
+                                        </constraints>
+                                        <size key="customSize" width="150" height="222"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="bWO-Oa-sG5"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="bidView" destination="bfw-xJ-17d" id="SYL-72-sB3"/>
+                                            <outlet property="imageView" destination="HW6-Kl-eRX" id="FMb-4y-q5t"/>
+                                            <outlet property="imageViewCenterConstraint" destination="r52-4q-7zH" id="d7D-ls-O2h"/>
+                                            <outlet property="imageViewWonCenterConstraint" destination="bWO-Oa-sG5" id="T4b-DH-Vor"/>
+                                            <outlet property="priceLabel" destination="zOj-Az-1o4" id="Crg-YK-22g"/>
+                                            <outlet property="titleLabel" destination="c2E-pG-0Pl" id="dSu-1X-jhq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
