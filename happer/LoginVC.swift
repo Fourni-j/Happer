@@ -27,6 +27,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
+        let width = UIScreen.mainScreen().bounds.size.width
+        let height = UIScreen.mainScreen().bounds.size.height
+        let imageViewBackground = UIImageView(frame: CGRectMake(0, 0, width, height))
+        imageViewBackground.image = UIImage(named: "loginBackground")
+        imageViewBackground.contentMode = UIViewContentMode.ScaleAspectFill
+        self.view.addSubview(imageViewBackground)
+        self.view.sendSubviewToBack(imageViewBackground)
     }
     
     override func viewDidAppear(animated: Bool) {
