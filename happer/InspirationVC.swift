@@ -14,6 +14,7 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
     // MARK : - attributs
     
     var categories: [Selfie.Category] = [.OOTD, .OOTN, .Bags, .Accessories, .Shoes, .Relaxed]
+    var tableViewData = [Dictionary<String,String>]()
     var selectedCategory = Selfie.Category.Unknown
     
     // filters
@@ -54,6 +55,12 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
         happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
         addSlideMenuButton()
+        tableViewData.append(["label":"Tenue de jour", "background":"OotdBack"])
+        tableViewData.append(["label":"Tenue de soirée", "background":"OotnBack"])
+        tableViewData.append(["label":"Sacs", "background":"BagsBack"])
+        tableViewData.append(["label":"Accessoires", "background":"AccessoriesBack"])
+        tableViewData.append(["label":"Chaussures", "background":"ShoesBack"])
+        tableViewData.append(["label":"Décontracté", "background":"RelaxedBack"])
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,12 +81,14 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.catTable.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath) as! CategoryCell
-        cell.cellName.text = categories[indexPath.row].value
+        cell.cellName.text = tableViewData[indexPath.row]["label"]
+        cell.cellBackground.image = UIImage(named: tableViewData[indexPath.row]["background"]!)
+        cell.contentView.sendSubviewToBack(cell.cellBackground)
+
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         selectedCategory = categories[indexPath.row]
         performSegueWithIdentifier("goFilActu", sender: self)

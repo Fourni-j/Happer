@@ -12,4 +12,5 @@ class CategoryCell: UITableViewCell {
     
     // MARK: - attributs
     @IBOutlet weak var cellName: UILabel!
+    @IBOutlet weak var cellBackground: UIImageView!
 }

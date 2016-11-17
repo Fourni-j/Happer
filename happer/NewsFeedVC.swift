@@ -60,9 +60,9 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as!  NewsFeedCell
-        cell.cellImage.tagHidden = !cell.cellImage.tagHidden
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! NewsFeedCell
+        cell.cellImage.tagHidden = !cell.cellImage.tagHidden
     }
 }
 

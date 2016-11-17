@@ -41,18 +41,24 @@
                                                         <constraint firstAttribute="width" constant="270" id="0is-iy-2dx"/>
                                                         <constraint firstAttribute="height" constant="40" id="Mbg-u9-axQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l4k-G2-sqN"/>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="l4k-G2-sqN" firstAttribute="leading" secondItem="air-A1-Nbs" secondAttribute="leading" id="C9y-7t-7op"/>
+                                                <constraint firstItem="l4k-G2-sqN" firstAttribute="top" secondItem="air-A1-Nbs" secondAttribute="top" id="CG6-xs-619"/>
                                                 <constraint firstItem="jWi-VS-wOg" firstAttribute="centerX" secondItem="air-A1-Nbs" secondAttribute="centerX" id="FAf-WI-ZUu"/>
                                                 <constraint firstItem="jWi-VS-wOg" firstAttribute="centerY" secondItem="air-A1-Nbs" secondAttribute="centerY" id="KPa-Qe-hdo"/>
+                                                <constraint firstAttribute="trailing" secondItem="l4k-G2-sqN" secondAttribute="trailing" id="j8e-bT-cpd"/>
+                                                <constraint firstAttribute="bottom" secondItem="l4k-G2-sqN" secondAttribute="bottom" id="yh9-SF-bjd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
                                         <connections>
+                                            <outlet property="cellBackground" destination="l4k-G2-sqN" id="n0M-on-hnK"/>
                                             <outlet property="cellName" destination="jWi-VS-wOg" id="vsY-Lm-uJS"/>
                                         </connections>
                                     </tableViewCell>
@@ -362,7 +368,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VKj-VF-dlu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VKj-VF-dlu">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>

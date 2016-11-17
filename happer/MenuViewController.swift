@@ -32,7 +32,6 @@ class MenuViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tap))
         self.view.addGestureRecognizer(tapGesture)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -119,7 +118,7 @@ extension MenuViewController : UITableViewDataSource, UITableViewDelegate {
         case 0, 1, 2, 3:
             return 90.0
         case 8:
-            return 233.0
+            return 220.0
         default:
             return 50.0 // 54.0 is true default height for a UITableViewCell
         }
@@ -158,6 +157,7 @@ extension MenuViewController : UITableViewDataSource, UITableViewDelegate {
 
             let networkView = cell.contentView.viewWithTag(100)!
             networkView.backgroundColor = UIColor.clearColor()
+//            networkView.layoutIfNeeded() // before width&heigth are 1000.0, after width is 19.5 and height is 75.0
 
             let borderTop = CALayer()
             borderTop.frame = CGRect(x: 0.0, y: 0.0, width: networkView.frame.width, height: 1.0)
@@ -187,7 +187,7 @@ extension MenuViewController : UITableViewDataSource, UITableViewDelegate {
             let decoButton = cell.contentView.viewWithTag(107) as! UIButton
             decoButton.setTitle("Deconnexion", forState: UIControlState.Normal)
             
-            // for use all the button, it's necessary to make custom UITableViewCell, this ressources does not exist.
+            // for use all the button, it's necessary to create custom UITableViewCell
 
             let versionLabel = cell.contentView.viewWithTag(108) as! UILabel
             versionLabel.text = "Version 1.1.2"
