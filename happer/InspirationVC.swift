@@ -25,8 +25,9 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Entry point of main.storyboard
-        Session.sharedInstance.router.perform("route://Login/mainPage#modal", sender: self)// Envoie vers la page de login
+        // Entry point of navigation on main.storyboard
+        // Envoie vers la page de login
+        //Session.sharedInstance.router.perform("route://Login/mainPage#modal", sender: self)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToShare), name: "share", object: nil)
