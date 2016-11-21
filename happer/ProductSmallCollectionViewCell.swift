@@ -14,8 +14,8 @@ class ProductSmallCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var bidView: BidView!
-    @IBOutlet weak var imageViewCenterConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewWonCenterConstraint: NSLayoutConstraint!
+    @IBOutlet var imageViewCenterConstraint: NSLayoutConstraint!
+    @IBOutlet var imageViewWonCenterConstraint: NSLayoutConstraint!
     
     var overlayView: UIView?
     var overlayPrice: UILabel?
@@ -27,7 +27,7 @@ class ProductSmallCollectionViewCell: UICollectionViewCell {
             _cellState = newCellState
             switch cellState {
             case .Available, .Unknown:
-                avalaibleLayout()
+                availableLayout()
             case .Soon:
                 soonLayout()
             case .Won:
@@ -39,7 +39,7 @@ class ProductSmallCollectionViewCell: UICollectionViewCell {
     func setup(product: Product) {
         backgroundColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.00)
         titleLabel.text = product.brand
-        priceLabel.text = "Prix réel \(Int(product.price))€"
+        priceLabel.text = "\(Int(product.price))€"
         layoutIfNeeded()
         imageView.clipsToBounds = true
         imageView.contentMode = .ScaleAspectFit
@@ -52,13 +52,8 @@ class ProductSmallCollectionViewCell: UICollectionViewCell {
         overlayView?.alpha = 0.7
         overlayView?.hidden = true
   
-
-
-//        overlayPrice = UILabel(frame: CGRectMake(priceLabel.frame.origin.x, priceLabel.frame.origin.y, frame.width, priceLabel.frame.height))
         overlayPrice = UILabel(frame: priceLabel.frame)
         overlayPrice?.text = "Prix réel \(Int(product.price))€"
-//        overlayPrice?.center = CGPoint(x: frame.width / 2, y: (frame.height / 3) * 2 )
-//        overlayPrice?.textAlignment = .Center
         overlayPrice?.textColor = UIColor.whiteColor()
 
         
@@ -68,7 +63,7 @@ class ProductSmallCollectionViewCell: UICollectionViewCell {
         addSubview(overlayView!)
     }
     
-    func avalaibleLayout() {
+    func availableLayout() {
         overlayView?.hidden = true
         priceLabel.hidden = false
         imageViewWonCenterConstraint.active = false
@@ -88,9 +83,5 @@ class ProductSmallCollectionViewCell: UICollectionViewCell {
         bidView.hidden = true
         imageViewCenterConstraint.active = false
         imageViewWonCenterConstraint.active = true
-        imageView.updateConstraints()
-        imageView.layoutIfNeeded()
-
-        
     }
 }
