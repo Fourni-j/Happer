@@ -17,7 +17,7 @@ class TaggableImageView : UIImageView {
     private var textFields: [UITextField] = []
     private var indicators: [UIImageView] = []
     private var activeTextField: UITextField!
-    private var _tagHidden: Bool = false
+    private var _tagHidden: Bool = true
     
     var tagHidden : Bool {
         get {
@@ -60,6 +60,9 @@ class TaggableImageView : UIImageView {
         self.addGestureRecognizer(tapGestureRecognizer)
         self.userInteractionEnabled = true
         self.contentMode = .ScaleAspectFit
+        self.creatTextField("test string", atPoint: CGPoint(x: CGFloat(50.0) , y: CGFloat(50.0)))
+        textFields[0].hidden = true
+        indicators[0].hidden = true
     }
     
     func tap(touch: UITapGestureRecognizer) {

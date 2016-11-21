@@ -51,7 +51,7 @@ class ProductPageVC : UIPageViewController {
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .Plain, target: self, action: #selector(popToRoot))
     }
-    
+
     func popToRoot() {
         navigationController?.popToRootViewControllerAnimated(true)
     }
@@ -60,10 +60,19 @@ class ProductPageVC : UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = currentCircle.rawValue
+    }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
+    }
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.title = currentCircle.rawValue
         ProductPresenter.register(self, events: .GetProductSuccess, .GetProductFailure)
     }
     

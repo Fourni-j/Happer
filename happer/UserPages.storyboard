@@ -3,9 +3,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NeutraTextBook.otf">
+            <string>NeutraText-BookSC</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--mes coups de coeur-->
         <scene sceneID="k5c-Zb-umY">
@@ -219,12 +225,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prenom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-dX-OkR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prénom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-dX-OkR">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="h8Q-he-Nf0"/>
                                     <constraint firstAttribute="height" constant="30" id="xcV-3A-kMJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -233,7 +239,7 @@
                                     <constraint firstAttribute="width" constant="115" id="6k4-Tx-OdD"/>
                                     <constraint firstAttribute="height" constant="30" id="O5B-AT-xiy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -242,7 +248,7 @@
                                     <constraint firstAttribute="height" constant="30" id="F0G-CA-yyD"/>
                                     <constraint firstAttribute="width" constant="115" id="LxZ-BR-sd7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -251,7 +257,7 @@
                                     <constraint firstAttribute="width" constant="115" id="Ktu-GP-9Bw"/>
                                     <constraint firstAttribute="height" constant="30" id="Yg1-DB-7as"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -260,7 +266,7 @@
                                     <constraint firstAttribute="width" constant="115" id="1pz-lW-n7G"/>
                                     <constraint firstAttribute="height" constant="30" id="ekY-7b-V9P"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -269,7 +275,7 @@
                                     <constraint firstAttribute="height" constant="30" id="gEU-xn-gYx"/>
                                     <constraint firstAttribute="width" constant="115" id="kVO-Xt-TcA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -278,7 +284,7 @@
                                     <constraint firstAttribute="width" constant="141" id="Gb1-nV-9I5"/>
                                     <constraint firstAttribute="height" constant="30" id="Zll-jy-Ftm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -287,24 +293,44 @@
                                     <!--2016-09-07 14:29:36 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon compte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG7-eI-qKb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Détails Compte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG7-eI-qKb">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3yC-Mw-AVs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiT-fI-qsE">
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="2C8-5g-3SX"/>
+                                    <constraint firstAttribute="width" constant="70" id="2C8-5g-3SX"/>
                                     <constraint firstAttribute="height" constant="30" id="4AF-gz-s2v"/>
                                 </constraints>
-                                <state key="normal" title="Modifier"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="17"/>
+                                <state key="normal" title="Modifier">
+                                    <color key="titleColor" red="0.9999155998" green="1" blue="0.99984383580000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="modifierAction:" destination="829-f4-DFi" eventType="touchUpInside" id="Qaa-ez-BC2"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFc-8m-zpN">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yn1-b2-pzM">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="yn1-b2-pzM" firstAttribute="leading" secondItem="KFc-8m-zpN" secondAttribute="leading" constant="5" id="0nJ-Ek-Ut7"/>
+                                    <constraint firstItem="yn1-b2-pzM" firstAttribute="top" secondItem="KFc-8m-zpN" secondAttribute="top" constant="5" id="4g1-y7-qVW"/>
+                                    <constraint firstAttribute="height" constant="110" id="6AG-IV-AZK"/>
+                                    <constraint firstAttribute="width" secondItem="KFc-8m-zpN" secondAttribute="height" multiplier="1:1" id="CFo-IT-2nh"/>
+                                    <constraint firstAttribute="bottom" secondItem="yn1-b2-pzM" secondAttribute="bottom" constant="5" id="XbM-VK-Tbo"/>
+                                    <constraint firstAttribute="trailing" secondItem="yn1-b2-pzM" secondAttribute="trailing" constant="5" id="lkB-De-zgv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -329,6 +355,7 @@
                             <constraint firstItem="5dZ-0D-8Xh" firstAttribute="leading" secondItem="gMU-GV-x0O" secondAttribute="trailing" constant="8" id="WhU-iQ-JDM"/>
                             <constraint firstItem="hDG-Ow-TFM" firstAttribute="top" secondItem="rG7-eI-qKb" secondAttribute="bottom" constant="8" id="WnA-rD-6F3"/>
                             <constraint firstItem="DEl-DQ-Rqv" firstAttribute="leading" secondItem="hy8-a1-314" secondAttribute="trailing" constant="8" id="ZKP-gb-2D6"/>
+                            <constraint firstItem="KFc-8m-zpN" firstAttribute="centerX" secondItem="GT7-mh-O4l" secondAttribute="centerX" id="Zop-TI-wdo"/>
                             <constraint firstItem="gMU-GV-x0O" firstAttribute="leading" secondItem="GT7-mh-O4l" secondAttribute="leadingMargin" id="bdT-nl-u3s"/>
                             <constraint firstItem="Ppd-kO-WbV" firstAttribute="top" secondItem="gMU-GV-x0O" secondAttribute="bottom" constant="8" id="bdf-uc-jJ6"/>
                             <constraint firstItem="B2o-md-A8B" firstAttribute="top" secondItem="Ngz-Ct-r8p" secondAttribute="bottom" constant="8" id="bmK-LQ-IEh"/>
@@ -347,23 +374,26 @@
                             <constraint firstItem="ZiT-fI-qsE" firstAttribute="centerX" secondItem="GT7-mh-O4l" secondAttribute="centerX" id="pVn-35-flW"/>
                             <constraint firstItem="DEl-DQ-Rqv" firstAttribute="trailing" secondItem="GT7-mh-O4l" secondAttribute="trailingMargin" id="pfS-DR-rDZ"/>
                             <constraint firstItem="lBi-SS-1VT" firstAttribute="leading" secondItem="GT7-mh-O4l" secondAttribute="leadingMargin" id="syi-Xc-5Ze"/>
+                            <constraint firstItem="rG7-eI-qKb" firstAttribute="top" secondItem="KFc-8m-zpN" secondAttribute="bottom" constant="8" id="uKe-EB-yKm"/>
                             <constraint firstItem="gMU-GV-x0O" firstAttribute="top" secondItem="hy8-a1-314" secondAttribute="bottom" constant="8" id="vfj-5x-Avg"/>
                             <constraint firstItem="oJO-dX-OkR" firstAttribute="top" secondItem="rG7-eI-qKb" secondAttribute="bottom" constant="8" id="y2e-gQ-kvd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="adressLabel" destination="IEL-Sv-aWc" id="Jc7-tB-vKi"/>
+                        <outlet property="borderProfilView" destination="KFc-8m-zpN" id="SdD-Co-KVn"/>
                         <outlet property="cityLabel" destination="DEl-DQ-Rqv" id="eOm-AI-8yB"/>
                         <outlet property="datePicker" destination="Zz9-gl-avn" id="Rjd-Ra-UFA"/>
                         <outlet property="emailLabel" destination="5dZ-0D-8Xh" id="s0M-6E-iOF"/>
                         <outlet property="firstnameLabel" destination="hDG-Ow-TFM" id="4Z9-ON-vSb"/>
                         <outlet property="nameLabel" destination="2zx-FK-ORL" id="ddR-SY-2Y4"/>
                         <outlet property="postalCodeLabel" destination="upr-xU-nz6" id="ppC-cR-QUa"/>
+                        <outlet property="profileImageView" destination="yn1-b2-pzM" id="ngy-2e-dmc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCa-XQ-gUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1942"/>
+            <point key="canvasLocation" x="765.60000000000002" y="1941.6791604197902"/>
         </scene>
     </scenes>
 </document>
