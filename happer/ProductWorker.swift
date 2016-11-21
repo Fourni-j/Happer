@@ -12,6 +12,11 @@ import Future
 class ProductWorker {
     
     static func insert(products: [Product]) {
+        let results = DAL.sharedInstance.readAllProducts()
+        for oldProducts in results {
+            DAL.sharedInstance.delete(oldProducts)
+        }
+
         for product in products {
             ProductWorker.insert(product)
         }
