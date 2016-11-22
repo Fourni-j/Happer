@@ -1,0 +1,19 @@
+{
+  "name": "Router",
+  "version": "1.0.0",
+  "summary": "Declare Segue without storyboard. Use syntax of generic URIs.",
+  "homepage": "https://github.com/favret/Router",
+  "license": "MIT",
+  "authors": {
+    "favre": ""
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/favret/Router.git",
+    "tag": "1.0.0"
+  },
+  "module_name": "Router",
+  "source_files": "**/*.swift"
+}

@@ -18,17 +18,18 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var resultSelfies: Results<Selfie>!
     var newsFeedInteractor = NewsFeedInteractor()
     var currentCategory = Selfie.Category.init(value: "")
+    var currentTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidDisappear(animated)
         NewsFeedPresenter.register(self, events: .GetSelfiesSuccess, .GetSelfiesFailure)
         newsFeedInteractor.getSelfies()
-        title = currentCategory.value
+        title = currentTitle
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -60,9 +61,9 @@ class NewsFeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as!  NewsFeedCell
-        cell.cellImage.tagHidden = !cell.cellImage.tagHidden
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! NewsFeedCell
+        cell.cellImage.tagHidden = !cell.cellImage.tagHidden
     }
 }
 

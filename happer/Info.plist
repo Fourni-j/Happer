@@ -57,11 +57,20 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Didot.tff</string>
+		<string>FuturaStdMedium.otf</string>
+		<string>NeutraTextBook.otf</string>
+		<string>RemachineScript.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Used to pick selfie</string>
 </dict>
 </plist>

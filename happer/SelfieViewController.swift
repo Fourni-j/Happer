@@ -18,7 +18,17 @@ class SelfieViewController: UIViewController {
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
     }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "Partager mon style"
+    }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

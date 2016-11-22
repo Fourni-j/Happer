@@ -3,9 +3,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NeutraTextBook.otf">
+            <string>NeutraText-BookSC</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--signUpPage-->
         <scene sceneID="pWH-ul-586">
@@ -19,13 +25,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOX-9Q-nGW" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Adresse mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOX-9Q-nGW" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DzA-Bp-wit"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -33,13 +39,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Au-QM-SpP" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom d'utilisateur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Au-QM-SpP" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Rkf-qN-xLf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -47,13 +53,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4U-N1-iob" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4U-N1-iob" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="yXh-zX-FJP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -61,13 +67,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORV-6f-pKh" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmer mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORV-6f-pKh" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jVa-aM-sfC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -85,10 +91,10 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tg-pQ-141">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="b9j-Bn-sZE"/>
+                                            <constraint firstAttribute="width" constant="78" id="b9j-Bn-sZE"/>
                                             <constraint firstAttribute="height" constant="21" id="rz7-ln-cUT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -100,7 +106,7 @@
                                     <constraint firstItem="ZYf-AH-2Qh" firstAttribute="top" secondItem="F0b-aw-OMI" secondAttribute="top" constant="8" id="Td6-HS-rgj"/>
                                     <constraint firstItem="3tg-pQ-141" firstAttribute="centerX" secondItem="F0b-aw-OMI" secondAttribute="centerX" id="Vay-ni-AsE"/>
                                     <constraint firstAttribute="bottom" secondItem="3tg-pQ-141" secondAttribute="bottom" constant="8" id="bg5-IG-PEr"/>
-                                    <constraint firstAttribute="width" constant="65" id="kpe-As-Auu"/>
+                                    <constraint firstAttribute="width" constant="78" id="kpe-As-Auu"/>
                                     <constraint firstItem="ZYf-AH-2Qh" firstAttribute="centerX" secondItem="F0b-aw-OMI" secondAttribute="centerX" id="stp-Dn-4Q0"/>
                                 </constraints>
                                 <connections>
@@ -108,16 +114,28 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="112" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEL-PX-aK4">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="esC-7n-prJ"/>
                                     <constraint firstAttribute="width" constant="112" id="sEe-fO-RK5"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="9"/>
                                 <state key="normal" title="S'inscrire">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submit:" destination="4ss-aj-aQs" eventType="touchUpInside" id="hxv-uf-pBm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F3-59-ubJ">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0F3-59-ubJ" secondAttribute="height" multiplier="1:1" id="PDQ-bd-hEb"/>
+                                    <constraint firstAttribute="height" constant="50" id="g3r-ju-FOU"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" animates="NO" id="aF2-mH-Td1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,6 +146,8 @@
                             <constraint firstItem="ORV-6f-pKh" firstAttribute="leading" secondItem="Gvo-nO-czR" secondAttribute="leadingMargin" constant="20" id="6dA-65-Lpf"/>
                             <constraint firstItem="gOX-9Q-nGW" firstAttribute="top" secondItem="5Au-QM-SpP" secondAttribute="bottom" constant="8" id="7sl-qx-U59"/>
                             <constraint firstItem="B4U-N1-iob" firstAttribute="leading" secondItem="Gvo-nO-czR" secondAttribute="leadingMargin" constant="20" id="8MF-o8-4td"/>
+                            <constraint firstItem="0F3-59-ubJ" firstAttribute="leading" secondItem="Gvo-nO-czR" secondAttribute="leadingMargin" id="C8j-dK-cws"/>
+                            <constraint firstItem="0F3-59-ubJ" firstAttribute="top" secondItem="hGp-dE-gvb" secondAttribute="bottom" id="FMs-vC-LMZ"/>
                             <constraint firstItem="WEL-PX-aK4" firstAttribute="top" secondItem="ORV-6f-pKh" secondAttribute="bottom" constant="20" id="MuY-l7-LXW"/>
                             <constraint firstItem="gOX-9Q-nGW" firstAttribute="leading" secondItem="Gvo-nO-czR" secondAttribute="leadingMargin" constant="20" id="Owl-4v-OmQ"/>
                             <constraint firstItem="F0b-aw-OMI" firstAttribute="centerX" secondItem="Gvo-nO-czR" secondAttribute="centerX" id="Xbk-dl-C5A"/>
@@ -156,7 +176,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="846" y="978"/>
+            <point key="canvasLocation" x="1784.8" y="977.36131934032994"/>
         </scene>
         <!--mainPage-->
         <scene sceneID="tne-QT-ifu">
@@ -178,6 +198,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="112" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTF-Be-2PV">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="13"/>
                                 <state key="normal" title="Connexion">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -187,6 +208,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="117" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-az-adI">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="13"/>
                                 <state key="normal" title="Inscription">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -205,9 +227,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgX-YR-OkD">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="SOS-8v-RSZ"/>
-                                            <constraint firstAttribute="width" constant="65" id="c27-tw-Puk"/>
+                                            <constraint firstAttribute="width" constant="78" id="c27-tw-Puk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -215,7 +237,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="nqS-0R-xnH" firstAttribute="top" secondItem="0pZ-fJ-r5F" secondAttribute="top" constant="8" id="EBw-Ur-kra"/>
-                                    <constraint firstAttribute="width" constant="65" id="Iza-bE-cGu"/>
+                                    <constraint firstAttribute="width" constant="78" id="Iza-bE-cGu"/>
                                     <constraint firstAttribute="bottom" secondItem="qgX-YR-OkD" secondAttribute="bottom" constant="8" id="RvW-77-jev"/>
                                     <constraint firstAttribute="height" constant="95" id="WwN-fG-igO"/>
                                     <constraint firstItem="nqS-0R-xnH" firstAttribute="centerX" secondItem="0pZ-fJ-r5F" secondAttribute="centerX" id="dCr-jY-5HS"/>
@@ -237,15 +259,16 @@
                             <constraint firstItem="0pZ-fJ-r5F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wl9-CU-7ND"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4MY-sS-wgd"/>
                     <connections>
                         <outlet property="fbLogin" destination="q9R-Bx-iah" id="icG-0i-eIG"/>
-                        <segue destination="4ss-aj-aQs" kind="showDetail" identifier="mainToSignUp" action="showViewController:sender:" id="PPg-7u-ZO3"/>
-                        <segue destination="qJj-dQ-E0x" kind="showDetail" identifier="mainToLogin" action="showViewController:sender:" id="BcM-8a-lN5"/>
+                        <segue destination="4ss-aj-aQs" kind="showDetail" identifier="mainToSignUp" animates="NO" action="showViewController:sender:" id="PPg-7u-ZO3"/>
+                        <segue destination="qJj-dQ-E0x" kind="showDetail" identifier="mainToLogin" animates="NO" action="showViewController:sender:" id="BcM-8a-lN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178.40000000000001" y="644.52773613193403"/>
+            <point key="canvasLocation" x="760.79999999999995" y="644.52773613193403"/>
         </scene>
         <!--loginPage-->
         <scene sceneID="T9P-Nh-7Ps">
@@ -259,13 +282,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odT-OQ-m3x" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom d'utilisateur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odT-OQ-m3x" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Cdv-Ut-o6D"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -273,13 +296,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-Yh-7rL" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh1-Yh-7rL" customClass="BottomBorderedTextField" customModule="happer" customModuleProvider="target">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="OMx-XT-gyZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
@@ -298,9 +321,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-s0-KIK">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="GlN-e1-MGG"/>
-                                            <constraint firstAttribute="width" constant="65" id="Wqe-lV-uf0"/>
+                                            <constraint firstAttribute="width" constant="78" id="Wqe-lV-uf0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -311,7 +334,7 @@
                                     <constraint firstAttribute="height" constant="95" id="0wD-LE-8FG"/>
                                     <constraint firstItem="MJM-s0-KIK" firstAttribute="centerX" secondItem="Fql-I3-Wmy" secondAttribute="centerX" id="9Iz-UD-d9Q"/>
                                     <constraint firstItem="h0n-md-3OV" firstAttribute="centerX" secondItem="Fql-I3-Wmy" secondAttribute="centerX" id="ImO-yT-nVI"/>
-                                    <constraint firstAttribute="width" constant="65" id="Tca-wN-riX"/>
+                                    <constraint firstAttribute="width" constant="78" id="Tca-wN-riX"/>
                                     <constraint firstAttribute="bottom" secondItem="MJM-s0-KIK" secondAttribute="bottom" constant="8" id="Wy9-GV-Ftm"/>
                                     <constraint firstItem="h0n-md-3OV" firstAttribute="top" secondItem="Fql-I3-Wmy" secondAttribute="top" constant="8" id="qLe-jd-as7"/>
                                 </constraints>
@@ -320,16 +343,28 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="112" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAi-Kv-wSA">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="112" id="MVC-8Y-wxU"/>
                                     <constraint firstAttribute="height" constant="30" id="te4-qG-1hP"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <state key="normal" title="Se connecter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submit:" destination="qJj-dQ-E0x" eventType="touchUpInside" id="6zB-uh-V44"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-kC-V6k">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zEO-kC-V6k" secondAttribute="height" multiplier="1:1" id="1g9-wY-MBQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="6FR-eY-A2L"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" animates="NO" id="J83-rC-0d3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -341,6 +376,8 @@
                             <constraint firstItem="lAi-Kv-wSA" firstAttribute="top" secondItem="bh1-Yh-7rL" secondAttribute="bottom" constant="38" id="M1q-xH-OAU"/>
                             <constraint firstItem="odT-OQ-m3x" firstAttribute="centerY" secondItem="PCy-pf-8fF" secondAttribute="centerY" constant="70" id="Nu2-4P-rsT"/>
                             <constraint firstItem="Fql-I3-Wmy" firstAttribute="centerX" secondItem="PCy-pf-8fF" secondAttribute="centerX" id="Osg-8s-21Z"/>
+                            <constraint firstItem="zEO-kC-V6k" firstAttribute="leading" secondItem="PCy-pf-8fF" secondAttribute="leadingMargin" id="Rq2-4H-TVR"/>
+                            <constraint firstItem="zEO-kC-V6k" firstAttribute="top" secondItem="E1r-WT-jPW" secondAttribute="bottom" id="VrB-Xu-y3d"/>
                             <constraint firstItem="odT-OQ-m3x" firstAttribute="leading" secondItem="PCy-pf-8fF" secondAttribute="leadingMargin" constant="36" id="ZnE-ty-Wa3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="odT-OQ-m3x" secondAttribute="trailing" constant="36" id="adP-TR-0G7"/>
                             <constraint firstItem="odT-OQ-m3x" firstAttribute="centerX" secondItem="PCy-pf-8fF" secondAttribute="centerX" id="cFl-1R-7wW"/>
@@ -361,10 +398,14 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="846" y="255"/>
+            <point key="canvasLocation" x="1784.8" y="254.12293853073464"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="102" height="102"/>
         <image name="logo_58x58" width="58" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="J83-rC-0d3"/>
+    </inferredMetricsTieBreakers>
 </document>

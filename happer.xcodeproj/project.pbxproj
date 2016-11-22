@@ -36,6 +36,10 @@
 		55015E571D9AB9700063459F /* SelfieWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55015E561D9AB9700063459F /* SelfieWorker.swift */; };
 		5521FC8A1D87116C002812C1 /* DressingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */; };
 		557D4F521D50E708001D26BC /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D4F511D50E708001D26BC /* MenuVC.swift */; };
+		55A6D11E1DDDC98C0071C472 /* Didot.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A6D11A1DDDC98C0071C472 /* Didot.ttf */; };
+		55A6D11F1DDDC98D0071C472 /* FuturaStdMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55A6D11B1DDDC98C0071C472 /* FuturaStdMedium.otf */; };
+		55A6D1201DDDC98D0071C472 /* NeutraTextBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55A6D11C1DDDC98C0071C472 /* NeutraTextBook.otf */; };
+		55A6D1211DDDC98D0071C472 /* RemachineScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A6D11D1DDDC98C0071C472 /* RemachineScript.ttf */; };
 		55DE4A8F1DDC841E00938995 /* BottomBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE4A8E1DDC841E00938995 /* BottomBorderedTextField.swift */; };
 		55E189D61D74741300A4FF6F /* CropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D51D74741300A4FF6F /* CropVC.swift */; };
 		55E189D81D74795700A4FF6F /* HashtagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D71D74795700A4FF6F /* HashtagVC.swift */; };
@@ -129,6 +133,10 @@
 		55015E561D9AB9700063459F /* SelfieWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieWorker.swift; sourceTree = "<group>"; };
 		5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DressingCollectionViewCell.swift; sourceTree = "<group>"; };
 		557D4F511D50E708001D26BC /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		55A6D11A1DDDC98C0071C472 /* Didot.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Didot.ttf; path = ../Didot.ttf; sourceTree = "<group>"; };
+		55A6D11B1DDDC98C0071C472 /* FuturaStdMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FuturaStdMedium.otf; path = ../FuturaStdMedium.otf; sourceTree = "<group>"; };
+		55A6D11C1DDDC98C0071C472 /* NeutraTextBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeutraTextBook.otf; path = ../NeutraTextBook.otf; sourceTree = "<group>"; };
+		55A6D11D1DDDC98C0071C472 /* RemachineScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RemachineScript.ttf; path = ../RemachineScript.ttf; sourceTree = "<group>"; };
 		55DE4A8E1DDC841E00938995 /* BottomBorderedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderedTextField.swift; sourceTree = "<group>"; };
 		55E189D51D74741300A4FF6F /* CropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropVC.swift; sourceTree = "<group>"; };
 		55E189D71D74795700A4FF6F /* HashtagVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagVC.swift; sourceTree = "<group>"; };
@@ -232,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				FC06300C1DD0873900E1383B /* happer.entitlements */,
+				55A6D1221DDDC9A70071C472 /* Fonts */,
 				FCEF9EA41D99043000CF3B95 /* DAL */,
 				FC0C70DC1D903476002AA0F6 /* Shared */,
 				FC0C70D41D90343B002AA0F6 /* Authent */,
@@ -316,6 +325,17 @@
 				357046961D53867C003F87DC /* HapperLogo.swift */,
 			);
 			name = useClass;
+			sourceTree = "<group>";
+		};
+		55A6D1221DDDC9A70071C472 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				55A6D11A1DDDC98C0071C472 /* Didot.ttf */,
+				55A6D11B1DDDC98C0071C472 /* FuturaStdMedium.otf */,
+				55A6D11C1DDDC98C0071C472 /* NeutraTextBook.otf */,
+				55A6D11D1DDDC98C0071C472 /* RemachineScript.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		55ED74D31D92E51200DCA3A6 /* Api */ = {
@@ -496,7 +516,6 @@
 				TargetAttributes = {
 					353C2B031D23E4ED009D7968 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = HWY6V6F9L7;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -534,6 +553,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A6D11E1DDDC98C0071C472 /* Didot.ttf in Resources */,
+				55A6D11F1DDDC98D0071C472 /* FuturaStdMedium.otf in Resources */,
+				55A6D1201DDDC98D0071C472 /* NeutraTextBook.otf in Resources */,
+				55A6D1211DDDC98D0071C472 /* RemachineScript.ttf in Resources */,
 				FC05BA601D8985A300802025 /* Happies.storyboard in Resources */,
 				FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */,
 				FC535C501DDCBF6200FAAB9E /* TopView.xib in Resources */,
@@ -854,7 +877,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HWY6V6F9L7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = happer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -872,7 +895,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HWY6V6F9L7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = happer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -15,6 +15,7 @@ class NewsFeedCell: UITableViewCell {
     @IBOutlet weak var cellImage: TaggableImageView!
     @IBOutlet weak var cellLikeCount: UILabel!
     @IBOutlet weak var cellRating: FloatRatingView!
+    var like = false
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,4 +27,14 @@ class NewsFeedCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func likeButton(sender: UIButton) {
+        self.like = !self.like
+        if self.like == true {
+            sender.setImage(UIImage(named: "likeIconFull"), forState: .Normal)
+            self.cellLikeCount.textColor = UIColor.whiteColor()
+        } else {
+            sender.setImage(UIImage(named: "likeIconEmpty"), forState: .Normal)
+            self.cellLikeCount.textColor = UIColor.blackColor()
+        }
+    }
 }

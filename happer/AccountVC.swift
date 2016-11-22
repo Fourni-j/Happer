@@ -17,7 +17,8 @@ class AccountVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityLabel: UITextField!
     @IBOutlet weak var emailLabel: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var borderProfilView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,15 @@ class AccountVC: UIViewController, UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        borderProfilView.layer.cornerRadius = borderProfilView.frame.height / 2
+        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        profileImageView.layer.masksToBounds = true
+        borderProfilView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1.0)
+        profileImageView.image = UIImage(named: "profilePic")
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,0 +1,19 @@
+{
+  "name": "MagicSwiftBus",
+  "version": "1.0.3",
+  "summary": "Use NotificationCenter with EventBus style",
+  "homepage": "https://github.com/favret/Magic-Swift-Bus",
+  "license": "MIT",
+  "authors": {
+    "favre": ""
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/favret/Magic-Swift-Bus.git",
+    "tag": "1.0.3"
+  },
+  "module_name": "MagicSwiftBus",
+  "source_files": "**/*.swift"
+}
