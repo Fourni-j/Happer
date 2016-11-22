@@ -1,0 +1,74 @@
+PODS:
+  - Alamofire (3.5.0)
+  - AlamofireImage (2.5.0):
+    - Alamofire (~> 3.5)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.15.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.15.1):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.15.1):
+    - FBSDKCoreKit
+  - FutureSwift (1.1.9)
+  - MagicSwiftBus (1.0.3)
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
+  - Router (1.0.0)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, tag `3.5.0`)
+  - AlamofireImage (~> 2.5)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
+  - FutureSwift
+  - MagicSwiftBus (from `https://github.com/favret/Magic-Swift-Bus.git`, branch `swift2.3`)
+  - RealmSwift (~> 1.1.0)
+  - Router (from `https://github.com/favret/Router.git`, branch `swift2.3`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :git: https://github.com/Alamofire/Alamofire.git
+    :tag: 3.5.0
+  MagicSwiftBus:
+    :branch: swift2.3
+    :git: https://github.com/favret/Magic-Swift-Bus.git
+  Router:
+    :branch: swift2.3
+    :git: https://github.com/favret/Router.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :git: https://github.com/Alamofire/Alamofire.git
+    :tag: 3.5.0
+  MagicSwiftBus:
+    :commit: 49474fa5b52494418bbfcdd45cbfe5795efc6076
+    :git: https://github.com/favret/Magic-Swift-Bus.git
+  Router:
+    :commit: c3cdf54871cfa5a8dda895d61ae6ca3ed32a5bfd
+    :git: https://github.com/favret/Router.git
+
+SPEC CHECKSUMS:
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  AlamofireImage: 2d34936e5201270bb17a316a786e90e83b4a249d
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
+  FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
+  FBSDKShareKit: 11cbb5a4d7b5fda8143cc95b76188147e6725736
+  FutureSwift: d3f9572b6a45ca742b51e003359f52f09a0ae246
+  MagicSwiftBus: 8b4296b5e591f1a537f8a31a183d16d4af6d852b
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
+  Router: 250afa9737008a796731a16c31ff1f9091256e79
+
+PODFILE CHECKSUM: 85d014ee4bfd4739c96a7e686a96537e991da9e2
+
+COCOAPODS: 1.1.1

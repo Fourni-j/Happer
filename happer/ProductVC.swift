@@ -13,14 +13,21 @@ import RealmSwift
 class ProductVC: UIViewController {
     
     @IBOutlet weak var productCollectionView: UICollectionView!
+    @IBOutlet weak var topView: TopView!
     
     var resultProducts: Results<Product>!
     var selectedProduct: Product!
+    var currentCircle: Circle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
+        
+        topView.setup(nil)
+        topView.select(Circle.init(value: self.title!))
+        topView.fillExp(3, neededExp: 4)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,6 +36,8 @@ class ProductVC: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        print("didAppear")
+//        topView.select(currentCircle)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -37,6 +46,7 @@ class ProductVC: UIViewController {
     
     func buildFromCircle(circle: Circle) {
         resultProducts = DAL.sharedInstance.readProduct(byCircle: circle)
+        currentCircle = circle
         if productCollectionView != nil {
             productCollectionView.reloadData()
         }
@@ -59,9 +69,15 @@ extension ProductVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("productCollectionViewCell", forIndexPath: indexPath) as! ProductCollectionViewCell
-        cell.setup(resultProducts[indexPath.row])
-        return cell
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("productCollectionViewCell", forIndexPath: indexPath) as! ProductCollectionViewCell
+            cell.setup(resultProducts[indexPath.row])
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("productSmallCollectionViewCell", forIndexPath: indexPath) as! ProductSmallCollectionViewCell
+            cell.setup(resultProducts[indexPath.row])
+            return cell
+        }
     }
     
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
@@ -75,9 +91,13 @@ extension ProductVC : UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 200.0)
+        if indexPath.row == 0 {
+            return CGSize(width: collectionView.frame.width - 20, height: 200.0)
+        } else {
+            return CGSize(width: collectionView.frame.width / 2 - 15, height: 250.0)
+        }
     }
-
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         selectedProduct = resultProducts[indexPath.row]
         Session.sharedInstance.router.perform("route://Product/productDetailsVC#push", sender: self)
