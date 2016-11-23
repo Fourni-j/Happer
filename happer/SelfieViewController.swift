@@ -37,13 +37,13 @@ class SelfieViewController: UIViewController {
         let destination = segue.destinationViewController as! SelfieTagViewController
         destination.cropedImage = pickedImage
     }
-    
-    @IBAction func loadPicture(sender: AnyObject) {
+
+    @IBAction func loadPictureAction(sender: AnyObject) {
         imagePicker.sourceType = .PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: { UIApplication.sharedApplication().statusBarHidden = true })
     }
     
-    @IBAction func takePicture(sender: AnyObject) {
+    @IBAction func takePictureAction(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             imagePicker.sourceType = .Camera
             imagePicker.cameraCaptureMode = .Photo
