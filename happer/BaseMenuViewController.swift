@@ -18,8 +18,6 @@ class BaseMenuViewController: UIViewController, MenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuWidth = view.frame.size.width
-        menuHeight = view.frame.size.height
         
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(toggleMenu))
@@ -37,6 +35,14 @@ class BaseMenuViewController: UIViewController, MenuDelegate {
         }
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        menuWidth = view.frame.size.width
+        menuHeight = view.frame.size.height
+
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
