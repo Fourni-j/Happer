@@ -38,6 +38,6 @@ extension SelfieTagViewController : UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Selfie.Category.init(value: row).value
+        return "#" + Selfie.Category.init(value: row).value
     }
 }
