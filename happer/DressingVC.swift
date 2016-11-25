@@ -10,8 +10,10 @@ import UIKit
 
 class DressingVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    @IBOutlet weak var creditLabel: UILabel!
+    @IBOutlet weak var notifButton: UIButton!
     @IBOutlet weak var dressingCollectionView: UICollectionView!
-    let reuseIdentifier = "dressingCell"
+    //let reuseIdentifier = "dressingCell"
     var items = ["1", "2", "3", "4", "5", "6", "7", "8"]
 
     override func viewDidLoad() {
@@ -19,6 +21,26 @@ class DressingVC: UIViewController, UICollectionViewDataSource, UICollectionView
         dressingCollectionView.delegate = self
         dressingCollectionView.dataSource = self
         // Do any additional setup after loading the view.
+        
+        let btn1 = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        btn1.setImage(UIImage(named: "accountIcon"), forState: .Normal)
+        btn1.addTarget(self, action: #selector(DressingVC.moveToAccount), forControlEvents: .TouchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn1)
+
+        notifButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 2, 4)
+        notifButton.layer.borderWidth = 1.0
+        notifButton.layer.borderColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.7).CGColor
+        creditLabel.adjustsFontSizeToFitWidth = true
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "Mon dressing"
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,30 +67,6 @@ class DressingVC: UIViewController, UICollectionViewDataSource, UICollectionView
         print("You selected cell #\(indexPath.item)!")
     }
 
-    @IBAction func backButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("inspiVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-
-    @IBAction func accountButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("accountVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-
-    @IBAction func LikeButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("myLikeVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-
-    @IBAction func UploadButton(sender: UIButton) {
-        let story = UIStoryboard.init(name: "Happies", bundle: nil)
-        let vc = story.instantiateViewControllerWithIdentifier("uploadVC")
-        self.presentViewController(vc, animated: true, completion: nil)
-    }
-
     /*
     // MARK: - Navigation
 
@@ -78,4 +76,20 @@ class DressingVC: UIViewController, UICollectionViewDataSource, UICollectionView
         // Pass the selected object to the new view controller.
     }
     */
+
+    func moveToAccount() {
+        Session.sharedInstance.router.perform("route://UserPages/accountVC#push", sender: self)
+    }
+
+    @IBAction func notifAction(sender: UIButton) {
+        print("====> NOTIF BUTTON PRESSED <====")
+    }
+
+    @IBAction func likesAction(sender: UIButton) {
+        Session.sharedInstance.router.perform("route://UserPages/myLikeVC#push", sender: self)
+    }
+    
+    @IBAction func uploadAction(sender: UIButton) {
+        Session.sharedInstance.router.perform("route://Happies/uploadVC#push", sender: self)
+    }
 }
