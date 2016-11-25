@@ -41,7 +41,7 @@
 		55A6D1201DDDC98D0071C472 /* NeutraTextBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55A6D11C1DDDC98C0071C472 /* NeutraTextBook.otf */; };
 		55A6D1211DDDC98D0071C472 /* RemachineScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A6D11D1DDDC98C0071C472 /* RemachineScript.ttf */; };
 		55BBBD831DE751F8003DBE43 /* LikesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBBD821DE751F8003DBE43 /* LikesVC.swift */; };
-		55BBBD851DE75219003DBE43 /* WishlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBBD841DE75219003DBE43 /* WishlistVC.swift */; };
+		55BBBD881DE86497003DBE43 /* WishlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBBD871DE86497003DBE43 /* WishlistVC.swift */; };
 		55DE4A8F1DDC841E00938995 /* BottomBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE4A8E1DDC841E00938995 /* BottomBorderedTextField.swift */; };
 		55E189D61D74741300A4FF6F /* CropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D51D74741300A4FF6F /* CropVC.swift */; };
 		55E189D81D74795700A4FF6F /* HashtagVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E189D71D74795700A4FF6F /* HashtagVC.swift */; };
@@ -140,7 +140,7 @@
 		55A6D11C1DDDC98C0071C472 /* NeutraTextBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeutraTextBook.otf; path = ../NeutraTextBook.otf; sourceTree = "<group>"; };
 		55A6D11D1DDDC98C0071C472 /* RemachineScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RemachineScript.ttf; path = ../RemachineScript.ttf; sourceTree = "<group>"; };
 		55BBBD821DE751F8003DBE43 /* LikesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikesVC.swift; sourceTree = "<group>"; };
-		55BBBD841DE75219003DBE43 /* WishlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistVC.swift; sourceTree = "<group>"; };
+		55BBBD871DE86497003DBE43 /* WishlistVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistVC.swift; sourceTree = "<group>"; };
 		55DE4A8E1DDC841E00938995 /* BottomBorderedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderedTextField.swift; sourceTree = "<group>"; };
 		55E189D51D74741300A4FF6F /* CropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropVC.swift; sourceTree = "<group>"; };
 		55E189D71D74795700A4FF6F /* HashtagVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagVC.swift; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 				35D4F1441D240A3400BEA8E1 /* DressingVC.swift */,
 				5521FC891D87116C002812C1 /* DressingCollectionViewCell.swift */,
 				55BBBD821DE751F8003DBE43 /* LikesVC.swift */,
-				55BBBD841DE75219003DBE43 /* WishlistVC.swift */,
+				55BBBD871DE86497003DBE43 /* WishlistVC.swift */,
 				35D4F1461D240A4900BEA8E1 /* AccountVC.swift */,
 			);
 			name = View;
@@ -717,7 +717,7 @@
 				55ED74DB1D92E6AF00DCA3A6 /* Api+Product.swift in Sources */,
 				FCE4C7B91DC9F42600E023D8 /* ProductDetailsBidTableViewCell.swift in Sources */,
 				FC664ED11DA3DC0D00CEF9D8 /* ProductPageVC.swift in Sources */,
-				55BBBD851DE75219003DBE43 /* WishlistVC.swift in Sources */,
+				55BBBD881DE86497003DBE43 /* WishlistVC.swift in Sources */,
 				FC57A93C1DA266F80023DF14 /* ProductWorker.swift in Sources */,
 				353C2B291D23E6EA009D7968 /* User.swift in Sources */,
 				FCEF9EB31D99045000CF3B95 /* DAL+Selfie.swift in Sources */,
