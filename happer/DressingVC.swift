@@ -53,7 +53,7 @@ class DressingVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: self.dressingCollectionView.frame.width, height: 200)
+        return CGSize(width: collectionView.frame.width, height: 200)
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
