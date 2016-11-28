@@ -85,6 +85,8 @@
 		FCEF9EB21D99045000CF3B95 /* DAL+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EAE1D99045000CF3B95 /* DAL+Product.swift */; };
 		FCEF9EB31D99045000CF3B95 /* DAL+Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EAF1D99045000CF3B95 /* DAL+Selfie.swift */; };
 		FCEF9EB41D99045000CF3B95 /* DAL+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEF9EB01D99045000CF3B95 /* DAL+User.swift */; };
+		FCFBDDB71DEC68AB00C19C63 /* CircleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBDDB61DEC68AB00C19C63 /* CircleTableViewCell.swift */; };
+		FCFBDDB91DEC6B6D00C19C63 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBDDB81DEC6B6D00C19C63 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,8 @@
 		FCEF9EAE1D99045000CF3B95 /* DAL+Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAL+Product.swift"; sourceTree = "<group>"; };
 		FCEF9EAF1D99045000CF3B95 /* DAL+Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAL+Selfie.swift"; sourceTree = "<group>"; };
 		FCEF9EB01D99045000CF3B95 /* DAL+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAL+User.swift"; sourceTree = "<group>"; };
+		FCFBDDB61DEC68AB00C19C63 /* CircleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTableViewCell.swift; sourceTree = "<group>"; };
+		FCFBDDB81DEC6B6D00C19C63 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +407,7 @@
 				FC359A4B1D9A663000030C7D /* TaggableImageView.swift */,
 				FCDC61AD1DAE2AF800A41003 /* BidView.swift */,
 				55DE4A8E1DDC841E00938995 /* BottomBorderedTextField.swift */,
+				FCFBDDB81DEC6B6D00C19C63 /* Color.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				FCE4C7BC1DC9FF2800E023D8 /* ProductDetailsHeaderTableViewCell.swift */,
 				FC0BFF071DDC716C0032AC70 /* TopView.swift */,
 				FC535C4F1DDCBF6200FAAB9E /* TopView.xib */,
+				FCFBDDB61DEC68AB00C19C63 /* CircleTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -685,6 +691,7 @@
 				FC4701821DA2A1A200417B81 /* ProductCircleVC.swift in Sources */,
 				353C2B331D23F53F009D7968 /* Product.swift in Sources */,
 				FCC671A51DB6514F0093C592 /* SelfieTagViewController.swift in Sources */,
+				FCFBDDB71DEC68AB00C19C63 /* CircleTableViewCell.swift in Sources */,
 				35D4F1501D240CC000BEA8E1 /* HapplikeVC.swift in Sources */,
 				35D4F13C1D24019A00BEA8E1 /* SignUpVC.swift in Sources */,
 				3570469B1D549F20003F87DC /* SelfieDetailsVC.swift in Sources */,
@@ -718,6 +725,7 @@
 				FCEF9EB11D99045000CF3B95 /* DAL.swift in Sources */,
 				35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */,
 				353C2B311D23F1D0009D7968 /* Selfie.swift in Sources */,
+				FCFBDDB91DEC6B6D00C19C63 /* Color.swift in Sources */,
 				35D4F13A1D24016E00BEA8E1 /* MainPageVC.swift in Sources */,
 				35D4F1451D240A3400BEA8E1 /* DressingVC.swift in Sources */,
 				35D4F1651D26AE1F00BEA8E1 /* InspiClass.swift in Sources */,
