@@ -10,27 +10,51 @@ import UIKit
 
 class AccountVC: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var firstnameLabel: UITextField!
-    @IBOutlet weak var nameLabel: UITextField!
-    @IBOutlet weak var adressLabel: UITextField!
-    @IBOutlet weak var postalCodeLabel: UITextField!
-    @IBOutlet weak var cityLabel: UITextField!
-    @IBOutlet weak var emailLabel: UITextField!
+    @IBOutlet weak var firstnameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var adressTextField: UITextField!
+    @IBOutlet weak var postalCodeTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var borderProfilView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firstnameLabel.delegate = self
-        self.nameLabel.delegate = self
-        self.adressLabel.delegate = self
-        self.postalCodeLabel.delegate = self
-        self.cityLabel.delegate = self
-        self.emailLabel.delegate = self
+        self.firstnameTextField.delegate = self
+        self.nameTextField.delegate = self
+        self.adressTextField.delegate = self
+        self.postalCodeTextField.delegate = self
+        self.cityTextField.delegate = self
+        self.emailTextField.delegate = self
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+        let firstNamePaddingView = UIView(frame: CGRectMake(0.0, 0.0, 7.0, 21.0))
+        firstNamePaddingView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1.0)
+        self.firstnameTextField.leftView = firstNamePaddingView
+        self.firstnameTextField.leftViewMode = .Always
+        let namePaddingView = UIView(frame: CGRectMake(0.0, 0.0, 7.0, 21.0))
+        namePaddingView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1.0)
+        self.nameTextField.leftView = namePaddingView
+        self.nameTextField.leftViewMode = .Always
+        let adressPaddingView = UIView(frame: CGRectMake(0.0, 0.0, 7.0, 21.0))
+        adressPaddingView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1.0)
+        self.adressTextField.leftView = adressPaddingView
+        self.adressTextField.leftViewMode = .Always
+        let postalCodePaddingView = UIView(frame: CGRectMake(0.0, 0.0, 7.0, 21.0))
+        postalCodePaddingView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1.0)
+        self.postalCodeTextField.leftView = postalCodePaddingView
+        self.postalCodeTextField.leftViewMode = .Always
+        let cityPaddingView = UIView(frame: CGRectMake(0.0, 0.0, 7.0, 21.0))
+        cityPaddingView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1.0)
+        self.cityTextField.leftView = cityPaddingView
+        self.cityTextField.leftViewMode = .Always
+        let emailPaddingView = UIView(frame: CGRectMake(0.0, 0.0, 7.0, 21.0))
+        emailPaddingView.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1.0)
+        self.emailTextField.leftView = emailPaddingView
+        self.emailTextField.leftViewMode = .Always
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -66,7 +90,7 @@ class AccountVC: UIViewController, UITextFieldDelegate {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let strDate = dateFormatter.stringFromDate(datePicker.date)
-        let postString: String = "prenom=\(firstnameLabel.text!)&nom=\(nameLabel.text!)&adresse=\(adressLabel.text!)&postalCode=\(postalCodeLabel.text!)&ville=\(cityLabel.text!)&email=\(emailLabel.text!)&borndate=\(strDate)"
+        let postString: String = "prenom=\(firstnameTextField.text!)&nom=\(nameTextField.text!)&adresse=\(adressTextField.text!)&postalCode=\(postalCodeTextField.text!)&ville=\(cityTextField.text!)&email=\(emailTextField.text!)&borndate=\(strDate)"
         print(postString)
     }
 
