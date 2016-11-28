@@ -29,8 +29,8 @@ class MenuViewController: UIViewController {
         tableView.layer.borderWidth = 1.0
         tableView.layer.borderColor = UIColor.darkGrayColor().CGColor
         view.backgroundColor = UIColor.clearColor()
-        
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tap))
+        tapGesture.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tapGesture)
     }
     
@@ -96,9 +96,7 @@ class MenuViewController: UIViewController {
         let location = tapGesture.locationInView(view)
         let path = tableView.indexPathForRowAtPoint(location)
         
-        if let indexPathRow = path {
-            self.tableView(self.tableView, didSelectRowAtIndexPath: indexPathRow)
-        } else {
+        if path == nil {
             closeMenu()
         }
         
