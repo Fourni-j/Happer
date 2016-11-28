@@ -255,7 +255,7 @@
                                     <constraint firstAttribute="height" constant="40" id="0t4-LW-PfL"/>
                                     <constraint firstAttribute="width" constant="40" id="I1X-35-WwC"/>
                                 </constraints>
-                                <state key="normal" image="likeIcon"/>
+                                <state key="normal" image="dressLikeIcon"/>
                                 <connections>
                                     <action selector="likesAction:" destination="shu-GP-kQt" eventType="touchUpInside" id="EBo-Ks-an1"/>
                                 </connections>
@@ -265,7 +265,7 @@
                                     <constraint firstAttribute="width" constant="40" id="DXX-Dy-8Eh"/>
                                     <constraint firstAttribute="height" constant="40" id="IzJ-C0-3Nc"/>
                                 </constraints>
-                                <state key="normal" title="Upload" image="shareIcon"/>
+                                <state key="normal" title="Upload" image="dressUploadIcon"/>
                                 <connections>
                                     <action selector="uploadAction:" destination="shu-GP-kQt" eventType="touchUpInside" id="KPS-KU-JFa"/>
                                 </connections>
@@ -570,10 +570,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="likeIcon" width="43" height="43"/>
+        <image name="dressLikeIcon" width="48" height="50"/>
+        <image name="dressUploadIcon" width="45" height="50"/>
         <image name="likeIconFull" width="131" height="129"/>
         <image name="loginBackground" width="245" height="454"/>
         <image name="notifIcon" width="86" height="86"/>
-        <image name="shareIcon" width="43" height="43"/>
     </resources>
 </document>
