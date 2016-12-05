@@ -78,7 +78,9 @@ class ProductDetailsVC: UIViewController {
     }
     
     @IBAction func shareAction(sender: AnyObject) {
-        
+        let shareContent = "\(selectedProduct.title) disponible sur l'application Happer."
+        let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+        presentViewController(activityViewController, animated: true, completion: nil)
     }
 }
 
