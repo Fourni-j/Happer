@@ -21,7 +21,6 @@ class ProductDetailsVC: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
-    
     var headerSize : CGFloat = 30.0
     var borderHeight : CGFloat = 2.0
     var borderInset : CGFloat = 10
@@ -61,7 +60,6 @@ class ProductDetailsVC: UIViewController {
         topView.select(selectedProduct.circle)
         
         bidView.updateFillWith(completedTime: 190, totalTime: 240) // Exemple
-        
         title = "Détails produit"
     }
 
