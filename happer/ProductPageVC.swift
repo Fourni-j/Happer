@@ -13,6 +13,8 @@ class ProductPageVC : UIPageViewController {
     var currentCircle = Circle.Unknown
     var productInteractor = ProductInteractor()
     var activityIndicator: UIActivityIndicatorView!
+    var topView: TopView!
+    
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newProductViewController(Circle.Silver),
@@ -35,11 +37,15 @@ class ProductPageVC : UIPageViewController {
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         
+        topView = TopView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 100))
+        topView.setup(Session.sharedInstance.user)
+        view.addSubview(topView)
+        
         
         if case 0 ... orderedViewControllers.count - 1 = currentCircle.hashValue {
             let firstviewcontroller = orderedViewControllers[currentCircle.hashValue] as! ProductVC
-            
             setViewControllers([firstviewcontroller], direction: .Forward, animated: true, completion: nil)
+            topView.select(currentCircle)
         } else {
             //TODO message d'erreur
             self.navigationController?.popViewControllerAnimated(true)
@@ -47,11 +53,11 @@ class ProductPageVC : UIPageViewController {
         
         delegate = self
         dataSource = self
-
+        
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .Plain, target: self, action: #selector(popToRoot))
     }
-
+    
     func popToRoot() {
         navigationController?.popToRootViewControllerAnimated(true)
     }
@@ -60,7 +66,7 @@ class ProductPageVC : UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.title = currentCircle.rawValue
@@ -70,7 +76,7 @@ class ProductPageVC : UIPageViewController {
         super.viewWillDisappear(animated)
         title = ""
     }
-
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         ProductPresenter.register(self, events: .GetProductSuccess, .GetProductFailure)
@@ -129,12 +135,12 @@ extension ProductPageVC : UIPageViewControllerDelegate, UIPageViewControllerData
         guard orderedViewControllersCount > nextIndex else {
             return nil
         }
-        
         return orderedViewControllers[nextIndex]
     }
     
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        let vc = viewControllers![0]
+        let vc = viewControllers![0] as! ProductVC
+        self.topView.select(vc.currentCircle!)
         self.navigationItem.title = vc.title
     }
     

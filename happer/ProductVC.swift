@@ -13,7 +13,6 @@ import RealmSwift
 class ProductVC: UIViewController {
     
     @IBOutlet weak var productCollectionView: UICollectionView!
-    @IBOutlet weak var topView: TopView!
     
     var resultProducts: Results<Product>!
     var selectedProduct: Product!
@@ -23,11 +22,6 @@ class ProductVC: UIViewController {
         super.viewDidLoad()
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
-        
-        topView.setup(nil)
-        topView.select(Circle.init(value: self.title!))
-        topView.fillExp(3, neededExp: 4)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,8 +30,6 @@ class ProductVC: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        print("didAppear")
-//        topView.select(currentCircle)
     }
     
     override func viewDidDisappear(animated: Bool) {

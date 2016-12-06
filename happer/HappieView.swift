@@ -22,10 +22,10 @@ class HappieView: UIView {
 
         happLikeButton.addTarget(self, action: #selector(HappieView.happLikeTap), forControlEvents: UIControlEvents.TouchUpInside)
         happLikeButton.frame = CGRectMake((frame.width / 2 - 75), 70, 40, 40)
-        happLikeButton.setImage(UIImage(named: "Mock_up_final_Happ'like"), forState: UIControlState.Normal)
+        happLikeButton.setImage(UIImage(named: "gradeIcon"), forState: UIControlState.Normal)
         shareButton.addTarget(self, action: #selector(HappieView.shareTap), forControlEvents: UIControlEvents.TouchUpInside)
         shareButton.frame = CGRectMake((frame.width / 2 - 20), 70, 40, 40)
-        shareButton.setImage(UIImage(named: "Mock_up_final_Partager"), forState: UIControlState.Normal)
+        shareButton.setImage(UIImage(named: "shareIcon"), forState: UIControlState.Normal)
         friendButton.addTarget(self, action: #selector(HappieView.friendTap), forControlEvents: UIControlEvents.TouchUpInside)
         friendButton.frame = CGRectMake((frame.width / 2 + 35), 70, 40, 40)
         friendButton.setImage(UIImage(named: "Mock_up_final_Amis"), forState: UIControlState.Normal)
