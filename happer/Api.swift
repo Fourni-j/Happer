@@ -25,7 +25,8 @@ public class Api {
                                      "getProduct" : "products",
                                      "putProduct" : "products",
                                      "postProduct" : "products",
-                                     "deleteProduct" : "products"]
+                                     "deleteProduct" : "products",
+                                     "getCategories" : "categories"]
 
     /**
      Entry point for all web services request

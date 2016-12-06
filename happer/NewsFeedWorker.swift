@@ -28,23 +28,20 @@ class NewsFeedWorker {
     static func parse(data: AnyObject) -> Future<[Selfie]> {
         return Future<[Selfie]> {
             var selfies = [Selfie]()
-
             
             let type = data as! [String: AnyObject]
             let array = type["selfies"] as! [[String: AnyObject]]
             for selfieJSON in array {
-                guard let category = selfieJSON["category"] as? String,
+                guard let category = selfieJSON["category"] as? [String:AnyObject],
                 let id = selfieJSON["id"] as? Int,
                 let nbLike = selfieJSON["nb_like"] as? Int,
                 let urlImage = selfieJSON["picture_url"] as? String,
                 let state = selfieJSON["state"] as? String
-                    else {
-                        fatalError("Something goes wrong --> SelfieWorker")
-                }
+                    else { fatalError("Something goes wrong --> SelfieWorker") }
                 
                 let selfie = Selfie()
                 selfie.id = id
-                selfie.category = Selfie.Category.init(value: category)
+                selfie.category = Selfie.Category.init(value: category["name"] as! String)
                 selfie.nbLike = nbLike
                 selfie.imageURLString = urlImage
                 selfie.state = Selfie.State.init(value: state)

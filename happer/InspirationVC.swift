@@ -9,16 +9,14 @@
 import UIKit
 import Foundation
 
-class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSource {
-
-    // MARK : - attributs
+class InspirationVC: BaseMenuViewController, UITabBarDelegate {
     
     var categories: [Selfie.Category] = [.OOTD, .OOTN, .Bags, .Accessories, .Shoes, .Relaxed]
     var tableViewData = [Dictionary<String,String>]()
     var selectedCategory = Selfie.Category.Unknown
     var selectedTitle = ""
     
-    // filters
+    var customCategory = [[String:AnyObject]]()
     
     var custom = HappieView()
     var filter = UIView()
@@ -31,15 +29,14 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
         super.viewDidLoad()
         // Entry point of navigation on main.storyboard
         // Envoie vers la page de login
-        //Session.sharedInstance.router.perform("route://Login/mainPage#modal", sender: self)
-
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToShare), name: "share", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToFriends), name:  "friends", object: nil)
-
+        
         let viewW = self.view.frame.width
         let viewH = self.view.frame.height
-
+        
         let tapOut = UITapGestureRecognizer(target: self, action: #selector(InspirationVC.dismissHappieView))
         
         // préparation vue happies et filtre
@@ -51,7 +48,7 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
         self.view.addSubview(filter)
         self.filter.addSubview(custom)
         self.filter.hidden = true
-
+        
         let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 150), width: 50, height: 50))
         happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(happerL)
@@ -65,69 +62,58 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
         
         // navbar title font and rigth button with icon
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "RemachineScriptPersonalUseOnly", size: 20)!, NSForegroundColorAttributeName : UIColor.whiteColor()]
-
+        
         let btn1 = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         btn1.setImage(UIImage(named: "dressIcon"), forState: .Normal)
         btn1.addTarget(self, action: #selector(InspirationVC.moveToDressing), forControlEvents: .TouchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn1)
-
+        
         // top left and right button (circle and notif)
         self.view.bringSubviewToFront(circleButton)
-
+        
         notifButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 2, 4)
         self.view.bringSubviewToFront(notifButton)
+        
+        updateCategory()
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         title = "Inspiration du jour"
     }
-
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         title = ""
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - topBar methods
+    func updateCategory() {
+        Api.getCategories()
+            .then { data in
+                
+                let type = data as! [String: AnyObject]
+                let array = type["categories"] as! [[String: AnyObject]]
+                for categoriesJSON in array {
+                    let dict = ["name":categoriesJSON["name"]!,
+                    "picture_url":categoriesJSON["picture_url"]!]
+                    self.customCategory.append(dict)
+                }
+                self.catTable.reloadData()
+        }
+    }
     
     @IBAction func menuAction(sender: AnyObject) {
         super.toggleMenu()
     }
-
+    
     func moveToDressing() {
         Session.sharedInstance.router.perform("route://UserPages/dressVC#push", sender: self)
     }
-
-    // MARK: - tableView methods
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.catTable.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath) as! CategoryCell
-        cell.cellName.text = tableViewData[indexPath.row]["label"]
-        cell.cellBackground.image = UIImage(named: tableViewData[indexPath.row]["background"]!)
-        cell.contentView.sendSubviewToBack(cell.cellBackground)
-
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        selectedCategory = categories[indexPath.row]
-        selectedTitle = tableViewData[indexPath.row]["label"]!
-        performSegueWithIdentifier("goFilActu", sender: self)
-    }
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goFilActu" {
             let destination = segue.destinationViewController as! NewsFeedVC
@@ -135,15 +121,15 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
             destination.currentTitle = selectedTitle
         }
     }
-
+    
     @IBAction func circleAction(sender: UIButton) {
         Session.sharedInstance.router.perform("route://Product/productCircleVC#push", sender: self)
     }
-
+    
     @IBAction func notifAction(sender: UIButton) {
         print("====> NOTIF BUTTON PRESSED <====")
     }
-
+    
     func moveToHappLike() {
         Session.sharedInstance.router.perform("route://Happies/happLikeVC#push", sender: self)
     }
@@ -157,13 +143,43 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate, UITableViewDataSo
     }
     
     // MARK : - Fonctions happies
-
+    
     func callHappieView() {
         self.filter.hidden = false
     }
-
+    
     func dismissHappieView() {
         self.filter.hidden = true
     }
+}
 
+extension InspirationVC : UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return customCategory.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.catTable.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath) as! CategoryCell
+        let imageUrlString = customCategory[indexPath.row]["picture_url"] as! String
+        let imageUrl = NSURL(string: "http:" + imageUrlString)!
+        cell.backgroundColor = UIColor.lightGrayColor()
+        cell.cellBackground.af_setImageWithURL(imageUrl)
+        cell.cellName.text = customCategory[indexPath.row]["name"] as? String
+        cell.cellBackground.contentMode = .ScaleAspectFill
+        cell.contentView.sendSubviewToBack(cell.cellBackground)
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let categoryName = customCategory[indexPath.row]["name"] as! String
+        selectedCategory = Selfie.Category.init(value: categoryName)
+        selectedTitle = customCategory[indexPath.row]["name"] as! String
+        performSegueWithIdentifier("goFilActu", sender: self)
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 160.0
+    }
 }
