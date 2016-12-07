@@ -11,25 +11,25 @@ import Future
 
 extension Api {
     static func getSelfie() -> Future<AnyObject?> {
-        var urlString = rootUrl + webServices["getSelfie"]!
+        var urlString = rootUrl + webServices["Selfie"]!
         urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return request(.GET, URLString: urlString)
     }
 
     static func putSelfie() -> Future<AnyObject?> {
-        var urlString = rootUrl + webServices["putSelfie"]!
+        var urlString = rootUrl + webServices["Selfie"]!
         urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return request(.PUT, URLString: urlString)
     }
 
     static func postSelfie() -> Future<AnyObject?> {
-        var urlString = rootUrl + webServices["postSelfie"]!
+        var urlString = rootUrl + webServices["Selfie"]!
         urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return request(.POST, URLString: urlString)
     }
 
     static func deleteSelfie() -> Future<AnyObject?> {
-        var urlString = rootUrl + webServices["deleteSelfie"]!
+        var urlString = rootUrl + webServices["Selfie"]!
         urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return request(.DELETE, URLString: urlString)
     }

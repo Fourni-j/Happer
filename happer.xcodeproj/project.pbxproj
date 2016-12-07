@@ -49,6 +49,7 @@
 		55ED74D71D92E58200DCA3A6 /* Api+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74D61D92E58200DCA3A6 /* Api+User.swift */; };
 		55ED74D91D92E5B100DCA3A6 /* Api+Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */; };
 		55ED74DB1D92E6AF00DCA3A6 /* Api+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */; };
+		561EA0D41DF83BCA00C5F915 /* Api+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */; };
 		60119B003DF617331FEA6318 /* Pods_happer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381809FD96EFD4DD77C7A7EB /* Pods_happer.framework */; };
 		E6E4F02A18D487593E7C4F39 /* Pods_happerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63C602DCD4EAD0426741B82 /* Pods_happerTests.framework */; };
 		FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5D1D89841E00802025 /* Login.storyboard */; };
@@ -150,6 +151,7 @@
 		55ED74D61D92E58200DCA3A6 /* Api+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+User.swift"; sourceTree = "<group>"; };
 		55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Selfie.swift"; sourceTree = "<group>"; };
 		55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Product.swift"; sourceTree = "<group>"; };
+		561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Actions.swift"; sourceTree = "<group>"; };
 		78E463FC25164351D218B324 /* Pods-happerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C928F85F8DAE7B7DB97FFE0E /* Pods-happer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happer/Pods-happer.debug.xcconfig"; sourceTree = "<group>"; };
 		E53BCCF9E20D2B9C4FD67041 /* Pods-happerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				55ED74D61D92E58200DCA3A6 /* Api+User.swift */,
 				55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */,
 				55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */,
+				561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				35D4F1651D26AE1F00BEA8E1 /* InspiClass.swift in Sources */,
 				FCE4C7BB1DC9FA2200E023D8 /* ProductDetailsDescTableViewCell.swift in Sources */,
 				FCDC61AE1DAE2AF800A41003 /* BidView.swift in Sources */,
+				561EA0D41DF83BCA00C5F915 /* Api+Actions.swift in Sources */,
 				557D4F521D50E708001D26BC /* MenuVC.swift in Sources */,
 				FCC9B1AB1DD9BF8F00E1A0E3 /* NewsFeedInteractor.swift in Sources */,
 				FCC671A11DB618100093C592 /* SelfieViewController.swift in Sources */,
