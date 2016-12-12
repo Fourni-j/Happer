@@ -47,6 +47,10 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn1)
         notifButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 2, 4)
         happiesView.delegate = self
+        
+        happiesView.hidden = true
+        happiesOverlay.hidden = true
+        
         updateCategory()
     }
     
