@@ -12,6 +12,7 @@ import Future
 
 public class Api {
     public static let rootUrl = "http://52.57.64.123/v1/"
+
     public static let webServices = ["connection" : "login.php",
         "subscribe" : "adduser.php",
         "User" : "users",

@@ -33,4 +33,10 @@ extension Api {
         urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return request(.DELETE, URLString: urlString)
     }
+    
+    static func getCategories() -> Future<AnyObject?> {
+        var urlString = rootUrl + webServices["getCategories"]!
+        urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        return request(.GET, URLString: urlString)
+    }
 }
