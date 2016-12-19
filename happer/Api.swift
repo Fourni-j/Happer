@@ -20,7 +20,8 @@ public class Api {
         "Product" : "products",
         "Like" : "likes",
         "Wish" : "wishes",
-        "Note" : "notes"]
+        "Note" : "notes",
+        "Categories" : "categories"]
 
     /**
      Entry point for all web services request
