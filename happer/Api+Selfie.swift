@@ -35,7 +35,7 @@ extension Api {
     }
     
     static func getCategories() -> Future<AnyObject?> {
-        var urlString = rootUrl + webServices["getCategories"]!
+        var urlString = rootUrl + webServices["Categories"]!
         urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         return request(.GET, URLString: urlString)
     }
