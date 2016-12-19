@@ -18,40 +18,19 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
     
     var customCategory = [[String:AnyObject]]()
     
-    var custom = HappieView()
-    var filter = UIView()
-    
     @IBOutlet weak var catTable: UITableView!
     @IBOutlet weak var circleButton: UIButton!
     @IBOutlet weak var notifButton: UIButton!
+    @IBOutlet weak var happiesButton: UIButton!
+    @IBOutlet weak var happiesView: HappiesView!
+    @IBOutlet weak var happiesOverlay: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Entry point of navigation on main.storyboard
-        // Envoie vers la page de login
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToHappLike), name: "happLike", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToShare), name: "share", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InspirationVC.moveToFriends), name:  "friends", object: nil)
+        let tapOut = UITapGestureRecognizer(target: self, action: #selector(happiesAction))
+        self.happiesOverlay.addGestureRecognizer(tapOut)
         
-        let viewW = self.view.frame.width
-        let viewH = self.view.frame.height
-        
-        let tapOut = UITapGestureRecognizer(target: self, action: #selector(InspirationVC.dismissHappieView))
-        
-        // préparation vue happies et filtre
-        
-        self.custom = HappieView(frame: CGRect(x: (viewW / 2 - 80), y: (viewH / 2), width: 160, height: 130))
-        self.filter = UIView(frame: CGRect(x: 0, y: 0, width: viewW, height: viewH))
-        self.filter.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
-        self.filter.addGestureRecognizer(tapOut)
-        self.view.addSubview(filter)
-        self.filter.addSubview(custom)
-        self.filter.hidden = true
-        
-        let happerL = HapperLogo(frame: CGRect(x: (viewW / 2 - 25), y: (viewH - 150), width: 50, height: 50))
-        happerL.button.addTarget(self, action: #selector(InspirationVC.callHappieView), forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(happerL)
         addSlideMenuButton()
         tableViewData.append(["label":"Tenue de jour", "background":"OotdBack"])
         tableViewData.append(["label":"Tenue de soirée", "background":"OotnBack"])
@@ -60,19 +39,17 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
         tableViewData.append(["label":"Chaussures", "background":"ShoesBack"])
         tableViewData.append(["label":"Décontracté", "background":"RelaxedBack"])
         
-        // navbar title font and rigth button with icon
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "RemachineScriptPersonalUseOnly", size: 20)!, NSForegroundColorAttributeName : UIColor.whiteColor()]
         
         let btn1 = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         btn1.setImage(UIImage(named: "dressIcon"), forState: .Normal)
         btn1.addTarget(self, action: #selector(InspirationVC.moveToDressing), forControlEvents: .TouchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn1)
-        
-        // top left and right button (circle and notif)
-        self.view.bringSubviewToFront(circleButton)
-        
         notifButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 2, 4)
-        self.view.bringSubviewToFront(notifButton)
+        happiesView.delegate = self
+        
+        happiesView.hidden = true
+        happiesOverlay.hidden = true
         
         updateCategory()
     }
@@ -130,27 +107,26 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
         print("====> NOTIF BUTTON PRESSED <====")
     }
     
-    func moveToHappLike() {
-        Session.sharedInstance.router.perform("route://Happies/happLikeVC#push", sender: self)
+    @IBAction func happiesAction(sender: AnyObject) {
+        self.happiesView.hidden = !self.happiesView.hidden
+        self.happiesOverlay.hidden = !self.happiesOverlay.hidden
     }
-    
-    func moveToShare() {
+}
+
+extension InspirationVC : HappiesViewDelegate {
+
+    func didSelectShareAction(sender: HappiesView) {
         Session.sharedInstance.router.perform("route://Happies/uploadVC#push", sender: self)
     }
     
-    func moveToFriends() {
+    func didSelectFriendAction(sender: HappiesView) {
         Session.sharedInstance.router.perform("route://Happies/askHelpVC#push", sender: self)
     }
     
-    // MARK : - Fonctions happies
-    
-    func callHappieView() {
-        self.filter.hidden = false
+    func didSelectNotationAction(sender: HappiesView) {
+        Session.sharedInstance.router.perform("route://Happies/happLikeVC#push", sender: self)
     }
     
-    func dismissHappieView() {
-        self.filter.hidden = true
-    }
 }
 
 extension InspirationVC : UITableViewDelegate, UITableViewDataSource {

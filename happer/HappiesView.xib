@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NeutraTextBook.otf">
+            <string>NeutraText-BookSC</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HappiesView" customModule="happer" customModuleProvider="target">
+            <connections>
+                <outlet property="frameView" destination="ImV-FW-48u" id="0pU-m1-lBl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-FW-48u">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEA-1k-CVB">
+                            <rect key="frame" x="30" y="313.5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="3Ry-uW-JVo"/>
+                                <constraint firstAttribute="width" secondItem="XEA-1k-CVB" secondAttribute="height" multiplier="1:1" id="Lut-i8-oFH"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="gradeIcon"/>
+                            <connections>
+                                <action selector="notationAction:" destination="-1" eventType="touchUpInside" id="c0o-FV-Y15"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgJ-VG-feq">
+                            <rect key="frame" x="305" y="313.5" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ZgJ-VG-feq" secondAttribute="height" multiplier="1:1" id="L35-Uo-K4o"/>
+                                <constraint firstAttribute="width" constant="40" id="OJ2-jv-KIn"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="shareIcon"/>
+                            <connections>
+                                <action selector="shareAction:" destination="-1" eventType="touchUpInside" id="jY4-xV-ubt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frq-FG-USc">
+                            <rect key="frame" x="355" y="647" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="qk6-85-D1Z"/>
+                                <constraint firstAttribute="width" secondItem="Frq-FG-USc" secondAttribute="height" multiplier="1:1" id="z0l-P2-YRr"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Mock_up_final_Amis"/>
+                            <connections>
+                                <action selector="friendAction:" destination="-1" eventType="touchUpInside" id="byH-iC-ebc"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQk-VV-a5L">
+                            <rect key="frame" x="30" y="363.5" width="40.5" height="13"/>
+                            <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnd-Tm-XWo">
+                            <rect key="frame" x="296" y="363.5" width="58.5" height="13"/>
+                            <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contribuez à la communauté" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSJ-9A-djv">
+                            <rect key="frame" x="0.0" y="5" width="375" height="303.5"/>
+                            <fontDescription key="fontDescription" name="NeutraText-BookSC" family="Neutra Text" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Frq-FG-USc" secondAttribute="bottom" constant="-10" id="0gz-Mi-SqR"/>
+                        <constraint firstItem="XEA-1k-CVB" firstAttribute="centerY" secondItem="ImV-FW-48u" secondAttribute="centerY" id="4YR-VE-RPc"/>
+                        <constraint firstItem="XEA-1k-CVB" firstAttribute="leading" secondItem="ImV-FW-48u" secondAttribute="leading" constant="30" id="Cev-75-5HS"/>
+                        <constraint firstItem="dSJ-9A-djv" firstAttribute="top" secondItem="ImV-FW-48u" secondAttribute="top" constant="5" id="O5z-aB-YwR"/>
+                        <constraint firstItem="bnd-Tm-XWo" firstAttribute="centerX" secondItem="ZgJ-VG-feq" secondAttribute="centerX" id="XDP-kN-9A0"/>
+                        <constraint firstItem="dSJ-9A-djv" firstAttribute="leading" secondItem="ImV-FW-48u" secondAttribute="leading" id="ZRD-yX-Trq"/>
+                        <constraint firstItem="yQk-VV-a5L" firstAttribute="centerX" secondItem="XEA-1k-CVB" secondAttribute="centerX" id="b4z-LV-9Lg"/>
+                        <constraint firstItem="bnd-Tm-XWo" firstAttribute="top" secondItem="ZgJ-VG-feq" secondAttribute="bottom" constant="10" id="bMs-B8-esD"/>
+                        <constraint firstAttribute="trailing" secondItem="dSJ-9A-djv" secondAttribute="trailing" id="ciO-g6-Iln"/>
+                        <constraint firstItem="ZgJ-VG-feq" firstAttribute="centerY" secondItem="ImV-FW-48u" secondAttribute="centerY" id="eLN-wf-bgs"/>
+                        <constraint firstAttribute="trailing" secondItem="ZgJ-VG-feq" secondAttribute="trailing" constant="30" id="ikb-kb-AAd"/>
+                        <constraint firstItem="yQk-VV-a5L" firstAttribute="top" secondItem="XEA-1k-CVB" secondAttribute="bottom" constant="10" id="n9d-Bu-xGR"/>
+                        <constraint firstItem="ZgJ-VG-feq" firstAttribute="top" secondItem="dSJ-9A-djv" secondAttribute="bottom" constant="5" id="sUX-L3-pcM"/>
+                        <constraint firstAttribute="trailing" secondItem="Frq-FG-USc" secondAttribute="trailing" constant="-10" id="srE-uR-wZE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ImV-FW-48u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MsA-Pa-VSN"/>
+                <constraint firstAttribute="trailing" secondItem="ImV-FW-48u" secondAttribute="trailing" id="aAf-bH-Uss"/>
+                <constraint firstAttribute="bottom" secondItem="ImV-FW-48u" secondAttribute="bottom" id="nrk-zT-sEq"/>
+                <constraint firstItem="ImV-FW-48u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pTN-sI-zTb"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="57.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Mock_up_final_Amis" width="28" height="28"/>
+        <image name="gradeIcon" width="31" height="31"/>
+        <image name="shareIcon" width="59" height="59"/>
+    </resources>
+</document>
