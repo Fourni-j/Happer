@@ -12,21 +12,15 @@ import Future
 
 public class Api {
     public static let rootUrl = "http://52.57.64.123/v1/"
-    public static let webServices = ["connection" : "login.php", // Update
-                                     "subscribe" : "adduser.php", // Update
-                                     "getUser" : "users",
-                                     "putUser" : "users",
-                                     "postUser" : "users",
-                                     "deleteUser" : "users",
-                                     "getSelfie" : "selfies",
-                                     "putSelfie" : "selfies",
-                                     "postSelfie" : "selfies",
-                                     "deleteSelfie" : "selfies",
-                                     "getProduct" : "products",
-                                     "putProduct" : "products",
-                                     "postProduct" : "products",
-                                     "deleteProduct" : "products",
-                                     "getCategories" : "categories"]
+
+    public static let webServices = ["connection" : "login.php",
+        "subscribe" : "adduser.php",
+        "User" : "users",
+        "Selfie" : "selfies",
+        "Product" : "products",
+        "Like" : "likes",
+        "Wish" : "wishes",
+        "Note" : "notes"]
 
     /**
      Entry point for all web services request
