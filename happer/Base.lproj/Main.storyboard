@@ -29,30 +29,6 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erm-ML-mA0">
-                                <rect key="frame" x="0.0" y="15" width="40" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="9lW-8J-9QD"/>
-                                    <constraint firstAttribute="height" constant="40" id="gbk-c1-X4G"/>
-                                </constraints>
-                                <state key="normal" image="circleIcon"/>
-                                <connections>
-                                    <action selector="circleAction:" destination="mQV-13-i7a" eventType="touchUpInside" id="RyD-ct-VD5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xe-4g-Man">
-                                <rect key="frame" x="335" y="15" width="40" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0wi-Yl-aDM"/>
-                                    <constraint firstAttribute="width" constant="40" id="lUI-Ot-ftj"/>
-                                </constraints>
-                                <state key="normal" image="notifIcon"/>
-                                <connections>
-                                    <action selector="notifAction:" destination="mQV-13-i7a" eventType="touchUpInside" id="QZn-eO-mJ2"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RIY-fc-8xu">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="603"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,23 +75,81 @@
                                     <outlet property="delegate" destination="mQV-13-i7a" id="Rid-f7-0m5"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erm-ML-mA0">
+                                <rect key="frame" x="0.0" y="15" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9lW-8J-9QD"/>
+                                    <constraint firstAttribute="height" constant="40" id="gbk-c1-X4G"/>
+                                </constraints>
+                                <state key="normal" image="circleIcon"/>
+                                <connections>
+                                    <action selector="circleAction:" destination="mQV-13-i7a" eventType="touchUpInside" id="RyD-ct-VD5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xe-4g-Man">
+                                <rect key="frame" x="335" y="15" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0wi-Yl-aDM"/>
+                                    <constraint firstAttribute="width" constant="40" id="lUI-Ot-ftj"/>
+                                </constraints>
+                                <state key="normal" image="notifIcon"/>
+                                <connections>
+                                    <action selector="notifAction:" destination="mQV-13-i7a" eventType="touchUpInside" id="QZn-eO-mJ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tud-ci-NHb">
+                                <rect key="frame" x="157" y="483" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Jd3-96-2z8"/>
+                                    <constraint firstAttribute="width" secondItem="tud-ci-NHb" secondAttribute="height" multiplier="1:1" id="PiG-py-ASP"/>
+                                </constraints>
+                                <state key="normal" image="Logo_transparent_100x100"/>
+                                <connections>
+                                    <action selector="happiesAction:" destination="mQV-13-i7a" eventType="touchUpInside" id="9Y8-zG-lZe"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpH-y0-b84">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcl-r1-d0s" customClass="HappiesView" customModule="happer" customModuleProvider="target">
+                                <rect key="frame" x="94" y="340" width="187.5" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="kEM-ZL-QiR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5bK-aR-gUQ" firstAttribute="top" secondItem="FpH-y0-b84" secondAttribute="bottom" id="1OB-qP-Jfs"/>
                             <constraint firstItem="RIY-fc-8xu" firstAttribute="top" secondItem="kAW-PF-Yqh" secondAttribute="bottom" id="53g-WY-n7Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RIY-fc-8xu" secondAttribute="trailing" constant="-20" id="57g-7z-R5I"/>
+                            <constraint firstItem="FpH-y0-b84" firstAttribute="leading" secondItem="LHg-Wz-2PS" secondAttribute="leading" id="5yA-zS-CjI"/>
                             <constraint firstItem="Erm-ML-mA0" firstAttribute="top" secondItem="kAW-PF-Yqh" secondAttribute="bottom" constant="15" id="L3d-SW-Txi"/>
                             <constraint firstItem="Erm-ML-mA0" firstAttribute="leading" secondItem="LHg-Wz-2PS" secondAttribute="leading" id="Nkb-z5-eZD"/>
+                            <constraint firstItem="tud-ci-NHb" firstAttribute="top" secondItem="gcl-r1-d0s" secondAttribute="bottom" constant="13" id="Ots-2z-eVn"/>
                             <constraint firstItem="6xe-4g-Man" firstAttribute="top" secondItem="kAW-PF-Yqh" secondAttribute="bottom" constant="15" id="P5a-dV-quv"/>
+                            <constraint firstAttribute="trailing" secondItem="FpH-y0-b84" secondAttribute="trailing" id="SAI-B9-RIN"/>
                             <constraint firstItem="RIY-fc-8xu" firstAttribute="leading" secondItem="LHg-Wz-2PS" secondAttribute="leadingMargin" constant="-20" id="TMF-eE-Zrf"/>
                             <constraint firstItem="5bK-aR-gUQ" firstAttribute="top" secondItem="RIY-fc-8xu" secondAttribute="bottom" id="Ttg-fd-mQn"/>
                             <constraint firstAttribute="trailing" secondItem="6xe-4g-Man" secondAttribute="trailing" id="bT3-Mk-PPv"/>
+                            <constraint firstItem="FpH-y0-b84" firstAttribute="top" secondItem="kAW-PF-Yqh" secondAttribute="bottom" id="chF-u2-DAs"/>
+                            <constraint firstItem="gcl-r1-d0s" firstAttribute="width" secondItem="LHg-Wz-2PS" secondAttribute="width" multiplier="0.5" id="lpm-tk-nwd"/>
+                            <constraint firstItem="gcl-r1-d0s" firstAttribute="centerX" secondItem="tud-ci-NHb" secondAttribute="centerX" id="vjH-yX-1ro"/>
+                            <constraint firstItem="5bK-aR-gUQ" firstAttribute="top" secondItem="tud-ci-NHb" secondAttribute="bottom" constant="60" id="xxk-VL-0F6"/>
+                            <constraint firstItem="tud-ci-NHb" firstAttribute="centerX" secondItem="LHg-Wz-2PS" secondAttribute="centerX" id="yDy-i7-QEf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2dh-Zi-vRN"/>
                     <connections>
                         <outlet property="catTable" destination="RIY-fc-8xu" id="O7k-4G-bI9"/>
                         <outlet property="circleButton" destination="Erm-ML-mA0" id="kVJ-NF-mjZ"/>
+                        <outlet property="happiesButton" destination="tud-ci-NHb" id="w3C-Tj-v76"/>
+                        <outlet property="happiesOverlay" destination="FpH-y0-b84" id="kBm-Pt-ccm"/>
+                        <outlet property="happiesView" destination="gcl-r1-d0s" id="Xx6-Kw-FuJ"/>
                         <outlet property="notifButton" destination="6xe-4g-Man" id="E5n-rW-IlR"/>
                         <segue destination="BqL-1p-IRn" kind="show" identifier="goFilActu" id="rSf-0S-wuV"/>
                         <segue destination="rnR-JV-u41" kind="show" identifier="goCercles" id="qdt-Ox-c6q"/>
@@ -642,6 +676,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo_transparent_100x100" width="100" height="100"/>
         <image name="Mock_up_final_Happ'like" width="131" height="129"/>
         <image name="Mock_up_final_etoile_vide" width="131" height="129"/>
         <image name="circleIcon" width="45" height="21"/>

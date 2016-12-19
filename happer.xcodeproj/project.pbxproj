@@ -50,6 +50,8 @@
 		55ED74D91D92E5B100DCA3A6 /* Api+Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */; };
 		55ED74DB1D92E6AF00DCA3A6 /* Api+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */; };
 		561EA0D41DF83BCA00C5F915 /* Api+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */; };
+		561EA0D61DF8505900C5F915 /* HappiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EA0D51DF8505900C5F915 /* HappiesView.swift */; };
+		561EA0D81DF8506B00C5F915 /* HappiesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561EA0D71DF8506B00C5F915 /* HappiesView.xib */; };
 		60119B003DF617331FEA6318 /* Pods_happer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381809FD96EFD4DD77C7A7EB /* Pods_happer.framework */; };
 		E6E4F02A18D487593E7C4F39 /* Pods_happerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63C602DCD4EAD0426741B82 /* Pods_happerTests.framework */; };
 		FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5D1D89841E00802025 /* Login.storyboard */; };
@@ -152,6 +154,8 @@
 		55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Selfie.swift"; sourceTree = "<group>"; };
 		55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Product.swift"; sourceTree = "<group>"; };
 		561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Actions.swift"; sourceTree = "<group>"; };
+		561EA0D51DF8505900C5F915 /* HappiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappiesView.swift; sourceTree = "<group>"; };
+		561EA0D71DF8506B00C5F915 /* HappiesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HappiesView.xib; sourceTree = "<group>"; };
 		78E463FC25164351D218B324 /* Pods-happerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C928F85F8DAE7B7DB97FFE0E /* Pods-happer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happer/Pods-happer.debug.xcconfig"; sourceTree = "<group>"; };
 		E53BCCF9E20D2B9C4FD67041 /* Pods-happerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 				FC664ECE1DA3A0BE00CEF9D8 /* MyRouter.swift */,
 				FC2292611DCA20EF00B42319 /* BaseMenuViewController.swift */,
 				FC2292631DCA215500B42319 /* MenuViewController.swift */,
+				561EA0D51DF8505900C5F915 /* HappiesView.swift */,
+				561EA0D71DF8506B00C5F915 /* HappiesView.xib */,
 			);
 			path = happer;
 			sourceTree = "<group>";
@@ -587,6 +593,7 @@
 				FC4701861DA2A52600417B81 /* Product.storyboard in Resources */,
 				FC05BA621D8987B900802025 /* UserPages.storyboard in Resources */,
 				353C2B121D23E4EE009D7968 /* LaunchScreen.storyboard in Resources */,
+				561EA0D81DF8506B00C5F915 /* HappiesView.xib in Resources */,
 				353C2B0F1D23E4EE009D7968 /* Assets.xcassets in Resources */,
 				353C2B0D1D23E4EE009D7968 /* Main.storyboard in Resources */,
 			);
@@ -736,6 +743,7 @@
 				FC664ECF1DA3A0BE00CEF9D8 /* MyRouter.swift in Sources */,
 				FCE4C7BD1DC9FF2800E023D8 /* ProductDetailsHeaderTableViewCell.swift in Sources */,
 				35D4F1581D240F1A00BEA8E1 /* ProductDetailsVC.swift in Sources */,
+				561EA0D61DF8505900C5F915 /* HappiesView.swift in Sources */,
 				FC0BFF081DDC716C0032AC70 /* TopView.swift in Sources */,
 				357046931D50AD53003F87DC /* RatingControl.swift in Sources */,
 				FCC9B1AF1DD9BFAC00E1A0E3 /* NewsFeedWorker.swift in Sources */,
