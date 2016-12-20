@@ -20,7 +20,13 @@ class AuthentInteractor {
         }
     }
     
-    func subscribe(username: String, pass: String, mail: String) {
-        AuthentPresenter.post(.SubscribeSuccess)
+    func subscribe(mail: String, password: String, confirm: String) {
+        
+        Api.postUser(mail, password: password, confirm: confirm)
+            .then { data in AuthentPresenter.post(.SubscribeSuccess)}
+            .fail {
+                error in
+                AuthentPresenter.postOnMainThread(.SubscribeFailure, object: error)
+        }
     }
 }
