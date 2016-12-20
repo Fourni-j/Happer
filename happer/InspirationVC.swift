@@ -28,6 +28,11 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let uid = defaults.stringForKey("USER_TOKEN")
+        if uid == nil || uid == ""{ displayLogin() }
+        else { Session.sharedInstance.token = uid! }
+        
         let tapOut = UITapGestureRecognizer(target: self, action: #selector(happiesAction))
         self.happiesOverlay.addGestureRecognizer(tapOut)
         
@@ -68,6 +73,12 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    func displayLogin() {
+        let authent = UIStoryboard(name: "Login", bundle: nil).instantiateViewControllerWithIdentifier("auhtentNavigationController")
+        presentViewController(authent, animated: false, completion: nil)
+    }
+    
+    
     func updateCategory() {
         Api.getCategories()
             .then { data in
@@ -76,7 +87,7 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
                 let array = type["categories"] as! [[String: AnyObject]]
                 for categoriesJSON in array {
                     let dict = ["name":categoriesJSON["name"]!,
-                    "picture_url":categoriesJSON["picture_url"]!]
+                        "picture_url":categoriesJSON["picture_url"]!]
                     self.customCategory.append(dict)
                 }
                 self.catTable.reloadData()
@@ -105,6 +116,8 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
     
     @IBAction func notifAction(sender: UIButton) {
         print("====> NOTIF BUTTON PRESSED <====")
+        NSUserDefaults.standardUserDefaults().setObject("", forKey: "USER_TOKEN")
+        displayLogin()
     }
     
     @IBAction func happiesAction(sender: AnyObject) {
@@ -114,7 +127,7 @@ class InspirationVC: BaseMenuViewController, UITabBarDelegate {
 }
 
 extension InspirationVC : HappiesViewDelegate {
-
+    
     func didSelectShareAction(sender: HappiesView) {
         Session.sharedInstance.router.perform("route://Happies/uploadVC#push", sender: self)
     }
@@ -130,7 +143,7 @@ extension InspirationVC : HappiesViewDelegate {
 }
 
 extension InspirationVC : UITableViewDelegate, UITableViewDataSource {
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return customCategory.count
     }
@@ -154,7 +167,7 @@ extension InspirationVC : UITableViewDelegate, UITableViewDataSource {
         selectedTitle = customCategory[indexPath.row]["name"] as! String
         performSegueWithIdentifier("goFilActu", sender: self)
     }
-
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 160.0
     }
