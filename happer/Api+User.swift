@@ -22,10 +22,12 @@ extension Api {
         return request(.PUT, URLString: urlString)
     }
 
-    static func postUser() -> Future<AnyObject?> {
+    static func postUser(email: String, password: String, confirm: String) -> Future<AnyObject?> {
         var urlString = rootUrl + webServices["User"]!
         urlString = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-        return request(.POST, URLString: urlString)
+        
+        let dict = ["user":["email":email, "password":password, "confirmation_password":confirm]]
+        return request(.POST, URLString: urlString, parameters: dict)
     }
 
     static func deleteUser() -> Future<AnyObject?> {
