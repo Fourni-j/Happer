@@ -52,6 +52,8 @@
 		561EA0D41DF83BCA00C5F915 /* Api+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */; };
 		561EA0D61DF8505900C5F915 /* HappiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EA0D51DF8505900C5F915 /* HappiesView.swift */; };
 		561EA0D81DF8506B00C5F915 /* HappiesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561EA0D71DF8506B00C5F915 /* HappiesView.xib */; };
+		562CDEC41E0997410072597E /* AskFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */; };
+		568865731E0A9A4500E5EA2D /* FacebookUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568865721E0A9A4500E5EA2D /* FacebookUsers.swift */; };
 		60119B003DF617331FEA6318 /* Pods_happer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381809FD96EFD4DD77C7A7EB /* Pods_happer.framework */; };
 		E6E4F02A18D487593E7C4F39 /* Pods_happerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63C602DCD4EAD0426741B82 /* Pods_happerTests.framework */; };
 		FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5D1D89841E00802025 /* Login.storyboard */; };
@@ -156,6 +158,8 @@
 		561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Actions.swift"; sourceTree = "<group>"; };
 		561EA0D51DF8505900C5F915 /* HappiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappiesView.swift; sourceTree = "<group>"; };
 		561EA0D71DF8506B00C5F915 /* HappiesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HappiesView.xib; sourceTree = "<group>"; };
+		562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskFriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		568865721E0A9A4500E5EA2D /* FacebookUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUsers.swift; sourceTree = "<group>"; };
 		78E463FC25164351D218B324 /* Pods-happerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C928F85F8DAE7B7DB97FFE0E /* Pods-happer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happer/Pods-happer.debug.xcconfig"; sourceTree = "<group>"; };
 		E53BCCF9E20D2B9C4FD67041 /* Pods-happerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 				353C2B281D23E6EA009D7968 /* User.swift */,
 				353C2B301D23F1D0009D7968 /* Selfie.swift */,
 				353C2B321D23F53F009D7968 /* Product.swift */,
+				568865721E0A9A4500E5EA2D /* FacebookUsers.swift */,
 			);
 			name = dataClasses;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				35D4F1531D240CF700BEA8E1 /* FriendsVC.swift */,
 				FCC671A01DB618100093C592 /* SelfieViewController.swift */,
 				FCC671A41DB6514F0093C592 /* SelfieTagViewController.swift */,
+				562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */,
 			);
 			name = "happies controllers";
 			sourceTree = "<group>";
@@ -748,6 +754,7 @@
 				357046931D50AD53003F87DC /* RatingControl.swift in Sources */,
 				FCC9B1AF1DD9BFAC00E1A0E3 /* NewsFeedWorker.swift in Sources */,
 				35D4F1401D2408E000BEA8E1 /* InspirationVC.swift in Sources */,
+				562CDEC41E0997410072597E /* AskFriendCollectionViewCell.swift in Sources */,
 				FCEF9EB11D99045000CF3B95 /* DAL.swift in Sources */,
 				35D4F1631D25482600BEA8E1 /* FBSDKLoginButtonFR.swift in Sources */,
 				353C2B311D23F1D0009D7968 /* Selfie.swift in Sources */,
@@ -771,6 +778,7 @@
 				55BBBD831DE751F8003DBE43 /* LikesVC.swift in Sources */,
 				55E189D61D74741300A4FF6F /* CropVC.swift in Sources */,
 				FC2292641DCA215500B42319 /* MenuViewController.swift in Sources */,
+				568865731E0A9A4500E5EA2D /* FacebookUsers.swift in Sources */,
 				55ED74D51D92E52F00DCA3A6 /* Api.swift in Sources */,
 				FC7C3BDE1DA28A0600014F6D /* ProductInteractor.swift in Sources */,
 				FC2292621DCA20EF00B42319 /* BaseMenuViewController.swift in Sources */,
