@@ -53,6 +53,7 @@
 		561EA0D61DF8505900C5F915 /* HappiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EA0D51DF8505900C5F915 /* HappiesView.swift */; };
 		561EA0D81DF8506B00C5F915 /* HappiesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561EA0D71DF8506B00C5F915 /* HappiesView.xib */; };
 		562CDEC41E0997410072597E /* AskFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */; };
+		563880651E0ACD2C007A0CA4 /* BrandTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563880641E0ACD2C007A0CA4 /* BrandTagViewController.swift */; };
 		568865731E0A9A4500E5EA2D /* FacebookUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568865721E0A9A4500E5EA2D /* FacebookUsers.swift */; };
 		60119B003DF617331FEA6318 /* Pods_happer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381809FD96EFD4DD77C7A7EB /* Pods_happer.framework */; };
 		E6E4F02A18D487593E7C4F39 /* Pods_happerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63C602DCD4EAD0426741B82 /* Pods_happerTests.framework */; };
@@ -159,6 +160,7 @@
 		561EA0D51DF8505900C5F915 /* HappiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappiesView.swift; sourceTree = "<group>"; };
 		561EA0D71DF8506B00C5F915 /* HappiesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HappiesView.xib; sourceTree = "<group>"; };
 		562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskFriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		563880641E0ACD2C007A0CA4 /* BrandTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTagViewController.swift; sourceTree = "<group>"; };
 		568865721E0A9A4500E5EA2D /* FacebookUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUsers.swift; sourceTree = "<group>"; };
 		78E463FC25164351D218B324 /* Pods-happerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C928F85F8DAE7B7DB97FFE0E /* Pods-happer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happer/Pods-happer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				FCC671A01DB618100093C592 /* SelfieViewController.swift */,
 				FCC671A41DB6514F0093C592 /* SelfieTagViewController.swift */,
 				562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */,
+				563880641E0ACD2C007A0CA4 /* BrandTagViewController.swift */,
 			);
 			name = "happies controllers";
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				FCFBDDB91DEC6B6D00C19C63 /* Color.swift in Sources */,
 				35D4F13A1D24016E00BEA8E1 /* MainPageVC.swift in Sources */,
 				35D4F1451D240A3400BEA8E1 /* DressingVC.swift in Sources */,
+				563880651E0ACD2C007A0CA4 /* BrandTagViewController.swift in Sources */,
 				35D4F1651D26AE1F00BEA8E1 /* InspiClass.swift in Sources */,
 				FCE4C7BB1DC9FA2200E023D8 /* ProductDetailsDescTableViewCell.swift in Sources */,
 				FCDC61AE1DAE2AF800A41003 /* BidView.swift in Sources */,

@@ -140,7 +140,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Votre Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPN-oc-1T2">
-                                <rect key="frame" x="134" y="110" width="107" height="24"/>
+                                <rect key="frame" x="134.5" y="110" width="107" height="24"/>
                                 <fontDescription key="fontDescription" name="FuturaStd-Medium" family="Futura Std" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -197,12 +197,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmh-JC-Lil">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmh-JC-Lil" customClass="FloatRatingView" customModule="happer" customModuleProvider="target">
                                 <rect key="frame" x="94" y="208" width="187.5" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bEI-Da-4fl"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Mock_up_final_etoile_vide"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="Mock_up_final_Happ'like"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="halfRatings" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="floatRatings" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour gagner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTk-rA-lWF">
                                 <rect key="frame" x="132.5" y="253" width="110" height="18"/>
@@ -344,12 +359,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogF-4K-EF1">
                                 <rect key="frame" x="0.0" y="500" width="375" height="167"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sag-Lp-Di9">
-                                        <rect key="frame" x="72" y="48" width="231" height="70"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sag-Lp-Di9" customClass="FloatRatingView" customModule="happer" customModuleProvider="target">
+                                        <rect key="frame" x="72" y="63" width="231" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="3Nu-iO-pb9"/>
+                                            <constraint firstAttribute="height" constant="40" id="3Nu-iO-pb9"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="Mock_up_final_etoile_vide"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="Mock_up_final_Happ'like"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="halfRatings" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="floatRatings" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIT-yX-9sY">
                                         <rect key="frame" x="319" y="63" width="40" height="40"/>
@@ -401,7 +431,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#OOTD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQo-8n-kUy">
-                                        <rect key="frame" x="158.5" y="19" width="58" height="21"/>
+                                        <rect key="frame" x="158.5" y="34" width="58" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -522,7 +552,7 @@
                                     <constraint firstAttribute="height" constant="35" id="623-Gt-3Zd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Terminer">
+                                <state key="normal" title="Suivant">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -581,9 +611,76 @@
             </objects>
             <point key="canvasLocation" x="-676" y="3608.5457271364321"/>
         </scene>
+        <!--Brand Tag View Controller-->
+        <scene sceneID="URi-wf-l5p">
+            <objects>
+                <viewController storyboardIdentifier="brandTagViewController" id="jQA-h7-Okf" customClass="BrandTagViewController" customModule="happer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W2d-sR-fHY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ovB-x3-Blo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rpm-96-6FP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_transparent_100x100" translatesAutoresizingMaskIntoConstraints="NO" id="jjl-V7-PfK">
+                                <rect key="frame" x="167.5" y="50" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jjl-V7-PfK" secondAttribute="height" multiplier="1:1" id="0jq-j7-qBI"/>
+                                    <constraint firstAttribute="width" constant="40" id="rhl-Ue-mAZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybu-jA-nh8" customClass="TaggableImageView" customModule="happer" customModuleProvider="target">
+                                <rect key="frame" x="37" y="150" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8P-hc-MAf">
+                                <rect key="frame" x="65.5" y="607" width="244" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="tfK-eJ-EGP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Terminer">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="DoneAction:" destination="jQA-h7-Okf" eventType="touchUpInside" id="TQG-hw-YSV"/>
+                                    <action selector="saveAction:" destination="yAU-V5-rnw" eventType="touchUpInside" id="bm6-VN-OsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jjl-V7-PfK" firstAttribute="top" secondItem="W2d-sR-fHY" secondAttribute="bottom" constant="30" id="9Xh-OE-fQu"/>
+                            <constraint firstItem="ybu-jA-nh8" firstAttribute="width" secondItem="rpm-96-6FP" secondAttribute="width" multiplier="0.8" id="FTj-H3-mLW"/>
+                            <constraint firstItem="ybu-jA-nh8" firstAttribute="centerX" secondItem="rpm-96-6FP" secondAttribute="centerX" id="Lhm-sq-kwq"/>
+                            <constraint firstItem="ybu-jA-nh8" firstAttribute="width" secondItem="ybu-jA-nh8" secondAttribute="height" multiplier="1:1" id="XIz-Uq-b3b"/>
+                            <constraint firstItem="X8P-hc-MAf" firstAttribute="centerX" secondItem="rpm-96-6FP" secondAttribute="centerX" id="cXf-T7-Lyo"/>
+                            <constraint firstItem="X8P-hc-MAf" firstAttribute="width" secondItem="rpm-96-6FP" secondAttribute="width" multiplier="0.65" id="e3A-iw-QPA"/>
+                            <constraint firstItem="jjl-V7-PfK" firstAttribute="centerX" secondItem="rpm-96-6FP" secondAttribute="centerX" id="fFD-KI-gG3"/>
+                            <constraint firstItem="ovB-x3-Blo" firstAttribute="top" secondItem="X8P-hc-MAf" secondAttribute="bottom" constant="25" id="gZU-Ax-ayX"/>
+                            <constraint firstItem="ybu-jA-nh8" firstAttribute="centerY" secondItem="rpm-96-6FP" secondAttribute="centerY" multiplier="0.9" id="sTy-e5-rXq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="taggableImageView" destination="ybu-jA-nh8" id="joB-fg-hdV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9V-F3-2B7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="3609"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo_transparent_100x100" width="100" height="100"/>
+        <image name="Mock_up_final_Happ'like" width="131" height="129"/>
+        <image name="Mock_up_final_etoile_vide" width="131" height="129"/>
         <image name="camera" width="93" height="70"/>
         <image name="notification" width="49" height="56"/>
         <image name="profilePic" width="80" height="80"/>
