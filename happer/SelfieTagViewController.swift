@@ -24,7 +24,7 @@ class SelfieTagViewController: UIViewController {
     }
     
     @IBAction func saveAction(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(false)
+        Session.sharedInstance.router.perform("route://Happies/brandTagViewController#push")
     }
  }
 
