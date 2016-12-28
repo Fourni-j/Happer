@@ -11,15 +11,21 @@ import UIKit
 class BrandTagViewController: UIViewController {
 
     @IBOutlet weak var taggableImageView: TaggableImageView!
+    var cropedImage: UIImage!
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taggableImageView.image = cropedImage
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    
+    
     @IBAction func DoneAction(sender: AnyObject) {
         let alertController = UIAlertController(title: "Partage du selfie", message: "Votre selfie est maintenant en attente de notation", preferredStyle: .Alert)
         let okAction = UIAlertAction(title: "Ok", style: .Default) {

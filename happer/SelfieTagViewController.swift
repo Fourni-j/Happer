@@ -12,11 +12,12 @@ class SelfieTagViewController: UIViewController {
 
     var cropedImage: UIImage!
     var selectedTag: Selfie.Category!
-    @IBOutlet weak var taggableImageView: TaggableImageView!
+    @IBOutlet weak var taggableImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         taggableImageView.image = cropedImage
+//        taggableImageView.contentMode = .
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +27,12 @@ class SelfieTagViewController: UIViewController {
     @IBAction func saveAction(sender: AnyObject) {
         Session.sharedInstance.router.perform("route://Happies/brandTagViewController#push")
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController as! BrandTagViewController
+        destination.cropedImage = cropedImage
+    }
+    
  }
 
 extension SelfieTagViewController : UIPickerViewDelegate, UIPickerViewDataSource {
