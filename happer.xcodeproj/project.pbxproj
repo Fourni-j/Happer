@@ -55,6 +55,8 @@
 		562CDEC41E0997410072597E /* AskFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */; };
 		563880651E0ACD2C007A0CA4 /* BrandTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563880641E0ACD2C007A0CA4 /* BrandTagViewController.swift */; };
 		568865731E0A9A4500E5EA2D /* FacebookUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568865721E0A9A4500E5EA2D /* FacebookUsers.swift */; };
+		565645B01E094643009970CE /* Api+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565645AF1E094643009970CE /* Api+Login.swift */; };
+		5698D3BD1E0951CD009431AB /* AuthentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D3BC1E0951CD009431AB /* AuthentWorker.swift */; };
 		60119B003DF617331FEA6318 /* Pods_happer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381809FD96EFD4DD77C7A7EB /* Pods_happer.framework */; };
 		E6E4F02A18D487593E7C4F39 /* Pods_happerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63C602DCD4EAD0426741B82 /* Pods_happerTests.framework */; };
 		FC05BA5E1D89841E00802025 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05BA5D1D89841E00802025 /* Login.storyboard */; };
@@ -162,6 +164,8 @@
 		562CDEC31E0997410072597E /* AskFriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		563880641E0ACD2C007A0CA4 /* BrandTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTagViewController.swift; sourceTree = "<group>"; };
 		568865721E0A9A4500E5EA2D /* FacebookUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookUsers.swift; sourceTree = "<group>"; };
+		565645AF1E094643009970CE /* Api+Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Api+Login.swift"; sourceTree = "<group>"; };
+		5698D3BC1E0951CD009431AB /* AuthentWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthentWorker.swift; sourceTree = "<group>"; };
 		78E463FC25164351D218B324 /* Pods-happerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C928F85F8DAE7B7DB97FFE0E /* Pods-happer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happer/Pods-happer.debug.xcconfig"; sourceTree = "<group>"; };
 		E53BCCF9E20D2B9C4FD67041 /* Pods-happerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-happerTests/Pods-happerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 				55ED74D81D92E5B100DCA3A6 /* Api+Selfie.swift */,
 				55ED74DA1D92E6AF00DCA3A6 /* Api+Product.swift */,
 				561EA0D31DF83BCA00C5F915 /* Api+Actions.swift */,
+				565645AF1E094643009970CE /* Api+Login.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0C70D81D90346F002AA0F6 /* AuthentInteractor.swift */,
+				5698D3BC1E0951CD009431AB /* AuthentWorker.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -735,6 +741,7 @@
 				55ED74D91D92E5B100DCA3A6 /* Api+Selfie.swift in Sources */,
 				FC7170CB1DDB648D00B86508 /* ProductSmallCollectionViewCell.swift in Sources */,
 				35D4F1471D240A4900BEA8E1 /* AccountVC.swift in Sources */,
+				565645B01E094643009970CE /* Api+Login.swift in Sources */,
 				FC7C3BDF1DA28A0600014F6D /* ProductPresenter.swift in Sources */,
 				FC0ED3751DA25AA200115DA2 /* Session.swift in Sources */,
 				357046971D53867C003F87DC /* HapperLogo.swift in Sources */,
@@ -787,6 +794,7 @@
 				FC7C3BDE1DA28A0600014F6D /* ProductInteractor.swift in Sources */,
 				FC2292621DCA20EF00B42319 /* BaseMenuViewController.swift in Sources */,
 				35D4F1421D24099A00BEA8E1 /* NewsFeedVC.swift in Sources */,
+				5698D3BD1E0951CD009431AB /* AuthentWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

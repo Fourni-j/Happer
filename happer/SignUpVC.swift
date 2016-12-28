@@ -40,7 +40,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        AuthentPresenter.register(self, events: .SubscribeSuccess, .SubscribeFailure)
+        AuthentPresenter.register(self, events: .SubscribeSuccess, .SubscribeFailure, .ConnectSuccess, .ConnectFailure)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -76,6 +76,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             mailField.text = ""
             passwdField.text = ""
             confpassField.text = ""
+            return;
         }
         if passwdField.text!.lowercaseString == confpassField.text!.lowercaseString {
             print("match")
@@ -87,81 +88,38 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             confpassField.text = ""
             return
         }
-        authentInteractor.subscribe(loginField.text!, pass: passwdField.text!, mail: mailField.text!)
+        authentInteractor.subscribe(mailField.text!, password: passwdField.text!, confirm: confpassField.text!)
         
-//        let login = loginField.text!.lowercaseString as NSString
-//        let mail = mailField.text!.lowercaseString as NSString
-//        let passwd = passwdField.text!.lowercaseString as NSString
-//        
-//        let session = NSURLSession.sharedSession()
-//        var jsonData = NSDictionary()
-//        let postr = NSString(string : "login=\(login)&passwd=\(passwd)&mail=\(mail)")
-//        let url = NSURL(string: "http://ec2-52-49-149-140.eu-west-1.compute.amazonaws.com:80/adduser.php")
-//        let request = NSMutableURLRequest(URL :url!)
-//        request.HTTPMethod = "POST"
-//        
-//        let postData: NSData = postr.dataUsingEncoding(NSUTF8StringEncoding)!
-//        request.HTTPBody = postData
-//        
-//        
-//        let postLength: NSString = String(postData.length)
-//        
-//        
-//        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length")
-//        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-//        request.setValue("application/json", forHTTPHeaderField: "Accept")
-//        
-//        var urlData: NSData?
-//        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-//            urlData = data! as NSData
-//            let res = response as! NSHTTPURLResponse
-//            if res.statusCode >= 200 && res.statusCode < 300 {
-//                do
-//                {
-//                    jsonData = try NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-//                }
-//                catch
-//                {
-//                    print("Catch-Location:: 'signUpVC' :: Serialization of server's response <jsonData>")
-//                    return
-//                }
-//            }
-//            else {
-//                print(res.statusCode)
-//                return
-//            }
-//            print(jsonData)
-//            let success = jsonData.valueForKey("success") as! NSInteger
-//            if (success > 0) {
-//                print("SUCCESS")
-//                let story = UIStoryboard(name: "Main", bundle: nil)
-//                let vc = story.instantiateViewControllerWithIdentifier("mainPage") as! MainPageVC
-//                self.presentViewController(vc, animated: true, completion: nil)
-//            }
-//            else {
-//                print("FAIL")
-//            }
-//        })
-//        task.resume()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 extension SignUpVC : AuthentEvent {
     func subscribeSuccess() {
-        print("success")
+        authentInteractor.connection(mailField.text!, pass: passwdField.text!)
     }
     
     func subscribeFailure(error: NSError) {
-        print("failure")
+        let alertController = UIAlertController(title: "Echec d'inscription", message: "Adresse mail deja existante", preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Default) {
+            (action: UIAlertAction!) in
+        }
+        alertController.addAction(okAction)
+        presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    func connectSuccess() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
+    
+    func connectFailure(error: NSError) {
+        let alertController = UIAlertController(title: "Echec de connexion", message: "mail ou mot de passe incorrect", preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Default) {
+            (action: UIAlertAction!) in
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        alertController.addAction(okAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
 }

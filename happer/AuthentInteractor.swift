@@ -11,10 +11,22 @@ import Foundation
 class AuthentInteractor {
 
     func connection(username: String, pass: String) {
-        AuthentPresenter.post(.ConnectSuccess)
+        Api.loginUser(username, password: pass)
+            .then { data in AuthentWorker.parse(data!) }
+            .then { AuthentPresenter.post(.ConnectSuccess) }
+            .fail {
+                error in
+                AuthentPresenter.postOnMainThread(.ConnectFailure, object: error)
+        }
     }
     
-    func subscribe(username: String, pass: String, mail: String) {
-        AuthentPresenter.post(.SubscribeSuccess)
+    func subscribe(mail: String, password: String, confirm: String) {
+        
+        Api.postUser(mail, password: password, confirm: confirm)
+            .then { data in AuthentPresenter.post(.SubscribeSuccess)}
+            .fail {
+                error in
+                AuthentPresenter.postOnMainThread(.SubscribeFailure, object: error)
+        }
     }
 }

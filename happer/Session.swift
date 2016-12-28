@@ -14,10 +14,12 @@ class Session {
 
     var user: User?
     let router: MyRouter
+    var token: String
     
     private init() {
         user = nil
         router = MyRouter()
+        token = ""
     }
     
 }
